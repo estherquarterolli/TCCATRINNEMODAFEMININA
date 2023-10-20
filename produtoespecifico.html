@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AtrineModaFeminina</title>
+    </head>
+
+<style>
+	
+.topo { 
+position:absolute;
+left:0;
+top:0;
+z-index:11;
+background-color:#eeecec;
+width:100%;
+height:66px;
+}
+
+.top{
+position:absolute;
+top:10px;
+left:0;
+z-index:11;
+width:100%;
+height:66px;
+font-family:"trebuchet ms","arial";
+font-size:40px;
+    
+}
+	
+	
+.linhapreta{
+position:absolute;
+top:0;
+left:0;
+z-index:9;
+background-color:#000000;
+width:100%;
+height:84px;	
+}
+
+.QuadradoMaior{
+position:absolute;
+top:120px;
+background-color:#D9D9D9;
+width:1029px;
+height:629px;	
+left:400px;
+border-radius:8px;
+}
+.Texto{
+	position: absolute;
+	right:50px;
+	top:10px;
+    font-family:"trebuchet ms";
+    left:550px;
+    /* line-height: 102px; */
+    height: 200px;
+   
+  
+	}
+
+
+
+
+
+
+
+#menu {
+	position: absolute;
+	left:50px;
+	top:10px;
+	}
+
+ #local {
+	position: absolute;
+    right:250px;
+	top:10px;
+	}
+
+    #bolsa {
+	position: absolute;
+	right:200px;
+	top:10px;
+	}
+    
+    #coracao {
+	position: absolute;
+    right:150px;
+    top:10px;
+	}
+    
+    #perfil{
+	position: absolute;
+	right:100px;
+    top:10px;
+	}
+    #casa {
+	position: absolute;
+	right:50px;
+	top:10px;
+	}
+    #roupa {
+	position: absolute;
+	right:500px;
+	top:10px;
+	}
+
+    #coracao1{
+    position: absolute;
+    left:850px;
+    top:450px;
+	}
+
+    .PP, .P, .M, .G, .GG{
+            transition: all 0.5s;
+            cursor: pointer;
+    }
+    .PP:hover, .P:hover, .M:hover, .G:hover, .GG:hover{
+        background-color: #2d2d2d;
+        color:white;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .PP {
+    top:200px;
+    position: relative;
+    left:550px;
+    background-color:#AFAFAF;
+    width:135px;
+    height:50px;
+    border-radius:8px;
+    text-align:center;
+    font-family:"trebuchet ms";
+    font-size:32px;
+	}
+   
+    .P{
+    top:200px;
+    position: absolute;
+	right:50px;
+    left:700px;
+    background-color:#AFAFAF;
+    width:135px;
+    height:50px;
+    border-radius:8px;
+    text-align:center;
+    font-family:"trebuchet ms";
+    font-size:32px;
+	}
+    
+    .M {
+    top:200px;
+    position: absolute;
+    left:850px;
+    background-color:#AFAFAF;
+    width:135px;
+    height:50px;
+    border-radius:8px;
+    text-align:center;
+    font-family:"trebuchet ms";
+    font-size:32px;
+	}
+    
+    .G{
+    top:265px;
+    position: absolute;
+    left:550px;
+    background-color:#AFAFAF;
+    width:135px;
+    height:50px;
+    border-radius:8px;
+    text-align:center;
+    font-family:"trebuchet ms";
+    font-size:32px;
+	}
+    
+    .GG{
+    top:265px;
+    position: absolute;
+    left:700px;
+    background-color:#AFAFAF;
+    width:135px;
+    height:50px;
+    border-radius:8px;
+    text-align:center;
+    font-family:"trebuchet ms";
+    font-size:32px;
+    }
+
+    .Adicionar{
+    top:450px;
+    position: absolute;
+    left:550px;
+    background-color:#AFAFAF;
+    width:253px;
+    height:75px;
+    border-radius:8px;
+    text-align:center;
+    font-family:"trebuchet ms";
+    font-size:32px;
+    cursor: pointer;
+    }
+    
+    .Adicionar:hover{
+        background: #2d2d2d;
+        color:white;
+        
+    }
+ 
+
+.img-container img{
+   width: 100%;
+   height: 100%;
+
+   transition: transform .5s ease;
+}
+
+.img-container:hover img{
+   -webkit-transform: scale(1.1);
+   transform: scale(1.1);
+}
+
+.preto{
+position: absolute;
+top:510px;
+left:25px;
+width: 31px;
+height:25px;
+}
+.bege{
+position: absolute;
+top:510px;
+left:75px;
+width: 31px;
+height:25px;
+}
+.azul{
+position: absolute;
+top:510px;
+left:115px;
+width: 31px;
+height:25px;
+}
+   
+
+.produto {
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    position: relative;
+    overflow: hidden;
+}
+
+.imagem-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.produto:hover .imagem {
+    transform: scale(1.2);
+}
+
+
+</style>
+
+
+
+    <link rel="stylesheet" href="css/menupaginas.css">
+    <!-- <link rel="stylesheet" href="css/galeria.css"> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- importação das fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@200&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@200;300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@200;300;400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,200;0,300;0,400;1,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,200;0,300;0,400;1,500;1,800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@300;400&family=Bebas+Neue&display=swap" rel="stylesheet">
+<!-- menu sidebar -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
+    <body>
+  <!-- Header -->
+  <header id="header">
+     
+    <nav>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="side-bar  ">
+        <div class="close-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="menu">
+          <!-- <div class="item"><a href="index.html"><i class="fas fa-desktop"></i></a></div> -->
+          <div class="item">
+            <a class="sub-btn">PARTE DE CIMA <i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+              <a href="#" class="sub-item">BLUSAS</a>
+              <a href="#" class="sub-item">TOPS</a>
+              <a href="#" class="sub-item">CASACOS</a>
+            </div>
+            <div class="item">
+            <a class="sub-btn">PARTE DE BAIXO<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+                <a href="#" class="sub-item"><p class="itemmenusub">CALÇA</p></a>
+                <a href="#" class="sub-item"><p class="itemmenusub">SAIA</p></a>
+                <a href="#" class="sub-item"><p class="itemmenusub">SHORT</p></a>
+              </div>
+          </div>
+          <div class="item">
+            <a class="sub-btn">CONJUNTOS<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+                <a href="#" class="sub-item">CURTOS/MEDIOS</p></a>
+                <a href="#" class="sub-item">LONGOS</p></a>
+                <a href="#" class="sub-item">TERCEIRA PEÇA</p></a>
+              
+          </div>
+          <div class="item">
+            <a class="sub-btn">VESTIDOS<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+                <a href="#" class="sub-item"><p class="itemmenusub">CURTOS</p></a>
+                <a href="#" class="sub-item"><p class="itemmenusub">MEDIOS</p></a>
+                <a href="#" class="sub-item"><p class="itemmenusub">LONGO</p></a>
+             
+          </div>
+          
+          
+        </nav>
+          <div class="nomedaloja">
+        <a href="index.html"><h1> Atrinne Moda Feminina</h1></a>
+    </div>
+    <ul>
+        <li>
+            <a href="login.html"> 
+           <span class="iconemenu"> <ion-icon name="shirt-outline"></ion-icon></span>
+           <span class="titulomenu">Produtos</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="login.html"> 
+            <span class="iconemenu"> <ion-icon name="heart-outline"></ion-icon></span>
+            <span class="titulomenu">Favoritos</span>
+        </a>
+        </li>
+
+        <li>
+            <a href="login.html"> 
+            <span class="iconemenu"><ion-icon name="cart-outline"></ion-icon></span>
+            <span class="titulomenu">Carrinho</span>
+        </a>
+        </li>
+
+        <li >
+            <a href="login.html"> 
+           <span class="iconemenu"><ion-icon name="person-outline"></ion-icon></span>
+            <span class="titulomenu">Perfil</span>
+           </a>
+        </li>
+    </ul>
+    
+ </header><!--fim do header index  -->
+
+ 
+ <div class="QuadradoMaior">
+    <img src="imagenstcc/roupa001.webp" width="509" height="492" 
+    id="roupa">
+
+<div class="Texto">
+    <p style="font-size: 63px; font-family: 'Bebas Neue';">Calça Cargo</p>
+    <p style="font-size: 33px; font-family: 'Anybody', cursive;">R$70,00</p>
+    <p style="font-size: 45px">Tamanhos:</p>
+    </div>
+
+    <div class="PP">PP</Div>
+    
+    <div class="P">P</Div>
+    
+    <div class="M">M</Div>
+    
+    <div class="G">G</Div>
+    
+    <div class="GG">GG</Div>
+    
+    <div class="Adicionar">Adicionar ao carrinho</Div>
+
+        
+  <img src="coracao.png" width="77" height="75" 
+  id="coracao1">
+
+  <div class="img-container"><div class="preto">
+    <img src="imagenstcc/preto.png"></div>
+ </div>
+
+ <div class="img-container"><div class="bege">
+    <img src="imagenstcc/bege.png"></div>
+ </div>
+
+ <div class="img-container"><div class="azul">
+    <img src="imagenstcc/azul.png.crdownload"></div>
+ </div>
+
+</div>
+
+
+    
+ </div>
+
+   
+</div>
+
+
+
+
+</div> 
+
+
+<script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"> </script > 
+    <script src="js/menuindex.js"></script>
+    <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"> </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+form{
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 15%;
+    background-color: rgb(183, 183, 183);
+    border-radius: 20px;
+}
+.texto{
+    text-align: center;
+    font-family: 'Bebas Neue';
+    font-size: 22.532px;
+    padding-top: 6.6%;
+}
+.acesso{
+    padding-top: 0.45%;
+    font-size: 31.078px;
+}
+.bolinhacheia{
+    display: flex;
+    margin-left: 47.8%;
+    height: 20px;
+}
+.bolinhavazia{
+    display: flex;
+    padding-left: 0.8%;
+    height: 21px;
+    width: 21px;
+}
+.cpf{
+    margin-left: 36.8% ;
+    padding-top: 6%;
+    height: 30px;
+    display: flex;
+}
+.senha{
+    margin-left: 36.8% ;
+    height: 30px;
+    display: flex;
+    padding-top: 3%;
+    position: relative;
+}
+.confirmarsenha{
+    margin-left: 36.8% ;
+    height: 30px;
+    display: flex;
+    padding-top: 3%;
+    position: relative;
+}
+.olho{
+    padding-left: 1%;
+    padding-top: 1.4%;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    right: 59.5%;
+}
+.olhoconfirmar{
+    padding-left: 1%;
+    padding-top: 1.4%;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    right: 59.5%;
+}
+#botao{
+    border-radius: 20px;
+    width: 200px; 
+    height: 40px;
+    background-color: #AFAFAF;
+    color: #242424;
+    cursor: pointer;
+}
+.espaco{
+    padding-bottom: 91px;
+
+}
+h1{
+    font-family: 'Bebas Neue', sans-serif;
+ }
+ h2, h3, h4, h5{
+    line-height: 3px;
+    font-family: 'Anybody', cursivo;
+ }
+form input{
+    height:35px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.input{
+    height: 300px;
+
+}

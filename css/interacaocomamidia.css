@@ -1,0 +1,57 @@
+section.interacao{
+    background-color: #E7e7e7;
+    padding-left: 10%;
+}
+section.interacaocomamidia{
+    padding-top: 10%;
+}
+.interacaoecomamidia {
+    padding-top: 10%;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 70%; /* Altura padrão de 70% para ambos */
+    margin: 5%;
+}
+
+.videointeracao {
+    width: 30%; /* Largura de 30% para o vídeo */
+    height: 800px;
+    margin-right: 5%; /* Margem à direita para separar o vídeo do carrossel */
+}
+
+.carousel-container {
+    width: 80%;
+    height: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 0.5%;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 0;
+}
+
+.carousel img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1.looks{
+ width:100%;
+ margin-top: 4px;
+ padding: 0;
+ line-height: 80%;
+    font-size: 90px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align:left ;
+} 

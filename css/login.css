@@ -1,0 +1,134 @@
+.facebook{
+   width: 453px;
+   height: 73px;
+   margin-top: 15%;
+   margin-left: 12%;
+   margin-bottom: 63%;
+   
+  }
+  .google{
+   width: 436px;
+   height: 73px;
+   margin-top: 15%;
+   margin-left: 11%;
+   margin-bottom: 63%;      
+  }
+ .container{
+  display: flex;
+  width: 100%;
+  max-width: 1920px;
+  min-width: 1366px;
+  
+ }
+
+  .login{
+   width: 259px;
+   height: 69px;
+   margin-top: -45%;
+   margin-left: 23.5%;
+   display: flex;
+  }
+
+  .cadastro{
+   width: 262px;
+   height: 69px;
+   display: flex;
+   margin-left: 120%;
+  }
+
+/*  JÁ POSSUI UMA CONTA?*/
+  .conta{
+   margin-left: 7%;
+   margin-top: -5%;
+   font-size: 34px;
+   width: 500px;
+   display: flex;
+
+  }
+  
+/* AINDA NÃO É CADASTRADO? */
+  .cadastrar{
+   font-size: 34px;
+   margin-top: -5%;
+   margin-left: 4.5%;
+   width: 491px;
+
+  }
+
+/* ADICIONAR FONTE AQUI  */
+
+  .email{
+   margin-top:  -4%;
+   margin-left: 7.5%;
+   height: 50px;
+   display: flex;
+  }
+
+  .senha{
+   margin-top:  4%;
+   margin-left: 7.5%;
+   height: 50px;
+   display: flex;
+  }
+
+ 
+
+  .emailofertas{
+   margin-top:  2.7%;
+   margin-left: 4.7%;
+   height: 50px;
+   display: flex;
+  }
+  
+   /* Estilo base para o input */
+input {
+  border-radius: 5px;
+  border: none;
+  width:70%;
+  padding: 10px;
+  transition: box-shadow 0.3s, background-color 0.6s;
+}
+
+/* Estilo quando passar o mouse (hover) */
+input:hover {
+  border-bottom: 3px solid rgb(69, 69, 69);
+  background-color: #f0f0f0; /* Cor mais clara quando passar o mouse */
+}
+
+/* Estilo quando estiver focado (clicado) */
+input:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra quando clicado */
+  outline: none; /* Remover a borda de foco padrão */
+}
+
+h1{
+  font-family: 'Bebas Neue', sans-serif;
+}
+h5{
+  line-height: 3px;
+  font-family: 'Anybody', cursivo;
+}
+
+.conta p{
+   padding-top: 15%;
+   font-family: 'Bebas Neue';
+   font-size: 50px;
+   padding-bottom: 20%;
+}
+.cadastrar p{
+   padding-top: 10%;
+   font-family: 'Bebas Neue';
+   font-size: 50px;
+   padding-bottom: 10%;
+   width:500px;
+}
+.ofertas ul{
+   font-family: 'Anybody', cursive;
+}
+.ofertas{
+   margin-top: -4%;
+   font-size: 20px;
+   width: 533px;
+   
+  
+  }

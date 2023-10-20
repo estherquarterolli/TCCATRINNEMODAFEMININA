@@ -1,0 +1,222 @@
+ *{ /*todos os elementos */
+    margin:0;
+    padding:0;
+    box-sizing: border-box; /*não soma o padding com o tamanho dos elementos */
+   
+  }
+  body{
+    display:flex;
+    min-width:1300px;
+    max-width: 1920px;
+    min-height: 100vh;
+    background-color: rgb(237, 237, 237);
+    margin-bottom: 225px;
+    flex-direction: column;
+  }
+ 
+  header{
+    padding:2%;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    min-width: 1300px;
+    max-width: 1920px;
+    display: flex;
+    height:10vh;
+    justify-content: space-between;
+    box-shadow: 0 0 1rem black;
+
+    position: fixed;
+    z-index: 2;
+}
+  
+
+  .nomedaloja a{
+    text-decoration: none;
+    color:white;
+    font-family:'Bebas Neue';
+    font-size: 35px;
+    position: static;
+  }
+ 
+  header.rolagem{
+    background-color: rgb(205, 205, 205) ;
+    color:black;
+  
+    
+}
+
+header.rolagem h1{
+    color: black;
+    
+}
+
+
+  ul{
+    display:flex;
+    gap: 25px;/* da uma separada entre os icons */
+    width: 450px;
+    list-style: none;
+   justify-content: right;
+  }
+  li{
+    list-style: none;
+  }
+  a{
+    list-style: none;
+    text-decoration: none;
+  }
+  header ul li a{
+    position: relative;
+    list-style: none;
+    width: 60px; 
+    height: 60px; /* 5% a menos que o valor original (60px) */
+    background: white;
+    border-radius: 28.5px; /* 5% a menos que o valor original (30px) */
+    cursor: pointer;
+    box-shadow: none;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+header ul li a:hover {
+    width: 171px; /* 5% a menos que o valor original (180px) */
+    box-shadow: 0 18.05px 23.75px rgba(0,0,0,.5); /* 5% a menos que o valor original (19px) */
+}
+
+header ul li ion-icon {
+    font-size: 0.8em; /* 5% a menos que o valor original (1.23em) */
+    color: rgb(194, 194, 194);
+    transition: .2s;
+}
+
+header ul li :hover ion-icon {
+    transform: scale(0);
+}
+
+header ul li .titulomenu {
+    position: absolute;
+    color: #040305;
+    font-weight: bold;
+    font-size: 0.4em; /* 5% a menos que o valor original (0.8em) */
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    transform: scale(0);
+    transition: .5s;
+    font-family: 'Anybody', cursive;
+}
+
+header ul li:hover .titulomenu {
+    transform: scale(1);
+    transition-delay: .1s;
+}
+
+
+  .side-bar{
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter:blur(15px);
+    width: 290px;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left: -100%;
+    overflow-y: auto;
+    transition: 0.6s ease;
+    transition-property: left;
+  }
+  
+  .side-bar.active{
+    left: 0;
+  }
+  
+  .side-bar .menu{
+    width: 100%;
+    margin-top: 80px;
+  }
+  
+  .side-bar .menu .item{
+    position:relative;
+    cursor:pointer;
+    align-items: start;
+  }
+  
+  .side-bar .menu .item a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 60px;
+    font-family: 'Anybody', cursive;
+  }
+  
+  .side-bar .menu .item a:hover{
+    background: #c5c5c58d;
+    transition: 0.3s ease;
+  
+  }
+  
+  .side-bar .menu .item i{
+    margin-right: 15px;
+  }
+  
+  .side-bar .menu .item a .dropdown{
+  
+    position: absolute;
+    right:0;
+    margin: 20px;
+    transition: 0.3s ease;
+  }
+  
+  .side-bar .menu .item .sub-menu{
+    background: rgba(255,255,255 , 0.1);
+    display:none;
+  }
+  
+  .side-bar .menu .item .sub-menu a{
+    padding-left: 80px;
+  }
+  
+  .rotate{
+    transform: rotate(90deg);
+  }
+  
+  .close-btn{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    right: 0;
+    margin: 25px;
+    cursor: pointer;
+  }
+  
+  
+  header .menu-btn i{
+    position:relative;
+    list-style: none;
+    width:60px;
+    height: 60px;
+    background: white;
+    border-radius: 30px;
+    cursor:pointer;
+    box-shadow: none;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    color:rgb(194, 194, 194);
+  }
+
+  nav{
+    width:200px;
+    margin-left: 4%;
+  }
+
+  h1{
+    font-family: 'Bebas Neue';
+    font-size: 100px;
+    text-align: center;
+  }
+

@@ -1,0 +1,70 @@
+section.novidades{
+    margin-top: 5%;
+    padding-bottom: 5%;
+}
+
+.novidades-container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 13%;
+    padding-left: 5%;
+    padding: 20px;
+}
+
+h1.novidades{
+    text-align: center;
+    align-items: center;
+    font-family: 'Bebas Neue';
+    font-size: 70px;
+}
+.novidades-slider {
+    display: flex;
+    justify-content: space-between;
+}
+
+.novidades-item {
+    flex: 0 0 calc(25% - 2%); /* 4 itens na frente com 2% de espaçamento entre eles */
+    text-align: left;
+    margin-right: 2%;
+    position: relative;
+}
+
+.novidades-item img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0.8); /* filtro de redução de brilho  */
+}
+
+.novidades-item:hover img {
+    transform: scale(1.05); /* Aumenta a imagem em hover */
+    filter: brightness(1);
+}
+
+.novidades-item h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 30px;
+    text-align: left; /* Alinha o título para a esquerda */
+}
+
+
+.quadradinho {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: inline-flex;
+    flex-shrink: 0;
+    margin-right: 5px;
+   
+}
+
+
+.novidades-item h3 {
+    text-align: left; /* Alinha o preço para a esquerda */
+    margin-top: 5px;
+    font-family: 'Anybody', cursivo;
+}
