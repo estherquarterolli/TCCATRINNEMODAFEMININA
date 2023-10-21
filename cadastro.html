@@ -39,6 +39,8 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
    <link rel="stylesheet" href="style.css">
    
+                               <!-- link do site de icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
  
 </head>
 <body>
@@ -157,28 +159,18 @@
                   <!-- SENHA -->
 <div class="senha">
     <input type="password" name="senha" id="senha" placeholder="Crie uma nova senha">
-   
-    <!-- OLHO DA SENHA -->
-   <div class="olho">
-    <i class="bi bi-eye" id="olhosenha" onclick="mostrarSenha()"></i>
+    <i class="bi bi-eye" id="senhaolho" onclick="mostrarsenha()"></i>
 </div>
 
-<!-- JS DO OLHOOO -->
-<script src="js/olho.js"></script>
-</div>
 
         <!-- CONFIRMAR SENHA -->
 <div class="confirmarsenha">
     <input type="password" name="senhaconfirmar" id="senhaconfirmar" placeholder="Confirme sua nova senha">
-   
-    <!-- OLHO DE CONFIRMAR SENHA -->
-   <div class="olhoconfirmar">
-    <i class="bi bi-eye" id="olhoconfirmarsenha" onclick="mostrarSenha2()"></i>
+    <div class="olhosenha">
+    <i class="bi bi-eye" id="senhaolho2" onclick="mostrarSenha2()"></i>
+    </div>
 </div>
 
-<!-- JS DE CONFIRMAR SENHA OLHOOO -->
-<script src="js/olhoconfirmar.js"></script>
-</div>
 </div>
         <!-- PRECISA COLOCAR LINK NO BOTÃO -->
                 <!-- BOTÃO CONFIRMAR -->
@@ -203,7 +195,7 @@
         <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"> </script >
       
            <script src="js/menuindex.js"></script>
-           <script src="js/cadastro1.js"></script>
+           <script src="js/cadastro.js"></script>
 
 </body>
 </html>
