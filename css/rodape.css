@@ -1,13 +1,13 @@
 
 section .footer {
-    max-width:1920px;
+    max-width:1980px;
     padding:0;
     height:225px;
     background: #000000;
     position: absolute;
     bottom:0;
  
-} */
+} 
 
 .footer{
     background: #000000;

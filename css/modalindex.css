@@ -1,30 +1,6 @@
 
-.form-container{
-   width: 1920px;
-  height: 1080px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    /* transform: translate(-50%, -50%); */
-    background-color: rgba(0, 0, 0, 0.362);
-    display: none;
 
-    z-index: 100000;
-}
-.container{
-    width: 600px;
-    height: 400px;
-    position: absolute;
-    border-radius: 20px;
-   left: 30%;
-   top: 20%;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-}
+
 
 .container form{
     background-color: #ffffff96;
@@ -113,4 +89,65 @@ form input[type=submit]{
     background-color: black;
     color:white;
 
+}
+
+@media screen and (max-width: 1980px) {
+    .form-container{
+        width: 1920px;
+       height: 1000vh;
+         position: fixed;
+         top: 0;
+         left: 0;
+         /* transform: translate(-50%, -50%); */
+         background-color: rgba(0, 0, 0, 0.362);
+         display: none;
+     
+         z-index: 100000;
+     }
+     .container{
+        width: 600px;
+        height: 400px;
+        position: absolute;
+        border-radius: 20px;
+       left: 30%;
+       top: 20%;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+}
+@media screen and (max-width: 1366px) {
+   
+    .form-container{
+        width: 1390px;
+       height: 110vh;
+         position: fixed;
+         top: 0;
+         left: 0;
+         /* transform: translate(-50%, -50%); */
+         background-color: rgba(0, 0, 0, 0.362);
+         display: none;
+      z-index: 100000;
+     }
+     .container{
+        width: 600px;
+        height: 400px;
+        position: absolute;
+        border-radius: 20px;
+       /* left: 30%;
+       top: 20%; */
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+}
+@media screen and (max-width: 1366px) {
+   
+    
 }

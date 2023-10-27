@@ -46,12 +46,35 @@ section.interacaocomamidia{
     height: auto;
 }
 
+@media screen and (max-width: 1980px) {
+    
 h1.looks{
- width:100%;
- margin-top: 4px;
- padding: 0;
- line-height: 80%;
-    font-size: 90px;
-    font-family: 'Bebas Neue', sans-serif;
-    text-align:left ;
-} 
+    width:100%;
+    margin-top: 4px;
+    padding: 0;
+    line-height: 80%;
+       font-size: 90px;
+       font-family: 'Bebas Neue', sans-serif;
+       text-align:left ;
+   } 
+    
+}
+@media screen and (max-width: 1366px) {
+   
+h1.looks{
+    width:100%;
+    margin-top: 4px;
+    padding: 0;
+    line-height: 80%;
+       font-size: 75px;
+       font-family: 'Bebas Neue', sans-serif;
+       text-align:start;
+   }  
+    
+}
+
+@media screen and (max-width: 1366px) {
+    
+    
+}
+

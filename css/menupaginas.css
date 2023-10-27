@@ -6,7 +6,7 @@
   }
   body{
     display:flex;
-    min-width:1300px;
+    min-width:686px;
     max-width: 1920px;
     min-height: 100vh;
     background-color: rgb(237, 237, 237);
@@ -14,22 +14,37 @@
     flex-direction: column;
   }
  
+ 
+@media screen and (max-width: 1980px) {
   header{
     padding:2%;
     align-items: center;
     justify-content: center; 
     width: 100%;
-    min-width: 1300px;
-    max-width: 1920px;
     display: flex;
     height:10vh;
     background-color: rgb(181, 181, 181);
     justify-content: space-between;
     box-shadow: 0 0 1rem black;
-
     position: fixed;
     z-index: 2;
 }
+  }
+  @media screen and (max-width: 1366px) {
+    header{
+      padding:2%;
+      align-items: center;
+      justify-content: center; 
+      width: 100%;
+      display: flex;
+      height:10vh;
+      background-color: rgb(181, 181, 181);
+      justify-content: space-between;
+      box-shadow: 0 0 1rem black;
+      position: fixed;
+      z-index: 2;
+  }
+    }
   
 
   .nomedaloja a{
@@ -41,10 +56,6 @@
   }
  
  
-
-
-
-
   ul{
     display:flex;
     gap: 25px;/* da uma separada entre os icons */
@@ -213,3 +224,17 @@ header ul li:hover .titulomenu {
     text-align: center;
   }
 
+  @media screen and (max-width: 1980px) {
+    h1{
+      font-family: 'Bebas Neue';
+      font-size: 100px;
+      text-align: center;
+    }
+    }
+    @media screen and (max-width: 1366px) {
+      h1{
+        font-family: 'Bebas Neue';
+        font-size: 75px;
+        text-align:right;
+      }
+      }

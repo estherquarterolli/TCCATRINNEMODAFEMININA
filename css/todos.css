@@ -1,0 +1,15 @@
+*{ /*todos os elementos */
+    margin:0;
+    padding:0;
+    box-sizing: border-box; /*não soma o padding com o tamanho dos elementos */
+   
+  }
+  body{
+    display:flex;
+    margin:0;
+    padding:0;
+    min-height: 100vh;
+    background-color: rgb(255, 0, 0);
+    width: 100%;
+    flex-direction: column;
+  }

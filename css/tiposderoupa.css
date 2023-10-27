@@ -11,23 +11,131 @@ section.tiposderoupa {
 }
 .carrossel-container {
     width: 150%;
-    max-width: 1600px;
     margin: 0 auto;
     padding-top: 3%;
     padding-bottom: 8%;
-   
-    overflow: hidden;
+   overflow: hidden;
     position: relative;
 }
 
-.carrossel {
+@media screen and (max-width: 1980px) {
+    .carrossel-container {
+        width: 150%;
+        width: 1980px;
+        margin: 0 auto;
+        padding-top: 3%;
+        padding-bottom: 8%;
+       overflow: hidden;
+        position: relative;
+    }
+    
+    .tiposderoupa-slide {
+        flex: 0 0 23%;
+        margin-right: 10%;
+        margin-bottom: 20px;
+        width:269px;
+        height: 544px;
+        padding: 10px;
+        background-color: aqua;
+        text-align: center;
+    }
+    .prev, .next {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 10px 15px;
+        outline: none;
+        z-index:4;
+    }
+}
+@media screen and (max-width: 1366px) {
+    .carrossel-container {
+        width: 150%;
+        gap:5%;
+        width: 980px;
+        margin: 0 auto;
+        padding-top: 3%;
+        padding-bottom: 8%;
+       overflow: hidden;
+        position: relative;
+    }
+
+    .tiposderoupa-slide {
+        flex: 0 0 23%;
+        margin-right: 10%;
+        margin-bottom: 20px;
+        width:269px;
+        height: 544px;
+        padding: 10px;
+        background-color: aqua;
+        text-align: center;
+    }
+    .prev, .next {
+        position: relative;
+        top: 40%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 3px 15px;
+        outline: none;
+        z-index:2;
+    }
+}
+@media screen and (max-width: 600px) {
+    .carrossel-container {
+        width: 150%;
+        gap:5%;
+        width:220px;
+        margin: 0 auto;
+        padding-top: 3%;
+        padding-bottom: 8%;
+       overflow: hidden;
+        position: relative;
+    }
+
+    .tiposderoupa-slide {
+        flex: 0 0 23%;
+        margin-right: 2%;
+        margin-bottom: 20px;
+        width:200px;
+        height: 544px;
+        padding: 10px;
+        background-color: aqua;
+        text-align: center;
+    }
+    .prev, .next {
+        position: relative;
+        top: 40%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 3px 15px;
+        outline: none;
+        z-index:2;
+    }
+}
+
+
+
+
+.content-container .carrossel {
     display: flex;
     transition: all 0.5s ease;
 }
 
 .tiposderoupa-slide {
     flex: 0 0 25%;
-    margin-right: 0%;
     text-align: center;
 }
 
