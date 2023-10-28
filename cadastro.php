@@ -1,4 +1,36 @@
+<?php
 
+@include 'conexao.php';
+
+if (isset($_POST['submit'])){
+
+$cpf = mysqli_real_escape_string($conn, $_POST['cfp']);
+$senha = md5( $_POST['senha']);
+$CSenha = md5( $_POST['senhaconfirmar']);
+
+$select = " SELECT * FROM cadastro_usuario WHERE cpf = '$cpf' && senha = '$senha' ";
+
+$result = mysqli_query($conn, $select);
+
+if (mysqli_num_rows($result) > 0) {
+
+    $error[] = "Esse uauário já existe!";
+
+}
+else{
+
+    if($senha != $CSenha){
+
+    $error[] = "Senha não correspondida!";
+}
+else{
+    $inserir = "INSERT INTO cadastro_usuario(cpf, senha, Csenha) VALUES ('$cpf', '$senha', '$CSenha')";
+    mysqli_query($conn, $inserir);
+    header('localition: login.html');
+        }
+    }
+};
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,7 +124,7 @@
               
             </nav>
               <div class="nomedaloja">
-            <a href="index.html"><h1> Atrinne  tilt Moda Feminina</h1></a>
+            <a href="index.html"><h1> Atrinne Moda Feminina</h1></a>
         </div>
         <ul>
             <li>
@@ -127,7 +159,8 @@
      </header><!--fim do header  -->
 
      <section class="cadastroum">
-        <form>
+        <!-- FORMULÁRIOOOOOOOOOOOO -->
+        <form method="post">
         
             <!-- parte 1 de 2 -->
             <div class="texto">
@@ -150,22 +183,36 @@
         </div>
             
                 </div>  
+
+<?php
+
+if(isset($error)){
+
+foreach($error as $error){
+
+    echo '<span class="mensagemErro">'.$error.'</span>';
+}
+}
+
+?>
+
+
         <div class="input">
                 <!-- CPF -->
         <div class="cpf">
-            <input type="number" name="cfp" id="cpf" placeholder="Digite o seu CPF">
+            <input type="number" name="cfp" id="cpf" required placeholder="Digite o seu CPF">
         </div>
         
                   <!-- SENHA -->
 <div class="senha">
-    <input type="password" name="senha" id="senha" placeholder="Crie uma nova senha">
+    <input type="password" name="senha" id="senha" required placeholder="Crie uma nova senha">
     <i class="bi bi-eye" id="senhaolho" onclick="mostrarsenha()"></i>
 </div>
 
 
         <!-- CONFIRMAR SENHA -->
 <div class="confirmarsenha">
-    <input type="password" name="senhaconfirmar" id="senhaconfirmar" placeholder="Confirme sua nova senha">
+    <input type="password" name="senhaconfirmar" id="senhaconfirmar" required placeholder="Confirme sua nova senha">
     <div class="olhosenha">
     <i class="bi bi-eye" id="senhaolho2" onclick="mostrarSenha2()"></i>
     </div>
@@ -175,10 +222,9 @@
         <!-- PRECISA COLOCAR LINK NO BOTÃO -->
                 <!-- BOTÃO CONFIRMAR -->
                 <br>
-        <div class="botao">
         
-            <a href="cadastro2.html"><center><input type="submit" value="CONFIRMAR" id="botao"></a></center>
-        </div>
+           <center> <a href="cadastro2.html"><input type="submit" name="submit" value="CONFIRMAR" id="botao">saas</a> </center>
+        
     </div>
         <div class="espaco">
         
