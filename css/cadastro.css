@@ -93,3 +93,13 @@ input{
     font-size: 20px;
 
 }
+
+.form .mensagemErro{
+
+    margin: 10px 0px;
+    display: block;
+    background: crimson;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+}
