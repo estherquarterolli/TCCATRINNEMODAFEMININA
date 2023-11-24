@@ -7,6 +7,7 @@ let products = {
       price: "179,00",
       image: "imagenstcc/Conjunto Amanda. R$ 179,00_.jpg",
     },
+
     {
       productName: "Conjunto Dany",
       category: "Conjuntos",
@@ -120,6 +121,12 @@ let products = {
       price: "109,00",
       image: "imagenstcc/Vestido Joice. R$ 109,00_.jpg",
     },
+    {
+      productName: "Vestido Joice",
+      category: "Vestidos",
+      price: "109,00",
+      image: "imagenstcc/Vestido Joice. R$ 109,00_.jpg",
+    },
   ],
 };
 
@@ -223,3 +230,6 @@ function redirectToProduct(product) {
   let queryString = "?product=" + encodeURIComponent(JSON.stringify(product));
   window.location.href = 'produto.html' + queryString;
 }
+
+//exportar varíavel para outra página. 
+module.exports = products;
