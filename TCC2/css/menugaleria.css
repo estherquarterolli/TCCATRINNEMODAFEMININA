@@ -1,0 +1,108 @@
+.side-bar{
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter:blur(15px);
+    width: 290px;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left: -100%;
+    overflow-y: auto;
+    transition: 0.6s ease;
+    transition-property: left;
+    }
+    
+    .side-bar.active{
+    left: 0;
+    }
+    
+    .side-bar .menu{
+    width: 100%;
+    margin-top: 80px;
+    }
+    
+    .side-bar .menu .item{
+    position:relative;
+    cursor:pointer;
+    align-items: start;
+    }
+    
+    .side-bar .menu .item a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 60px;
+    font-family: 'Anybody', cursive;
+    }
+    
+    .side-bar .menu .item a:hover{
+    /* background: #0000008d; */
+    transition: 0.3s ease;
+    
+    }
+    
+    .side-bar .menu .item i{
+    margin-right: 15px;
+    }
+    
+    .side-bar .menu .item a .dropdown{
+    
+    position: absolute;
+    right:0;
+    margin: 20px;
+    transition: 0.3s ease;
+    }
+    
+    .side-bar .menu .item .sub-menu{
+    background: rgba(255,255,255 , 0.1);
+    display:none;
+    }
+    
+    .side-bar .menu .item .sub-menu a{
+    padding-left: 80px;
+    }
+    
+    .rotate{
+    transform: rotate(90deg);
+    }
+    
+    .close-btn{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    right: 0;
+    margin: 25px;
+    cursor: pointer;
+    }
+    
+    
+    header .menu-btn i{
+    position:relative;
+    list-style: none;
+    width:60px;
+    height: 60px;
+    background: white;
+    border-radius: 30px;
+    cursor:pointer;
+    box-shadow: none;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    color:rgb(194, 194, 194);
+    }
+    
+    nav{
+    width:200px;
+    margin-left: 4%;
+    }
+    
+    .ICONS{
+      display: flex;
+      margin-right: 5%;
+      /* justify-content: flex-end; */
+      width: 300PX;
+      }
+    
+    

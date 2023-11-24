@@ -1,0 +1,14 @@
+#demo{
+    margin: 0;
+    padding:0;
+    z-index: 1;
+    position: relative;
+    /* height: 100vh; */
+
+  
+}
+@media screen and (max-width: 1000px) {
+.carousel-item img{
+    height: 70vh;
+}
+}

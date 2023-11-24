@@ -1,0 +1,20 @@
+
+@media screen and (max-width: 1000px) {
+    .bannerpreorder img{
+        overflow-x: hidden;
+        /* border: 5px solid blue; */
+       min-width:600px;
+       max-width: 800px;
+       height: 120px; /* Ajuste a largura máxima conforme necessário */
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .bannerpreorder img{
+        overflow-x: hidden;
+        /* border: 5px solid rgb(64, 255, 0); */
+        min-width:270px;
+        max-width: 400px;
+       height: 120px; /* Ajuste a largura máxima conforme necessário */
+    }
+}
