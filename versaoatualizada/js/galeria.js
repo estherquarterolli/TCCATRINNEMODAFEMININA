@@ -127,6 +127,12 @@ let products = {
       price: "109,00",
       image: "imagenstcc/Vestido Joice. R$ 109,00_.jpg",
     },
+    {
+      productName: "Vestido Joice",
+      category: "Vestidos",
+      price: "109,00",
+      image: "imagenstcc/Vestido Joice. R$ 109,00_.jpg",
+    },
   ],
 };
 
