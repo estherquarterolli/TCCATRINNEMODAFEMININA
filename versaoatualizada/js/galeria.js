@@ -109,7 +109,7 @@ let products = {
       image: "imagenstcc/Macaquinho Angel. R$ 119,00.jpg",
     },
     //Vestidos:
-    {
+    { 
       productName: "Vestido Corcovado",
       category: "Vestidos",
       price: "239,00",
