@@ -27,6 +27,13 @@ let products = {
       price: "59,90",
       image: "imagenstcc/Body Liz. R$ 59,90_.jpg",
     },
+    {
+      productName: "Body Liz",
+      category: "Preços-maiores",
+      category:"Maisvendidos",
+      price: "59,90",
+      image: "imagenstcc/Body Liz. R$ 59,90_.jpg",
+    },
     ],
   };
   
