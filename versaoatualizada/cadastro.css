@@ -1,0 +1,196 @@
+form{
+    margin-right: 25%;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    margin-left: 25%;
+    margin-top: 10%;
+    background-color: rgb(167, 167, 167);
+    border-radius: 20px;
+}
+
+
+.texto{
+    text-align: center;
+    font-size: 34px;
+    padding-top: 6.6%;
+    font-family: 'Anybody', cursive;
+   
+}
+.acesso{
+    padding-top: 0.45%;
+   font-size: 40px;
+
+}
+.bolinhacheia{
+    display: flex;
+    margin-left: 47.8%;
+}
+.bolinhavazia{
+    display: flex;
+    padding-left: 0.8%;
+}
+.cpf{
+    margin-left: 28% ;
+    padding-top: 3%;
+    height: 73px;
+    display: flex;
+}
+.senha{
+    margin-left: 28% ;
+    height: 73px;
+    display: flex;
+    padding-top: 3%;
+    position: relative;
+}
+.senha i{
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 39.5%;
+    top: 45%;
+}
+.olhosenha{
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 39.5%;
+    top: 45%;
+}
+.confirmarsenha{
+    margin-left: 28% ;
+    height: 73px;
+    display: flex;
+    padding-top: 3%;
+    position: relative;
+    
+}
+#botao{
+    border-radius: 20px;
+    width: 300px; 
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 5%;
+    font-size: 25px;
+
+}
+/* Estilo quando passar o mouse (hover) */
+#botao:hover {
+    font-size: 25px;
+    background-color: #ffffff; /* Cor mais clara quando passar o mouse */
+    color: black;
+  }
+.espaco{
+    padding-bottom: 91px;
+
+}
+input{
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    width:400px;
+    font-family: 'Anybody', cursive;
+    font-size: 20px;
+
+}
+
+.form .mensagemErro{
+
+    margin: 10px 0px;
+    display: block;
+    background: crimson;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.concluir{
+    padding-top: 0.45%;
+    font-size: 31.078px;
+    width: 900px;
+    padding-left: 3%;
+    display: flex;
+}
+
+.nome{
+    margin-left: 28% ;
+    padding-top: 3%;
+    height: 73px;
+    display: flex;
+}
+.email{
+    margin-left: 28% ;
+    padding-top: 3%;
+    height: 73px;
+    display: flex;
+    position: relative;
+}
+.tipo{
+    margin-left: 28% ;
+    padding-top: 3%;
+    height: 100px;
+    display: flex;
+    position: relative; 
+}
+.nascimento{
+    margin-left: 28% ;
+    padding-top: 3%;
+    height: 73px;
+    display: flex;
+}
+.celular{
+    margin-left: 28% ;
+    padding-top: 3%;
+    height: 73px;
+
+    display: flex;
+}
+.ofertas{
+    margin-left: 36.5% ;
+    height: 40px;
+    display: flex;
+    padding-top: 1%; 
+    width: 280px;
+}
+input[type="checkbox"] {
+    cursor: pointer;
+}
+.textoofertas{
+    padding-top: 2%;
+}
+.termos{
+    margin-left: 36.5% ;
+    height: 43px;
+    display: flex;
+    padding-top: 1.5%; 
+    width: 280px;
+}
+.textotermos{
+    padding-top: 2.3%;
+
+}
+#botao{
+    border-radius: 20px;
+    width: 250px; 
+    height: 60px;
+    background-color: #ff7f50;
+    color: #242424;
+    cursor: pointer;
+}
+.botao{
+    margin-top: 95%;
+}
+body{
+    background-image: url(imagenstcc/Rectangle\ 47.png);
+
+}
+.banco{
+    background-color: red;
+    margin-top: 5%;
+}
+
+/* DIV QUE APARECE OS ERROS NO FORMULÁRIO */
+.mensagem{
+    color: rgb(255, 255, 255);
+    
+}

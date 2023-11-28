@@ -144,7 +144,7 @@ foreach($error as $error){
 
      <section class="cadastroum">
         <!-- FORMULÁRIOOOOOOOOOOOO -->
-        <form method="post" action="">
+        <form method="post">
         
             <!-- parte 1 de 2 -->
             <div class="texto">
@@ -164,8 +164,8 @@ if (isset($_POST['submit'])){
   $email = $_POST['email'];
   $celular = $_POST['celular'];
   $cpf = mysqli_real_escape_string($conn, $_POST['cpf']);
-  $senha = ( $_POST['senha']);
-  $CSenha = ( $_POST['senhaconfirmar']);
+  $senha = md5( $_POST['senha']);
+  $CSenha = md5( $_POST['senhaconfirmar']);
   
 
   };
@@ -205,12 +205,8 @@ $cpfmensagem=   $error[] = "<br><center>Este CPF já está sendo usado!</center>
           
                  $sucesso =  "DADOS INSERIDOS COM SUCESSO!!!";
                  echo "$sucesso";
-                  $inserir = "INSERT INTO cadastro(nome, email, celular, cpf, senha, Csenha) VALUES ('$nome','$email','55$celular','$cpf', '$senha', '$CSenha')";
+                  $inserir = "INSERT INTO cadastro(nome, email, celular, cpf, senha, Csenha) VALUES ('$nome','$email','$celular','$cpf', '$senha', '$CSenha')";
                   mysqli_query($conn, $inserir);
-
-                  $inserirLogin = "INSERT INTO dados_login(email_id, senha) VALUES ('$email','$senha')";
-                  mysqli_query($conn, $inserirLogin);
-
               }
           
           
@@ -290,9 +286,6 @@ $cpfmensagem=   $error[] = "<br><center>Este CPF já está sendo usado!</center>
       
            <script src="js/menuindex.js"></script>
            <script src="js/cadastro.js"></script>
-
-
-      
 
 </body>
 </html>
