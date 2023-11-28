@@ -28,6 +28,7 @@ header{
     display: flex;
     align-items: center;
     margin-left: 5%;
+    /* margin-bottom:3%; */
 }
 
 .botoes-header {
@@ -35,7 +36,7 @@ header{
     flex-direction: row;
     gap: 35px;
     align-items: center;
-    margin-bottom:2%;
+    /* margin-top:3%; */
     margin-right: 5%;
 }
 

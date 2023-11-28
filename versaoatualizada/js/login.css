@@ -1,0 +1,7 @@
+.container-login-record{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+}
