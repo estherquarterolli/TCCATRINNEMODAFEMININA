@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300;500&display=swap');
 *,
 *::before,
 *::after {
@@ -15,10 +16,10 @@ input {
 
 main {
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   overflow: hidden;
-  background-color: #888888;
-  padding: 2rem;
+  background-color: #a4a4a4;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,46 +80,36 @@ form.sign-up-form {
 }
 
 .logo img {
-  width:300px;
-  height: 40px;
+  width: 27px;
   margin-right: 0.3rem;
 }
 
 .logo h4 {
   font-size: 1.1rem;
-  /* margin-top: -9px; */
+  margin-top: -9px;
   letter-spacing: -0.5px;
   color: #151111;
 }
 
 .heading h2 {
-  font-size: 2.1rem;
-  /* font-weight:300; */
+  font-size: 2.2em;
+  font-weight: 400;
   color: #151111;
   font-family: 'BEBAS NEUE';
-  width: 500px;
+}
+.heading-login{
+  font-size: 1.9em;
+  font-weight: 400;
+  color: #151111;
+  font-family: 'BEBAS NEUE';
 }
 
 .heading h6 {
   color: #bababa;
-  /* font-weight: 400; */
+  font-weight: 400;
   font-size: 0.75rem;
   display: inline;
 }
-.heading-login h2 {
-    font-size: 4.5em;
-    /* font-weight:500; */
-    color: #151111;
-    font-family: 'BEBAS NEUE';
-    width: 500px;
-  }
-  
-  .heading-login h6 {
-    color: #bababa;
- /* font-weight: 400;  */
-    font-size: 0.75rem;
-    display: inline;
-  }
 
 .toggle {
   color: #151111;
@@ -137,6 +128,7 @@ form.sign-up-form {
   height: 37px;
   margin-bottom: 2rem;
 }
+
 
 .input-field {
   position: absolute;
@@ -222,13 +214,13 @@ main.sign-up-mode .carousel {
   left: 0%;
 }
 
-.carousel {
+  .carousel {
   position: absolute;
   height: 100%;
   width: 55%;
   left: 45%;
   top: 0;
-  background-color: #c9c9c9;
+  background-color: #e1e1e1;
   border-radius: 2rem;
   display: grid;
   grid-template-rows: auto 1fr;

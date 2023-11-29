@@ -1,3 +1,14 @@
+<?php
+require "conexao.php";
+// if(!empty($_SESSION["id"])){
+//   $id = $_SESSION["id"];
+//   $result = mysqli_query($conn, "SELECT * FROM dados_login WHERE id = $id");
+//   $row = mysqli_fetch_assoc($result);
+// }else{
+//   header("Location: login.php");
+// }
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,6 +23,7 @@
     <link rel="stylesheet" href="css/interacaocomamidia.css">
     <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/mapa.css">
+    <link rel="stylesheet" href="css/modallogin.css">
     <title>Atrinne Moda Feminina</title>
 
     <!-- ionicon -->
@@ -612,9 +624,19 @@
 </footer>
 </div>
 
+<button id="openModal">X</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Bem vindo fulaninho do TCC</p>
+        </div>
+    </div>
+
 <script src="js/header.js"></script>
     <script src="js/interacaocomamidia.js"></script>
     <script src="js/tipos-maisvendidos.js"></script>
+    <script src="js/modallogin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- ionicon -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
