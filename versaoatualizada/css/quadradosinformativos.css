@@ -1,0 +1,11 @@
+
+.informativos img{
+width:300px;
+height: 300px;
+} 
+.container-informativos{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+}
