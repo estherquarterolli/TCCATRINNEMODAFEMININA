@@ -1,93 +1,97 @@
-<!-- PHP LOGIN -->
-<?php
-include('conexao.php');
-if(isset($_POST["submit"])){
-    $email = $_POST['email-login'];
-    $senha = $_POST['senha-login'];
-    $result = mysqli_query($conn, "SELECT * FROM dados_login WHERE email_id = '$email' OR senha = '$senha'");
-    $row = mysqli_fetch_assoc($result);
-    if(mysqli_num_rows($result) >0){
-        if($senha == $row["senha"]){
-            $_SESSION["login"] = true;
-            $_SESSION["id"] = $row["id"];
-            header("Location: index.php");
-        }
+                      <!-- CADASTRO -->
+                      <?php
+if(!empty($_SESSION['id'])){
+  header('location: index.php');
+}
+
+
+
+
+include 'conexao.php';
+if(isset($_POST['submitCADASTRO'])){
+  $nome = mysqli_real_escape_string($conn, $_POST['nome_cadastro']);
+  $email = mysqli_real_escape_string($conn, $_POST['email_cadastro']);
+  $telefone = $_POST['telefone_cadastro'];
+  $cpf = mysqli_real_escape_string($conn, $_POST['cpf_cadastro']);
+  $senha = $_POST['senha_cadastro'];
+  $ConfirmarSenha = $_POST['confirmarsenha_cadastro'];
+
+  $select = " SELECT * FROM cadastro WHERE Email = '$email' && Senha = '$senha' ";
+  $result = mysqli_query($conn, $select);
+
+  if(mysqli_num_rows($result) > 0){
+
+    $error[] = 'Já existe um usuário com este Email e Senha!';
+  }else{
+
+    if($senha != $ConfirmarSenha){
+    $error[] = 'As senhas não correspondem!';
+
+    }else{
+      $resultcpf = " SELECT * FROM cadastro WHERE Cpf = '$cpf' ";
+      $resultadoCPF = mysqli_query($conn, $resultcpf);
+
+    if(mysqli_num_rows($resultadoCPF) > 0){
+    $error[] = 'Este CPF já está em uso!';
+
+    }else{
+
+    $resultemail = "SELECT * FROM cadastro WHERE Email = '$email' ";
+    $result = mysqli_query($conn, $resultemail);
+
+    if(mysqli_num_rows($result) > 0){
+    $error[] = 'Este EMAIL já está em uso!';
 
     }
-else{
-    
-}
-if(isset($error)){
 
-foreach($error as $error){
+    else{
+      $inserir = "INSERT INTO cadastro(Nome, Email, Telefone, Cpf, Senha) VALUES ('$nome','$email','$telefone','$cpf','$senha')";
+      mysqli_query($conn, $inserir);
+      header('location: index.php');
+    }
+  }
+  }
+} 
+}
+?>
+                    <!-- LOGIN -->
+<?php
+include('conexao.php');
+if(isset($_POST["submitLOGIN"])){
+  if(isset($_POST['email_login']) || isset($_POST['senha_login'])){
 
-    echo '<span class="mensagemErro">'.$error.'</span>';
-}
-}
-}
+    $email = $conn->real_escape_string($_POST['email_login']);
+    $senha = $conn->real_escape_string($_POST['senha_login']);
+
+    $sql_code = "SELECT * FROM cadastro WHERE Email = '$email' AND Senha = '$senha' ";
+    $sql_query = $conn->query($sql_code);
+
+    $quantidade = $sql_query->num_rows;
+
+    if($quantidade == 1){
+
+      $usuario = $sql_query->fetch_assoc();
+
+      if(!isset($_SESSION)){
+        session_start();
+      }
+
+      $_SESSION['user'] = $usuario['IdCadastro'];
+      $_SESSION['name'] = $usuario['Nome'];
+
+      header('location: index.php'); 
+    }
+    else{
+      echo "Email ou Senha incorretos!";
+    }
+
+  }
+  }
 
 ?>
-<!-- FIM PHP LOGIN -->
 
 
-<!-- PHP CADASTRO -->
 
-<?php
-            
-if (isset($_POST['submit'])){
-
-  $nome = $_POST['nome-cadastro'];
-  $email = $_POST['email-cadastro'];
-  $celular = $_POST['telefone-cadastro'];
-  $cpf = mysqli_real_escape_string($conn, $_POST['cpf-cadastro']);
-  $senha = ( $_POST['senha-cadastro']);
-  $CSenha = ( $_POST['confirmarsenha-cadastro']);
-
-  };
-
-  $select = " SELECT * FROM cadastro WHERE cpf = '$cpf' && senha = '$senha' ";
-  
-  $result = mysqli_query($conn, $select);
-  
-
-            if (mysqli_num_rows($result) > 0) {
-
-           $msguser =   $error[] =  "<br><center>Esse usuário já existe!</center><br>";
-              echo "$msguser";
-          }
-          else{
-
- $resultcpf = " SELECT * FROM cadastro WHERE cpf = '$cpf' ";
- $resultcpf = mysqli_query($conn, $resultcpf);
-
-
-if(mysqli_num_rows ($resultcpf) > 0) {
-
-$cpfmensagem=   $error[] = "<br><center>Este CPF já está sendo usado!</center><br>";
-    echo "$cpfmensagem";          
-}else{
-                  
-              $resultemail = "SELECT * FROM cadastro WHERE email = '$email' ";
-              $resultemail = mysqli_query($conn, $resultemail);
-          
-          
-              if(mysqli_num_rows ($resultemail) > 0){
-                $email=  $error[] = "<br><center>Este EMAIL já está sendo usado!</center><br>";
-                echo "$email";
-              }else{
-          
-                 $sucesso =  "DADOS INSERIDOS COM SUCESSO!!!";
-                 echo "$sucesso";
-                  $inserir = "INSERT INTO cadastro(nome, email, celular, cpf, senha, Csenha) VALUES ('$nome','$email','55$celular','$cpf', '$senha', '$CSenha')";
-                  mysqli_query($conn, $inserir);
-
-                  $inserirLogin = "INSERT INTO dados_login(email_id, senha) VALUES ('$email','$senha')";
-                  mysqli_query($conn, $inserirLogin);
-              }
-          } 
-          } 
-            ?>
-                <!-- FIM PHP CADASTRO -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -106,7 +110,7 @@ $cpfmensagem=   $error[] = "<br><center>Este CPF já está sendo usado!</center>
       <nav class="nav-bar">
         
           <div class="logo">
-              <a href="INDEX.HTML"><p>ATRINNE MODA FEMININA</p></a>
+              <a href="index.php"><p>ATRINNE MODA FEMININA</p></a>
           </div>
         <div class="botoes-header">
           <a href="GALERIA.html"><div class="login-button">
@@ -125,7 +129,7 @@ $cpfmensagem=   $error[] = "<br><center>Este CPF já está sendo usado!</center>
           </div>
 
           <div class="login-button">
-              <button><a href="LOGIN.HTML"><ion-icon name="person-outline"></ion-icon></a></button><br>
+              <button><a href="logout.php"><ion-icon name="person-outline"></ion-icon></a></button><br>
                <span class="titulomenu">Perfil</span>
           </div>
       </div>
@@ -147,7 +151,7 @@ $cpfmensagem=   $error[] = "<br><center>Este CPF já está sendo usado!</center>
           </div>
 
           <div class="login-button-mobile">
-              <center><a href="LOGIN.HTML"><H3>PERFIL</H3></a></center>
+              <center><a href="logout.php"><H3>PERFIL</H3></a></center>
           </div>
       </div>
     </div>
@@ -158,8 +162,8 @@ $cpfmensagem=   $error[] = "<br><center>Este CPF já está sendo usado!</center>
     <div class="box">
       <div class="inner-box">
         <div class="forms-wrap">
-                                <!-- formulário -->
-          <form action="index.html" autocomplete="off" class="sign-in-form">
+                                <!-- formulário login -->
+          <form  autocomplete="off" class="sign-in-form" method="post">
           
 
             <div class="heading-login">
@@ -175,7 +179,7 @@ $cpfmensagem=   $error[] = "<br><center>Este CPF já está sendo usado!</center>
                   type="text"
                   minlength="4"
                   class="input-field"
-                  name="email-login"
+                  name="email_login"
                   autocomplete="off"
                   required
                 />
@@ -187,26 +191,38 @@ $cpfmensagem=   $error[] = "<br><center>Este CPF já está sendo usado!</center>
                 <input
                   type="password"
                   class="input-field"
-                  name="senha-login"
+                  name="senha_login"
                   autocomplete="off"
                   required
                 />
                 <label>Senha:</label>
               </div>
 
-              <input type="submit" value="Login" class="sign-btn" />
+              <input type="submit" name="submitLOGIN" value="Login" class="sign-btn" />
 
              
             </div>
           </form>
 
-          <form action="login.php" autocomplete="off" class="sign-up-form">
-          
+          <form method="post"  autocomplete="off" class="sign-up-form">
 
+
+
+                            <!-- CADASTRO -->
             <div class="heading">
               <h2>Faça seu cadastro</h2>
               <!-- <h6>Pronto</h6> -->
               <a href="#" class="toggle">Faça seu login</a>
+<br>
+              <?php 
+              
+              if(isset($error)){
+                foreach($error as $error){
+                  echo $error;
+                }
+              }
+              
+              ?>
             </div>
 
             <div class="actual-form">
@@ -215,7 +231,7 @@ $cpfmensagem=   $error[] = "<br><center>Este CPF já está sendo usado!</center>
                 <input
                   type="text"
                   class="input-field"
-                  name="nome-cadastro"
+                  name="nome_cadastro"
                   autocomplete="off"
                   required
                 />
@@ -226,7 +242,7 @@ $cpfmensagem=   $error[] = "<br><center>Este CPF já está sendo usado!</center>
                 <input
                   type="email"
                   class="input-field"
-                  name="email-cadastro"
+                  name="email_cadastro"
                   autocomplete="off"
                   required
                 />
@@ -237,7 +253,7 @@ $cpfmensagem=   $error[] = "<br><center>Este CPF já está sendo usado!</center>
                 <input
                   type="text"
                   class="input-field"
-                  name="telefone-cadastro"
+                  name="telefone_cadastro"
                   autocomplete="off"
                   required
                 />
@@ -248,7 +264,7 @@ $cpfmensagem=   $error[] = "<br><center>Este CPF já está sendo usado!</center>
                 <input
                   type="text"
                   class="input-field"
-                  name="cpf-cadastro"
+                  name="cpf_cadastro"
                   autocomplete="off"
                   required
                 />
@@ -258,7 +274,7 @@ $cpfmensagem=   $error[] = "<br><center>Este CPF já está sendo usado!</center>
                 <input
                   type="password"
                   class="input-field"
-                  name="senha-cadastro"
+                  name="senha_cadastro"
                   autocomplete="off"
                   required
                 />
@@ -268,14 +284,14 @@ $cpfmensagem=   $error[] = "<br><center>Este CPF já está sendo usado!</center>
                 <input
                   type="password"
                   class="input-field"
-                  name="confirmarsenha-cadastro"
+                  name="confirmarsenha_cadastro"
                   autocomplete="off"
                   required
                 />
                 <label>Confirmar senha</label>
               </div>
 
-              <input type="submit" value="Cadastro" class="sign-btn" />
+              <input type="submit" name="submitCADASTRO" value="Cadastro" class="sign-btn" />
 
         
             </div>
