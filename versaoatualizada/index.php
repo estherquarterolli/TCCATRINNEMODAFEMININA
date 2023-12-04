@@ -1,13 +1,5 @@
 <?php
-require "conexao.php";
-// if(!empty($_SESSION["id"])){
-//   $id = $_SESSION["id"];
-//   $result = mysqli_query($conn, "SELECT * FROM dados_login WHERE id = $id");
-//   $row = mysqli_fetch_assoc($result);
-// }else{
-//   header("Location: login.php");
-// }
-
+include ('protect.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -63,7 +55,7 @@ require "conexao.php";
           </div>
 
           <div class="login-button">
-              <button><a href="login.php"><ion-icon name="person-outline"></ion-icon></a></button><br>
+              <button><a href="logout.php"><ion-icon name="person-outline"></ion-icon></a></button><br>
                <span class="titulomenu">Perfil</span>
           </div>
       </div>
@@ -85,7 +77,7 @@ require "conexao.php";
           </div>
 
           <div class="login-button-mobile">
-              <center><a href="#"><H3>PERFIL</H3></a></center>
+              <center><a href="logout.php"><H3>PERFIL</H3></a></center>
           </div>
       </div>
     </div>
@@ -126,7 +118,7 @@ require "conexao.php";
     <!-- tipos de roupa -->
     <div class="product">
       <div class="product-containerzao">
-      <center><h2 class="product-category">ENCONTRE O QUE VOCÊ PROCURA...</h2></center>
+      <center><h2 class="product-category">ENCONTRE O QUE VOCÊ PROCURA... <?php echo $_SESSION['name']; ?></h2></center>
       <button class="pre-btn"><ion-icon CLASS="ARROW"  name="arrow-forward-circle-outline"></ion-icon></button>
       <button class="nxt-btn"><ion-icon CLASS="ARROW" name="arrow-forward-circle-outline"></ion-icon></button>
       <div class="product-container">
