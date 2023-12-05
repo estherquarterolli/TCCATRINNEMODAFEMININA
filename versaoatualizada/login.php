@@ -1,5 +1,6 @@
                       <!-- CADASTRO -->
                       <?php
+// isso aqui é para caso nãopo haja sessão iniciada, será redirecionado para lá.
 if(!empty($_SESSION['id'])){
   header('location: index.php');
 }
@@ -76,8 +77,19 @@ if(isset($_POST["submitLOGIN"])){
         session_start();
       }
 
-      $_SESSION['user'] = $usuario['IdCadastro'];
-      $_SESSION['name'] = $usuario['Nome'];
+      $_SESSION['id'] = $usuario['IdCadastro'];
+      $_SESSION['nome'] = $usuario['Nome'];
+      $_SESSION['email'] = $usuario['Email'];
+      $_SESSION['telefone'] = $usuario['Telefone'];
+      $_SESSION['endereco'] = $usuario['Endereco'];
+      $_SESSION['cpf'] = $usuario['Cpf'];
+      $_SESSION['senha'] = $usuario['Senha'];
+
+
+
+
+
+      
 
       header('location: index.php'); 
     }
