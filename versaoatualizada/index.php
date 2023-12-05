@@ -1,6 +1,3 @@
-<?php
-include ('protect.php');
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -118,7 +115,7 @@ include ('protect.php');
     <!-- tipos de roupa -->
     <div class="product">
       <div class="product-containerzao">
-      <center><h2 class="product-category">ENCONTRE O QUE VOCÊ PROCURA... <?php echo $_SESSION['name']; ?></h2></center>
+      <center><h2 class="product-category">ENCONTRE O QUE VOCÊ PROCURA... </h2></center>
       <button class="pre-btn"><ion-icon CLASS="ARROW"  name="arrow-forward-circle-outline"></ion-icon></button>
       <button class="nxt-btn"><ion-icon CLASS="ARROW" name="arrow-forward-circle-outline"></ion-icon></button>
       <div class="product-container">
