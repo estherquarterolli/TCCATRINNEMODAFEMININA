@@ -178,13 +178,14 @@ header.rolagem{
 @media screen and (max-width: 1000px) {
 
     header{
-        padding: 5PX;
+        
         max-width: 1000PX;
-        box-shadow: 0px 3px 10px #464646;
+        box-shadow: 0px 3px 10px #0000007e;
         z-index: 4;
+        
         height: 90px;
         position: fixed;
-        top:0;
+        padding-top: 3%;
         left:0;
        right: 0;
     }
@@ -208,7 +209,7 @@ header.rolagem{
     header.rolagem{
         background-color: #24252a;
         color:rgb(255, 255, 255);
-        padding: 4px ;
+        padding-top: 3%;
         }
 
         .logo p {
@@ -228,8 +229,17 @@ header.rolagem{
     .login-button {
         display: none;
     }
+    .login-button {
+        display: none;
+    }
+    .login-button-estatico ion-icon{
+        display: none;
+    }
     .mobile-menu-icon {
         display: block;
+    }
+    .mobile-menu-icon ion-icon{
+        color: white;
     }
     .mobile-menu-icon button {
         background-color: transparent;
@@ -293,7 +303,44 @@ header.rolagem{
         width: 100%;
         margin: 0;
             }
+
+.login-button-mobile-estatico h3{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+    /* justify-content: center; */
+  background-color:#24252a;
+  text-decoration: none;
+  padding:20px;
+  /* border: 1px solid hsl(0, 0%, 100%); */
+  font-family: 'Anybody', sans-serif;
 }
+.login-button-mobile-estatico{
+    text-decoration: none;
+}
+.mobile-menu-icon ion-icon{
+    width: 50px;
+    height:50px;
+    text-align: center;
+    justify-content: center;
+}
+.login-button-mobile-estatico{
+    text-decoration: none;
+
+}
+.login-button-mobile-estatico a{
+    text-decoration: none;
+    color:black;
+}
+.mobile-menu.open{
+    width: 100%;
+    margin: 0;
+        }
+}
+
+
+
+
 @media screen and (max-width: 580px) {
 
     header{
@@ -331,7 +378,9 @@ header.rolagem{
     .login-button {
         display: none;
     }
-
+    .login-button-estatico ion-icon{
+        display: none;
+    }
     .mobile-menu.open{
 width: 100%;
 margin: 0;

@@ -41,11 +41,14 @@ input {
     padding: 8px;
     margin-bottom: 15px;
     box-sizing: border-box;
+    border: none;
+    background-color: rgb(217, 217, 217);
 }
 
 .half-width {
     display: inline-block;
-    width: 48%; /* Metade do width com algum espaço para evitar problemas de quebra */
+    justify-content: space-between;
+    width: 49.7%; /* Metade do width com algum espaço para evitar problemas de quebra */
 }
 
 .alterardados{
@@ -62,4 +65,7 @@ input {
  
     box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
    
+}
+.botoes-editar{
+    display: inline;
 }
