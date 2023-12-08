@@ -177,6 +177,10 @@ header.rolagem{
 
 @media screen and (max-width: 1000px) {
 
+
+    #dropdownBtn {
+        display: none;
+    }
     header{
         
         max-width: 1000PX;
@@ -198,14 +202,6 @@ header.rolagem{
     margin-bottom: 5%;
 }
 
-.botoes-header {
-    display: flex;
-    flex-direction: row;
-    gap: 35px;
-    align-items: center;
-    margin-bottom:2%;
-    margin-right: 5%;
-}
     header.rolagem{
         background-color: #24252a;
         color:rgb(255, 255, 255);
@@ -262,6 +258,11 @@ header.rolagem{
     }
     .mobile-menu .login-button button {
         width: 100%;
+    }
+    .mobile-menu{
+        max-width: 1000px;
+        background-color: #24252a;
+
     }
     .open {
         display: block;
@@ -335,6 +336,7 @@ header.rolagem{
 .mobile-menu.open{
     width: 100%;
     margin: 0;
+    padding: 0;
         }
 }
 
