@@ -9,15 +9,18 @@
 }
 
 header{
-    /* padding-top: 1%; */
-    /* padding: 30px, 30px, 30px, 30px; */
-    top: 0;
-    width:100%;
-    box-shadow: 0px 3px 10px #464646;
-    z-index: 7;
-    position: fixed;
-    background-color: #24252a;
+    max-width: 1000PX;
+    box-shadow: 0px 3px 10px #0000007e;
+    z-index: 4;
     height: 90px;
+    /* position: fixed; */
+    padding-bottom: 3%;
+   
+   right: 0;
+   top: 0;
+    
+   
+   
 
 }
 
@@ -172,10 +175,16 @@ header{
 
 @media screen and (max-width: 1000px) {
 
+
+    #dropdownBtn {
+        display: none;
+    }
     header{
+        
         max-width: 1000PX;
-        box-shadow: 0px 3px 10px #464646;
+        box-shadow: 0px 3px 10px #0000007e;
         z-index: 4;
+        
         height: 90px;
         position: fixed;
         padding-top: 3%;
@@ -188,17 +197,14 @@ header{
     align-items: center;
     justify-content: center;
 
-    /* margin-bottom: 5%; */
+    margin-bottom: 5%;
 }
 
-.botoes-header {
-    display: flex;
-    flex-direction: row;
-    gap: 35px;
-    align-items: center;
-    margin-bottom:2%;
-    margin-right: 5%;
-}
+    header.rolagem{
+        background-color: #24252a;
+        color:rgb(255, 255, 255);
+        padding-top: 3%;
+        }
 
         .logo p {
             color: #fff;
@@ -217,30 +223,23 @@ header{
     .login-button {
         display: none;
     }
+    .login-button {
+        display: none;
+    }
+    .login-button-estatico ion-icon{
+        display: none;
+    }
     .mobile-menu-icon {
-        display: relative;
-        margin-top: 10%;
+        display: block;
+    }
+    .mobile-menu-icon ion-icon{
         color: white;
-    }
-    .mobile-menu {
-        width: 100%;
-        margin: 0;
-        padding: 0; /* Adicionando esta linha para remover o padding padrão */
-    }
-    .mobile-menu .login-button-mobile {
-        margin: 0; /* Adicionando esta linha para remover o espaçamento entre as divs */
-        width: 100%; /* Adicionando esta linha para fazer as divs ocuparem toda a largura */
-    }
-    
-    .mobile-menu-icon {
-        display: none; /* Adicionando esta linha para ocultar o ícone no layout padrão */
     }
     .mobile-menu-icon button {
         background-color: transparent;
         border: none;
         cursor: pointer;
     }
-
     .mobile-menu ul {
         display: flex;
         flex-direction: column;
@@ -249,14 +248,19 @@ header{
     }
     .mobile-menu .nav-item {
         display: block;
-        /* padding-top: 1.2rem; */
+        padding-top: 1.2rem;
     }
     .mobile-menu .login-button {
         display: block;
-         padding: 1rem 2rem; 
+        /* padding: 1rem 2rem; */
     }
     .mobile-menu .login-button button {
         width: 100%;
+    }
+    .mobile-menu{
+        max-width: 1000px;
+        background-color: #24252a;
+
     }
     .open {
         display: block;
@@ -296,10 +300,47 @@ header{
     }
     .mobile-menu.open{
         width: 100%;
-        padding: 0;
         margin: 0;
             }
+
+.login-button-mobile-estatico h3{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+    /* justify-content: center; */
+  background-color:#24252a;
+  text-decoration: none;
+  padding:20px;
+  /* border: 1px solid hsl(0, 0%, 100%); */
+  font-family: 'Anybody', sans-serif;
 }
+.login-button-mobile-estatico{
+    text-decoration: none;
+}
+.mobile-menu-icon ion-icon{
+    width: 50px;
+    height:50px;
+    text-align: center;
+    justify-content: center;
+}
+.login-button-mobile-estatico{
+    text-decoration: none;
+
+}
+.login-button-mobile-estatico a{
+    text-decoration: none;
+    color:black;
+}
+.mobile-menu.open{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+        }
+}
+
+
+
+
 @media screen and (max-width: 580px) {
 
     header{
@@ -311,9 +352,15 @@ header{
         position: fixed;
         top:0;
         left:0;
+        background-color: #24252a;
     }
 
-
+    header.rolagem{
+        background-color: #24252a;
+        color:rgb(255, 255, 255);
+        padding: 4px ;
+        width: 100%;
+        }
 
         .logo p {
             color: #fff;
@@ -332,7 +379,9 @@ header{
     .login-button {
         display: none;
     }
-
+    .login-button-estatico ion-icon{
+        display: none;
+    }
     .mobile-menu.open{
 width: 100%;
 margin: 0;
@@ -536,9 +585,32 @@ margin: 0;
     left: 0;
 }
 
+    /* margin-bottom: 15px; */
+    /* padding-bottom: 10px;
+    border-bottom: 1px solid #ffffff;
+} */
+
+.nomeusuario a {
+    text-decoration: none;
+    color: #333;
+}
+
+.usuariofuncao ion-icon {
+    margin-left: 10px; /* ou ajuste conforme necessário */
+}
 
 
-.dropdown-content-mobile {
+
+.usuariofuncao ion-icon{
+    color: white;
+    width: 30px;
+    height:30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-right: 10px;
+}
+.dropdown-content {
     display: none;
     position: absolute;
     margin-top: 15%;
@@ -550,13 +622,27 @@ margin: 0;
     width: 300px;
     border-radius: 5px;
 }
+.nome-usuario{
+    display: flex; /* Alteração para display flex */
+    align-items: center; /* Centralizar verticalmente */
+  height: 40px;
+  width: 300px;
+  border-bottom: 1px solid white;
+  
+}
 
-
-.login-button:hover .dropdown-content-mobile {
+.nome-usuario{
+    font-family: 'Bebas Neue';
+    font-size:30px;
+    color: #D49DA8;
+   
+    padding: 15px;
+}
+.login-button:hover .dropdown-content {
     display: block;
 }
 
-.dropdown-content-mobile p, .dropdown-content-mobile a {
+.dropdown-content p, .dropdown-content a {
     color: #fff;
     padding: 10px;
     text-decoration: none;
@@ -566,10 +652,24 @@ margin: 0;
     /* border-bottom: 1px solid #555;  */
 }
 
+.usuariofuncao:hover {
+    background-color: #97979724;
+    color: black;
+}
+
+
 
 /* Adicione essas linhas para ajustar o posicionamento do dropdown */
+.login-button {
+    position: relative;
+}
 
-.login-button .dropdown-content-mobile {
+.login-button:hover .titulomenu {
+    transform: scale(1);
+    transition-delay: .1s;
+}
+
+.login-button .dropdown-content {
     top: 100%;
     left: 0;
 }
