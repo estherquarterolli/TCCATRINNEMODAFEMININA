@@ -1,6 +1,5 @@
                       <!-- CADASTRO -->
                       <?php
-// isso aqui é para caso nãopo haja sessão iniciada, será redirecionado para lá.
 if(!empty($_SESSION['id'])){
   header('location: index.php');
 }
@@ -8,7 +7,7 @@ if(!empty($_SESSION['id'])){
 
 
 
-include 'conexao.php';
+include ('conexao.php');
 if(isset($_POST['submitCADASTRO'])){
   $nome = mysqli_real_escape_string($conn, $_POST['nome_cadastro']);
   $email = mysqli_real_escape_string($conn, $_POST['email_cadastro']);
@@ -48,7 +47,7 @@ if(isset($_POST['submitCADASTRO'])){
     else{
       $inserir = "INSERT INTO cadastro(Nome, Email, Telefone, Cpf, Senha) VALUES ('$nome','$email','$telefone','$cpf','$senha')";
       mysqli_query($conn, $inserir);
-      header('location: index.php');
+      header('location: login.php');
     }
   }
   }
@@ -85,13 +84,7 @@ if(isset($_POST["submitLOGIN"])){
       $_SESSION['cpf'] = $usuario['Cpf'];
       $_SESSION['senha'] = $usuario['Senha'];
 
-
-
-
-
-      
-
-      header('location: index.php'); 
+      header('location: indexcomlogin.php'); 
     }
     else{
       echo "Email ou Senha incorretos!";
