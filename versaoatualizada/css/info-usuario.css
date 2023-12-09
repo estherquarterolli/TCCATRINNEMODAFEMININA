@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300;500&display=swap');
+
+.info-usuarios {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+.TITULO{
+    font-family: 'BEBAS NEUE';
+    font-size: 40PX;
+}
+.container-informacoes{
+    background-color: #e7e7e7;
+    width: 70%;
+    padding-top:2% ;
+    padding: 3%;
+    border-radius: 20PX;
+}
+
+/* .circulo {
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+} */
+
+label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgb(217, 217, 217);
+}
+
+.half-width {
+    display: inline-block;
+    justify-content: space-between;
+    width: 49.7%; /* Metade do width com algum espaço para evitar problemas de quebra */
+}
+
+.alterardados{
+    background-color: #D49DA8;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.alterardados:hover {
+    background-color: #703c46;
+    color: #fff;
+ 
+    box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+   
+}
+
+.salvardados{
+    background-color: #D49DA8;
+    color: #fff;
+    width:260px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.salvardados:hover {
+    background-color: #703c46;
+    color: #fff;
+ 
+    box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+   
+}
+.botoes-editar{
+    display: inline;
+}
+.btnvoltar {
+    text-decoration: none;
+    text-decoration-line: none;
+    color:black;
+
+}
+.btnvoltar:hover {
+    background-color: black;
+    color: rgb(108, 108, 108);
+    padding: 5px;
+}

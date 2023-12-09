@@ -1,5 +1,5 @@
 <?php
-require "conexao.php";
+include ('protect.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -17,6 +17,13 @@ require "conexao.php";
     <link rel="stylesheet" href="css/mapa.css">
     <link rel="stylesheet" href="css/modallogin.css">
     <link rel="stylesheet" href="css/tiposderoupa.css">
+    <link rel="stylesheet" href="css/quadradosinformativos.css">
+    <link rel="stylesheet" href="css/maisvendidos.css">
+    <link rel="stylesheet" href="css/clientes-instagram.css">
+    <link rel="stylesheet" href="css/lightslider.css">
+    <script type="text/javascript" src="js/Jquery.js"></script>
+    <script type="text/javascript" src="js/lightslider.js"></script>
+
     <title>Atrinne Moda Feminina</title>
 
     <!-- ionicon -->
@@ -53,10 +60,34 @@ require "conexao.php";
               <span class="titulomenu">Carrinho</span>
           </div>
 
-          <div class="login-button">
-              <button><a href="#"><ion-icon name="person-outline"></ion-icon></a></button><br>
-               <span class="titulomenu">Perfil</span>
-          </div>
+          <div class="login-button-estatico" id="dropdownBtn">
+            <button>
+                <ion-icon name="person-outline"></ion-icon>
+            </button>
+            <div class="dropdown-content">
+                <div class="nomeusuario">
+                  <!-- tem que por a parte do php de vcs -->
+                    <h2 class="nome-usuario">Nome do usuário </h2>
+                </div>
+
+                <div class="usuariofuncao">
+                    <a href="info-usuario.html">Minha conta</a>
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+
+                <div class="usuariofuncao">
+                    <a href="#">Meus pedidos</a>
+                    <ion-icon name="checkbox-outline"></ion-icon>
+                </div>
+                
+                
+                
+            </div>
+            <!-- <span class="titulomenu">Perfil</span> -->
+        </div>
+        
+          
+          
       </div>
 
           <div class="mobile-menu-icon">
@@ -75,9 +106,30 @@ require "conexao.php";
               <center><a href="#"><H3>CARRINHO</H3></a></center>
           </div>
 
-          <div class="login-button-mobile">
-              <center><a href="#"><H3>PERFIL</H3></a></center>
+          <div class="login-button-mobile-estatico" id="dropdownBtn">
+           <center><a href="#"><H3>CARRINHO</H3></a></center>
+           <center>
+            <a href="#" onclick="toggleDropdown()">
+              <h3>PERFIL</h3>
+            </a>
+          </center>
+        
+          <div class="dropdown-content-mobile" id="dropdownContent">
+            <div class="nomeusuario">
+              <h2 class="nome-usuario">Nome do usuário</h2>
+            </div>
+        
+            <div class="usuariofuncao">
+              <a href="info-usuario.html">Minha conta</a>
+              <ion-icon name="person-outline"></ion-icon>
+            </div>
+        
+            <div class="usuariofuncao">
+              <a href="#">Meus pedidos</a>
+              <ion-icon name="checkbox-outline"></ion-icon>
+            </div>
           </div>
+
       </div>
     </div>
   </header>
@@ -115,9 +167,9 @@ require "conexao.php";
   </div>
     </section>
     <!-- tipos de roupa -->
-    <section class="product">
+    <div class="product">
       <div class="product-containerzao">
-      <center><h2 class="product-category">ENCONTRE O QUE VOCÊ PROCURA...</h2></center>
+      <center><h2 class="product-category">ENCONTRE O QUE VOCÊ PROCURA... <?php echo $_SESSION['name']; ?></h2></center>
       <button class="pre-btn"><ion-icon CLASS="ARROW"  name="arrow-forward-circle-outline"></ion-icon></button>
       <button class="nxt-btn"><ion-icon CLASS="ARROW" name="arrow-forward-circle-outline"></ion-icon></button>
       <div class="product-container">
@@ -125,8 +177,16 @@ require "conexao.php";
         
               <div class="product-image-type">
             <A href="BLUSAS.HTML" STYLE="text-decoration: NONE;COLOR:BLACK;">
-                  <img src="imagenstcc/tproupablusa.png" class="product-thumb" alt="">
-                 
+
+              <div class="img-tipos">
+                <img src="imagenstcc/tproupablusa.png" class="product-thumb" alt="">
+
+                <!-- <div class="overlay">
+                <button href="#" class="info-btn">Saiba mais</button>
+              </div> -->
+
+            </div>
+
               </div>
               <div class="product-info">
                 
@@ -139,7 +199,7 @@ require "conexao.php";
   <div class="product-image-type">
 <A href="#" STYLE="text-decoration: NONE;COLOR:BLACK;">
       <img src="imagenstcc/tproupashort.png" class="product-thumb" alt="">
-     
+      
   </div>
   <div class="product-info">
     
@@ -152,7 +212,7 @@ require "conexao.php";
 <div class="product-card">
   <div class="product-image-type">
 <A href="#" STYLE="text-decoration: NONE;COLOR:BLACK;">
-      <img src="imagenstcc/tproupaconjunto" class="product-thumb" alt="">
+      <img src="imagenstcc/tproupaconjunto.png" class="product-thumb" alt="">
      
   </div>
   <div class="product-info">
@@ -208,51 +268,171 @@ require "conexao.php";
 
           </div>
             </div>
-            </section>
+    </div>
             </div>
     </section>
 
-    <!-- MAIS VENDIDOS -->
-      <section class="product-maisvendidos"> 
-      
-        <center><h2 class="product-category">MAIS VENDIDOS</h2><center>
-        <div class="maisvendidos-container">
-        <button class="pre-btn"><ion-icon CLASS="ARROW"  name="arrow-forward-circle-outline"></ion-icon></button>
-        <button class="nxt-btn"><ion-icon CLASS="ARROW" name="arrow-forward-circle-outline"></ion-icon></button>
-        <div class="product-container">
-          <!-- inicio produto -->
-<div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">30% off</span>
-                    <img src="imagenstcc/Body Any. R$ 59,90_.jpg" class="product-thumb" alt="">
-                    <button class="card-btn"><a href="#"><ion-icon name="cart-outline"></ion-icon></a></button>
-                </div>
-                <div class="product-info">
-                
-            
-                    <h2 class="product-name">Blusa Bonita</h2>
-                    <!-- <p class="product-short-description">Clique e Saiba</p> -->
-                    <span class="priceproduct">R$60,00</span> <!--<span class="actual-price">$40</span> -->
-                </div>
- </div><!--fim produto -->
-
-          
-            
-
-            </div>
-        </div>
-</div>
-    </section>
    <!-- BANNER MARKETING -->
 
    <div class="bannerpreorder" style="display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;">
-    <img src="imagenstcc/bannerpreorder.png">
+    <img src="imagenstcc/bannerpreorder.png" class="img-bannerinformativo">
+    
   </div>
 
   <!-- FIM DO BANNER -->
+  <br><br>
+<section class="informativos-banner">
+  <!-- QUADRADOS INFORMATIVOS -->
+
+  <div class="container-informativos">
+
+    <div class="informativos">
+
+      <div class="img-bannerinformativo">
+      <img src="imagenstcc/ENTREGA.png">
+      <div class="overlay">
+        <p> Frete Gratis</p>
+      </div>
+    </div>
+    
+    </div>
+    
+    <div class="informativos">
+
+      <div class="img-bannerinformativo">
+      <img src="imagenstcc/CUPONS.png">
+      <div class="overlay">
+        <p> Ativo: clientenovo15</p>
+      </div>
+    </div>
+    </div>
+    <div class="informativos">
+
+      <div class="img-bannerinformativo">
+      <img src="imagenstcc/TROCAEDEV.png">
+      <div class="overlay">
+        <p>Mande uma dm para nosso instagram</p>
+      </div>
+    </div>
+    </div>
+   <!-- FIM DOS INFORMATIVOS -->
+  </section>
+  <!-- PRODUTOS EM DESTAQUE -->
+<section class="maisvendidos">
+ <center> <h2 class="product-category">Destaques da loja</h2></center>
+  <ul id="autoWidth" class="cs-hidden">
+    <li class="item">
+      <div class="box">
+        <div class="slide-img">
+          <img src="imagenstcc/Bermuda meia coxa. R$ 119,00_.jpg" alt="" />
+          <div class="overlay">
+            <a href="#" class="buy-btn">Compre agora</a>
+          </div>
+        </div>
+        <div class="detail-box">
+          <div class="type">
+            <a href="#">Atrinne</a>
+            <span>Bermuda meia coxa</span>
+          </div>
+          <a href="#" class="price">R$119,00</a>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <div class="box">
+        <div class="slide-img">
+          <img src="imagenstcc/Bermuda meia coxa. R$ 119,00_.jpg" alt="" />
+          <div class="overlay">
+            <a href="#" class="buy-btn">Compre agora</a>
+          </div>
+        </div>
+        <div class="detail-box">
+          <div class="type">
+            <a href="#">Atrinne</a>
+            <span>Bermuda meia coxa</span>
+          </div>
+          <a href="#" class="price">R$119,00</a>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <div class="box">
+        <div class="slide-img">
+          <img src="imagenstcc/Bermuda meia coxa. R$ 119,00_.jpg" alt="" />
+          <div class="overlay">
+            <a href="#" class="buy-btn">Compre agora</a>
+          </div>
+        </div>
+        <div class="detail-box">
+          <div class="type">
+            <a href="#">Atrinne</a>
+            <span>Bermuda meia coxa</span>
+          </div>
+          <a href="#" class="price">R$119,00</a>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <div class="box">
+        <div class="slide-img">
+          <img src="imagenstcc/Bermuda meia coxa. R$ 119,00_.jpg" alt="" />
+          <div class="overlay">
+            <a href="#" class="buy-btn">Compre agora</a>
+          </div>
+        </div>
+        <div class="detail-box">
+          <div class="type">
+            <a href="#">Atrinne</a>
+            <span>Bermuda meia coxa</span>
+          </div>
+          <a href="#" class="price">R$119,00</a>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <div class="box">
+        <div class="slide-img">
+          <img src="imagenstcc/Bermuda meia coxa. R$ 119,00_.jpg" alt="" />
+          <div class="overlay">
+            <a href="#" class="buy-btn">Compre agora</a>
+          </div>
+        </div>
+        <div class="detail-box">
+          <div class="type">
+            <a href="#">Atrinne</a>
+            <span>Bermuda meia coxa</span>
+          </div>
+          <a href="#" class="price">R$119,00</a>
+        </div>
+      </div>
+    </li>
+
+    <li class="item">
+      <div class="box">
+        <div class="slide-img">
+          <img src="imagenstcc/Bermuda meia coxa. R$ 119,00_.jpg" alt="" />
+          <div class="overlay">
+            <a href="#" class="buy-btn">Compre agora</a>
+          </div>
+        </div>
+        <div class="detail-box">
+          <div class="type">
+            <a href="#">Atrinne</a>
+            <span>Bermuda meia coxa</span>
+          </div>
+          <a href="#" class="price">R$119,00</a>
+        </div>
+      </div>
+    </li>
+    
+    
+  </ul>
+</section>
+
+
 
 <!-- INTERAÇÃO COM A MÍDIA -->
 <section class="interacao"> 
@@ -279,11 +459,13 @@ require "conexao.php";
       </div>
   </section>
   </section>
-  <!-- mapa -->
-<div class="mapa">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.1844917243334!2d-43.25070292397651!3d-22.646908979438855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997591c669277f%3A0x94a0efb05d07d372!2sAtrinne%20moda%20feminina!5e0!3m2!1spt-BR!2sbr!4v1700088893708!5m2!1spt-BR!2sbr"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-  
+ 
+  <!-- instagram compras -->
+
+      <section class="instagram-clientes">
+     
+      </section>
+
   <!-- rodapé -->
   <footer>
     <div class="footer-container">
@@ -335,7 +517,7 @@ require "conexao.php";
     </div>
 </footer>
 </div>
-
+<!-- 
 <button id="openModal">X</button>
 
 <div id="myModal" class="modal">
@@ -343,13 +525,19 @@ require "conexao.php";
             <span class="close">&times;</span>
             <p>Bem vindo fulaninho do TCC</p>
         </div>
-    </div>
+    </div> -->
 
 <script src="js/header.js"></script>
     <script src="js/interacaocomamidia.js"></script>
     <script src="js/tipos-maisvendidos.js"></script>
     <script src="js/modallogin.js"></script>
+    <script src="js/maisvendidos.js"></script>
+    <script src="js/clientes-instagram.js"></script>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
     <!-- ionicon -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

@@ -169,22 +169,27 @@ header.rolagem{
     display: none;
 }
 
-ion-icon{
+.login-button ion-icon{
     color: white;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 @media screen and (max-width: 1000px) {
 
+
+    #dropdownBtn {
+        display: none;
+    }
     header{
-        padding: 5PX;
+        
         max-width: 1000PX;
-        box-shadow: 0px 3px 10px #464646;
+        box-shadow: 0px 3px 10px #0000007e;
         z-index: 4;
+        
         height: 90px;
         position: fixed;
-        top:0;
+        padding-top: 3%;
         left:0;
        right: 0;
     }
@@ -197,18 +202,10 @@ ion-icon{
     margin-bottom: 5%;
 }
 
-.botoes-header {
-    display: flex;
-    flex-direction: row;
-    gap: 35px;
-    align-items: center;
-    margin-bottom:2%;
-    margin-right: 5%;
-}
     header.rolagem{
         background-color: #24252a;
         color:rgb(255, 255, 255);
-        padding: 4px ;
+        padding-top: 3%;
         }
 
         .logo p {
@@ -228,8 +225,17 @@ ion-icon{
     .login-button {
         display: none;
     }
+    .login-button {
+        display: none;
+    }
+    .login-button-estatico ion-icon{
+        display: none;
+    }
     .mobile-menu-icon {
         display: block;
+    }
+    .mobile-menu-icon ion-icon{
+        color: white;
     }
     .mobile-menu-icon button {
         background-color: transparent;
@@ -252,6 +258,11 @@ ion-icon{
     }
     .mobile-menu .login-button button {
         width: 100%;
+    }
+    .mobile-menu{
+        max-width: 1000px;
+        background-color: #24252a;
+
     }
     .open {
         display: block;
@@ -293,7 +304,45 @@ ion-icon{
         width: 100%;
         margin: 0;
             }
+
+.login-button-mobile-estatico h3{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+    /* justify-content: center; */
+  background-color:#24252a;
+  text-decoration: none;
+  padding:20px;
+  /* border: 1px solid hsl(0, 0%, 100%); */
+  font-family: 'Anybody', sans-serif;
 }
+.login-button-mobile-estatico{
+    text-decoration: none;
+}
+.mobile-menu-icon ion-icon{
+    width: 50px;
+    height:50px;
+    text-align: center;
+    justify-content: center;
+}
+.login-button-mobile-estatico{
+    text-decoration: none;
+
+}
+.login-button-mobile-estatico a{
+    text-decoration: none;
+    color:black;
+}
+.mobile-menu.open{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+        }
+}
+
+
+
+
 @media screen and (max-width: 580px) {
 
     header{
@@ -331,7 +380,9 @@ ion-icon{
     .login-button {
         display: none;
     }
-
+    .login-button-estatico ion-icon{
+        display: none;
+    }
     .mobile-menu.open{
 width: 100%;
 margin: 0;
@@ -394,4 +445,143 @@ margin: 0;
         text-decoration: none;
         color:black;
     }
+}
+
+.login-button-estatico button {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background: none;
+  /* background-color:#24252a; */
+    justify-content: center;
+    align-items: center; 
+    line-height: 0.5;
+    
+} 
+.login-button-estatico ion-icon{
+    color: white;
+    width: 40px;
+    height: 40px;
+}
+
+    .login-button-estatico{
+        position: block;
+        list-style: none;
+        width: 40px; 
+        height: 50px; /* 5% a menos que o valor original (60px) */
+        /* background: white; */
+        border-radius: 28.5px; /* 5% a menos que o valor original (30px) */
+        cursor: pointer;
+        box-shadow: none;
+        transition: .5s;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        align-items: center; 
+        line-height:1.5;
+        }
+
+     
+    
+            .login-button-estatico ion-icon {
+    font-size: 0.3em; /* 5% a menos que o valor original (1.23em) */
+     color: rgb(254, 254, 254); 
+    transition: .2s;
+                }
+
+
+/* login com usuario ja logado */
+
+.usuariofuncao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    /* margin-bottom: 15px; */
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.nomeusuario a {
+    text-decoration: none;
+    color: #333;
+}
+
+.usuariofuncao ion-icon {
+    margin-left: 10px; /* ou ajuste conforme necessário */
+}
+
+
+
+.usuariofuncao ion-icon{
+    color: white;
+    width: 30px;
+    height:30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-right: 10px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 15%;
+    background-color: #24252a;
+    border: 1px solid white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: left;
+    width: 300px;
+    border-radius: 5px;
+}
+.nome-usuario{
+    display: flex; /* Alteração para display flex */
+    align-items: center; /* Centralizar verticalmente */
+  height: 40px;
+  width: 300px;
+  border-bottom: 1px solid white;
+  
+}
+
+.nome-usuario{
+    font-family: 'Bebas Neue';
+    font-size:30px;
+    color: #D49DA8;
+   
+    padding: 15px;
+}
+.login-button:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content p, .dropdown-content a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    width: 300px;
+    /* border-bottom: 1px solid #555;  */
+}
+
+.usuariofuncao:hover {
+    background-color: #97979724;
+    color: black;
+}
+
+
+
+/* Adicione essas linhas para ajustar o posicionamento do dropdown */
+.login-button {
+    position: relative;
+}
+
+.login-button:hover .titulomenu {
+    transform: scale(1);
+    transition-delay: .1s;
+}
+
+.login-button .dropdown-content {
+    top: 100%;
+    left: 0;
 }

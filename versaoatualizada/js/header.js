@@ -17,3 +17,29 @@ window.addEventListener("scroll", function(){
 })
 
 
+
+// index com usuário já logado
+document.getElementById("dropdownBtn").addEventListener("click", function() {
+  var dropdownContent = this.querySelector(".dropdown-content");
+  dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+});
+
+document.addEventListener("click", function(event) {
+  var dropdownBtn = document.getElementById("dropdownBtn");
+  if (!dropdownBtn.contains(event.target)) {
+      var dropdownContent = dropdownBtn.querySelector(".dropdown-content");
+      dropdownContent.style.display = "none";
+  }
+});
+
+
+
+//mobile btn perfil
+function toggleDropdown() {
+  var dropdownContent = document.getElementById("dropdownContent");
+  if (dropdownContent.style.display === "none" || dropdownContent.style.display === "") {
+    dropdownContent.style.display = "block";
+  } else {
+    dropdownContent.style.display = "none";
+  }
+}
