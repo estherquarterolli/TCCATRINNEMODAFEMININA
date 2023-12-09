@@ -1,5 +1,6 @@
 <?php
 include ('protect.php');
+include ('conexao.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -55,7 +56,7 @@ include ('protect.php');
             </button>
             <div class="dropdown-content">
                 <div class="nomeusuario">
-                    <h2 class="nome-usuario">Nome do usuário </h2>
+                    <h2 class="nome-usuario"><?php echo $_SESSION['nome']; ?></h2>
                 </div>
 
                 <div class="usuariofuncao">
@@ -105,7 +106,7 @@ include ('protect.php');
 
 
 <div class="container-informacoes">
-    <a class="btnvoltar" href="info-usuario.html"><p>Voltar</p></a>
+    <a class="btnvoltar" href="info-usuario.php"><p>Voltar</p></a>
    <CENTER> <h2 CLASS="TITULO">Meu Perfil na Atrinne</h2></CENTER>
 
    <br>
@@ -113,39 +114,59 @@ include ('protect.php');
     <h3>Editar Informações</h3>
     <!-- <center><button class="alterardados" id="alterarDados">Alterar Dados</button></center> -->
    
-
+<form method="post">
     <div class="circulo">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" placeholder="Esther Quarterolli" >
+        <input type="text" id="nome" name="nome" placeholder="" value="<?php  $nome = $_SESSION['nome'];  echo $nome;?>">
 <br>
-        <label for="sobrenome">Email:</label>
-        <input type="text" id="sobrenome" >
+        <label for="sobrenome">Email: </label>
+        <input type="text" id="sobrenome" value="<?php  $email = $_SESSION['email'];  echo $email;?>" disabled>
         <br>
         <div class="half-width">
             <label for="email">Telefone:</label>
-            <input type="text" id="email" >
+            <input type="text" id="email" name="telefone" value="<?php  $telefone = $_SESSION['telefone'];  echo $telefone;?>" >
         </div>
    
         <div class="half-width">
             <label for="telefone">Cpf:</label>
-            <input type="text" id="telefone" disabled >
+            <input type="text" id="telefone" value="<?php  $cpf = $_SESSION['cpf'];  echo $cpf;?>" disabled >
         </div>
         <br>
         <BR>
             <div class="botoes-editar">
-                <center><button class="salvardados" id="salvaralteracao">Salvar</button></center>
+                <center><button type="submit" class="salvardados" id="salvaralteracao" name="Salvar" >Salvar</button></center>
             </div>
+
+<?php
+if(isset($_POST["Salvar"])){
+    $nome = $_POST['nome'];
+    $telefone = $_POST['telefone'];
+    $id = $_SESSION['id'];
+    $sql = "UPDATE cadastro SET Nome= '$nome', Telefone = '$telefone' WHERE IdCadastro='$id' ";
+    $result = mysqli_query($conn, $sql);
+    
+ }
+?>
     </div>
+    
     <!-- Alterar senha -->
     <div class="half-width">
         <label for="senha">Alterar Senha:</label>
-        <input type="password" id="senha-usuario" >
+        <input type="password" id="senha-usuario" name="senha" value="value="<?php  $senha = $_SESSION['senha'];  echo $senha;?>"" >
     </div>
     <br><br>
     <div class="botoes-editar">
-    <button class="salvardados" id="alterarsenha">Alterar Senha</button>
+    <button class="salvardados" id="alterarSENHA" name="alterarSENHA" >Alterar Senha</button>
     </div>
-
+    </form>
+    <?php
+    if(isset($_POST["alterarSENHA"])){
+        $senha = $_POST['senha'];
+        $id = $_SESSION['id'];
+        $sql ="UPDATE cadastro SET Senha= '$senha' WHERE IdCadastro='$id' ";
+        $result = mysqli_query($conn, $sql);
+     }
+    ?>
 <br><br>
      <!-- Alterar Email
      <div class="half-width">
