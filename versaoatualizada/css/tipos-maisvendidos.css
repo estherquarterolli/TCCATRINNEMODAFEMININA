@@ -30,11 +30,13 @@ product-image-type A{
   position: relative;
  overflow: hidden;
   padding: 20px;
+  margin: 5%;
 }
 
 .product-category {
   margin-top: 5%;
   padding: 0 10vw;
+  margin: 3%;
   font-size: 50px;
   font-weight: 200px;
   margin-bottom: 40px;
@@ -46,7 +48,7 @@ product-image-type A{
 
 .product-container {
   align-items: center;
-  padding: 0 10vw;
+  padding: 0 7vw;
   display: flex;
   flex-direction: row;
   overflow-x: auto;
@@ -133,7 +135,7 @@ product-image-type A{
   overflow: hidden;
   opacity: 0.5;
   text-transform: capitalize;
-  margin: 5px 0;
+  /* margin: 5px 0; */
 }
 
 .price {
@@ -157,7 +159,7 @@ product-image-type A{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 80%);
   cursor: pointer;
   z-index: 3;
 }
@@ -179,6 +181,11 @@ product-image-type A{
 .pre-btn:hover img,
 .nxt-btn:hover img {
   opacity: 1;
+}
+
+.pre-btn ion-icon, .nxt-btn ion-icon{
+  width: 40px;
+  height: 40px;
 }
 
 .collection-container {

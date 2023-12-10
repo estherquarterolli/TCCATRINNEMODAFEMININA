@@ -1,66 +1,79 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var mySwiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-      750: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      1000: {
-        slidesPerView: 3,
-        spaceBetween: 40,
-      },
-      1500: {
-        slidesPerView: 4,
-        spaceBetween: 50,
-      },
-    },
-  });
+// document.addEventListener("DOMContentLoaded", function () {
+//   var mySwiper = new Swiper(".mySwiper", {
+//     slidesPerView: 1,
+//     spaceBetween: 10,
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//     breakpoints: {
+//       0: {
+//         slidesPerView: 1,
+//         spaceBetween: 10,
+//       },
+//       750: {
+//         slidesPerView: 2,
+//         spaceBetween: 20,
+//       },
+//       1000: {
+//         slidesPerView: 3,
+//         spaceBetween: 40,
+//       },
+//       1500: {
+//         slidesPerView: 4,
+//         spaceBetween: 50,
+//       },
+//     },
+//   });
 
   // graddable slider
-  const slider = document.querySelector('.product');
-  const cards = document.querySelector('.product-containerzao');
-  let isPressed = false;
-  let cursorX;
+  let isDown = false;
+let startX;
+let scrollLeft;
+const slider = document.querySelector('.product-container');
 
-  slider.addEventListener("mousedown", (e) => {
-    isPressed = true;
-    cursorX = e.clientX - cards.offsetLeft;
-    slider.style.cursor = "grabbing";
-  });
+const end = () => {
+	isDown = false;
+  slider.classList.remove('active');
+}
 
-  slider.addEventListener("mouseup", () => {
-    slider.style.cursor = "grab";
-  });
+const start = (e) => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX || e.touches[0].pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;	
+}
 
-  window.addEventListener("mouseup", () => {
-    isPressed = false;
-  });
+const move = (e) => {
+	if(!isDown) return;
 
-  slider.addEventListener("mousemove", (e) => {
-    if (!isPressed) return;
-    e.preventDefault();
-    cards.style.left = `${e.clientX - cursorX}px`;
-    boundSlides();
-  });
+  e.preventDefault();
+  const x = e.pageX || e.touches[0].pageX - slider.offsetLeft;
+  const dist = (x - startX);
+  slider.scrollLeft = scrollLeft - dist;
+}
 
-  function boundSlides() {
-    const containerRect = slider.getBoundingClientRect();
-    const cardsRect = cards.getBoundingClientRect();
+(() => {
+	slider.addEventListener('mousedown', start);
+	slider.addEventListener('touchstart', start);
 
-    if (parseInt(cards.style.left) > 0) {
-      cards.style.left = 0;
-    } else if (cardsRect.right < containerRect.right) {
-      cards.style.left = `-${cardsRect.width - containerRect.width}px`;
-    }
-  }
+	slider.addEventListener('mousemove', move);
+	slider.addEventListener('touchmove', move);
+
+	slider.addEventListener('mouseleave', end);
+	slider.addEventListener('mouseup', end);
+	slider.addEventListener('touchend', end);
+})();
+
+
+//teste para ficar slider infinito:
+
+$(document).ready(function() {
+  $('#slider-infinito').lightSlider({
+      autoWidth:true,
+      loop:true,
+      onSliderLoad: function() {
+          $('#slider-infinito').removeClass('cS-hidden');
+      } 
+  });  
 });

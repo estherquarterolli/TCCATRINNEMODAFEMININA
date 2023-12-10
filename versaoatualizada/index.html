@@ -125,17 +125,19 @@ include ('protect.php');
     <div class="product">
       <div class="product-containerzao">
       <center><h2 class="product-category">ENCONTRE O QUE VOCÊ PROCURA... <?php echo $_SESSION['name']; ?></h2></center>
-      <button class="pre-btn"><ion-icon CLASS="ARROW"  name="arrow-forward-circle-outline"></ion-icon></button>
-      <button class="nxt-btn"><ion-icon CLASS="ARROW" name="arrow-forward-circle-outline"></ion-icon></button>
-      <div class="product-container">
+      <!-- <button class="pre-btn"><ion-icon CLASS="ARROW"  name="arrow-forward-circle-outline"></ion-icon></button>
+      <button class="nxt-btn"><ion-icon CLASS="ARROW" name="arrow-forward-circle-outline"></ion-icon></button> -->
+      <div class="product-container" id="slider-infinito">
       <div class="product-card">
         
               <div class="product-image-type">
             <A href="BLUSAS.HTML" STYLE="text-decoration: NONE;COLOR:BLACK;">
 
               <div class="img-tipos">
+                <div class="img"></div>
                 <img src="imagenstcc/tproupablusa.png" class="product-thumb" alt="">
 
+                
                 <!-- <div class="overlay">
                 <button href="#" class="info-btn">Saiba mais</button>
               </div> -->
@@ -269,7 +271,7 @@ include ('protect.php');
       <div class="img-bannerinformativo">
       <img src="imagenstcc/TROCAEDEV.png">
       <div class="overlay">
-        <p>Mande uma dm para nosso instagram</p>
+        <p><a href="https://www.instagram.com/atrinnemodafeminina/">Mande uma dm para nosso instagram</a></p>
       </div>
     </div>
     </div>
@@ -289,78 +291,15 @@ include ('protect.php');
         </div>
         <div class="detail-box">
           <div class="type">
-            <a href="#">Atrinne</a>
-            <span>Bermuda meia coxa</span>
+            <a href="#">Bermuda meia coxa
+              <a href="#" class="price">R$119,00</a>
+            </a>
+            <!-- <span>Perfeita para usar no verão</span> -->
           </div>
-          <a href="#" class="price">R$119,00</a>
-        </div>
-      </div>
-    </li>
-    <li class="item">
-      <div class="box">
-        <div class="slide-img">
-          <img src="imagenstcc/Bermuda meia coxa. R$ 119,00_.jpg" alt="" />
-          <div class="overlay">
-            <a href="#" class="buy-btn">Compre agora</a>
-          </div>
-        </div>
-        <div class="detail-box">
-          <div class="type">
-            <a href="#">Atrinne</a>
-            <span>Bermuda meia coxa</span>
-          </div>
-          <a href="#" class="price">R$119,00</a>
-        </div>
-      </div>
-    </li>
-    <li class="item">
-      <div class="box">
-        <div class="slide-img">
-          <img src="imagenstcc/Bermuda meia coxa. R$ 119,00_.jpg" alt="" />
-          <div class="overlay">
-            <a href="#" class="buy-btn">Compre agora</a>
-          </div>
-        </div>
-        <div class="detail-box">
-          <div class="type">
-            <a href="#">Atrinne</a>
-            <span>Bermuda meia coxa</span>
-          </div>
-          <a href="#" class="price">R$119,00</a>
-        </div>
-      </div>
-    </li>
-    <li class="item">
-      <div class="box">
-        <div class="slide-img">
-          <img src="imagenstcc/Bermuda meia coxa. R$ 119,00_.jpg" alt="" />
-          <div class="overlay">
-            <a href="#" class="buy-btn">Compre agora</a>
-          </div>
-        </div>
-        <div class="detail-box">
-          <div class="type">
-            <a href="#">Atrinne</a>
-            <span>Bermuda meia coxa</span>
-          </div>
-          <a href="#" class="price">R$119,00</a>
-        </div>
-      </div>
-    </li>
-    <li class="item">
-      <div class="box">
-        <div class="slide-img">
-          <img src="imagenstcc/Bermuda meia coxa. R$ 119,00_.jpg" alt="" />
-          <div class="overlay">
-            <a href="#" class="buy-btn">Compre agora</a>
-          </div>
-        </div>
-        <div class="detail-box">
-          <div class="type">
-            <a href="#">Atrinne</a>
-            <span>Bermuda meia coxa</span>
-          </div>
-          <a href="#" class="price">R$119,00</a>
+  
+          <br>
+          <ion-icon class="carrinho-icon" name="cart-outline"></ion-icon>
+        
         </div>
       </div>
     </li>
@@ -368,22 +307,96 @@ include ('protect.php');
     <li class="item">
       <div class="box">
         <div class="slide-img">
-          <img src="imagenstcc/Bermuda meia coxa. R$ 119,00_.jpg" alt="" />
+          <img src="imagenstcc/Blusa babado. R$ 49,90_.jpg" alt="" />
           <div class="overlay">
             <a href="#" class="buy-btn">Compre agora</a>
           </div>
         </div>
         <div class="detail-box">
           <div class="type">
-            <a href="#">Atrinne</a>
-            <span>Bermuda meia coxa</span>
+            <a href="#">Blusa Babado
+              <a href="#" class="price">R$49,90</a>
+            </a>
+            <!-- <span>Perfeita para usar no verão</span> -->
           </div>
-          <a href="#" class="price">R$119,00</a>
+  
+          <br>
+          <ion-icon class="carrinho-icon" name="cart-outline"></ion-icon>
+        
         </div>
       </div>
     </li>
+
+
+    <li class="item">
+      <div class="box">
+        <div class="slide-img">
+          <img src="imagenstcc/Body Any. R$ 59,90_.jpg" alt="" />
+          <div class="overlay">
+            <a href="#" class="buy-btn">Compre agora</a>
+          </div>
+        </div>
+        <div class="detail-box">
+          <div class="type">
+            <a href="#">Body Any
+              <a href="#" class="price">R$59,90</a>
+            </a>
+            <!-- <span>Perfeita para usar no verão</span> -->
+          </div>
+  
+          <br>
+          <ion-icon class="carrinho-icon" name="cart-outline"></ion-icon>
+        
+        </div>
+      </div>
+    </li>
+
     
-    
+    <li class="item">
+      <div class="box">
+        <div class="slide-img">
+          <img src="imagenstcc/Calça Crystal. R$ 179,00_.jpg" alt="" />
+          <div class="overlay">
+            <a href="#" class="buy-btn">Compre agora</a>
+          </div>
+        </div>
+        <div class="detail-box">
+          <div class="type">
+            <a href="#">Calça Crystal 
+              <a href="#" class="price">R$179,00</a>
+            </a>
+            <!-- <span>Perfeita para usar no verão</span> -->
+          </div>
+  
+          <br>
+          <ion-icon class="carrinho-icon" name="cart-outline"></ion-icon>
+        
+        </div>
+      </div>
+    </li>
+
+    <li class="item">
+      <div class="box">
+        <div class="slide-img">
+          <img src="imagenstcc/Calça mom. R$ 139,90_.jpg" alt="" />
+          <div class="overlay">
+            <a href="#" class="buy-btn">Compre agora</a>
+          </div>
+        </div>
+        <div class="detail-box">
+          <div class="type">
+            <a href="#">Bermuda mom
+              <a href="#" class="price">R$139,90</a>
+            </a>
+            <!-- <span>Perfeita para usar no verão</span> -->
+          </div>
+  
+          <br>
+          <ion-icon class="carrinho-icon" name="cart-outline"></ion-icon>
+        
+        </div>
+      </div>
+    </li>
   </ul>
 </section>
 
@@ -485,6 +498,7 @@ include ('protect.php');
 <script src="js/header.js"></script>
     <script src="js/interacaocomamidia.js"></script>
     <script src="js/tipos-maisvendidos.js"></script>
+    <script src="js/tiposderoupa.js"></script>
     <script src="js/modallogin.js"></script>
     <script src="js/maisvendidos.js"></script>
     <script src="js/clientes-instagram.js"></script>

@@ -16,6 +16,7 @@ section.maisvendidos{
     margin: 5%;
 }
 .product-category{
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 80%);
     margin-top: 5%;
   padding: 0 10vw;
   font-size: 50px;
@@ -53,23 +54,28 @@ section.maisvendidos{
 .detail-box{
     width: 100%;
     display: flex;
+    /* flex-direction: column; */
     justify-content: space-between;
-    align-items: center;
+    align-items: safe;
     padding: 10px 20px;
     box-sizing: border-box;
 }
 
 .type{
     display: flex;
+    width: 100%;
     flex-direction: column;
 }
 
 .type a{
     color: #222222;
+    text-transform: uppercase;
     margin: 5px 0px;
     font-weight: 700;
     letter-spacing: 0.5px;
     padding-right: 8px;
+    width: 100%;
+    text-decoration: none;
 
 }
 
@@ -85,6 +91,13 @@ section.maisvendidos{
     letter-spacing: 0.5px;
 }
 
+.carrinho-icon{
+    display: flex;
+    padding-top: 3%;
+    /* background-color: aqua; */
+    width: 40px;
+    height: 40px;
+}
 .overlay{
     position: absolute;
     left: 50%;
@@ -92,6 +105,7 @@ section.maisvendidos{
     transform: translate(-50% , -50%);
     width: 100%;
     height: 100%;
+    text-decoration: none;
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
@@ -110,6 +124,7 @@ section.maisvendidos{
     letter-spacing: 1px;
     border-radius: 20px;
     box-shadow: 2px 2px 30px rgba(0, 0, 0, .2);
+    text-decoration: none;
 }
 
 .buy-btn:hover{
