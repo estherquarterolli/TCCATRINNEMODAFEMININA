@@ -43,3 +43,20 @@ function toggleDropdown() {
     dropdownContent.style.display = "none";
   }
 }
+
+
+
+// menu dropdown 
+
+function toggleProfileDropdown() {
+  var dropdownContent = document.getElementById("profileDropdown").querySelector(".dropdown-content-mobile");
+  dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+}
+
+document.addEventListener("click", function (event) {
+  var profileDropdown = document.getElementById("profileDropdown");
+  if (!profileDropdown.contains(event.target)) {
+      var dropdownContent = profileDropdown.querySelector(".dropdown-content-mobile");
+      dropdownContent.style.display = "none";
+  }
+});

@@ -186,19 +186,17 @@ header.rolagem{
         max-width: 1000PX;
         box-shadow: 0px 3px 10px #0000007e;
         z-index: 4;
-        
         height: 90px;
         position: fixed;
         padding-top: 3%;
         left:0;
-       right: 0;
+        right: 0;
     }
 
 
 .logo P{
     align-items: center;
     justify-content: center;
-
     margin-bottom: 5%;
 }
 
@@ -206,7 +204,9 @@ header.rolagem{
         background-color: #24252a;
         color:rgb(255, 255, 255);
         padding-top: 3%;
+        
         }
+        
 
         .logo p {
             color: #fff;
@@ -346,7 +346,7 @@ header.rolagem{
 @media screen and (max-width: 580px) {
 
     header{
-        padding: 10px;
+        padding-top: 2%;
         width:100%;
         box-shadow: 0px 3px 10px #464646;
         z-index: 4;
@@ -359,7 +359,7 @@ header.rolagem{
     header.rolagem{
         background-color: #24252a;
         color:rgb(255, 255, 255);
-        padding: 4px ;
+        padding-top:3%;
         width: 100%;
         }
 
@@ -492,14 +492,16 @@ margin: 0;
 
 /* login com usuario ja logado */
 
-.usuariofuncao {
+.dropdown-content .usuariofuncao {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
     /* margin-bottom: 15px; */
     padding-bottom: 10px;
-    border-bottom: 1px solid #ffffff;
+    /* border-bottom: 1px solid #ffffff; */
+    width: 100%;
+    
 }
 
 .nomeusuario a {
@@ -524,21 +526,22 @@ margin: 0;
 }
 .dropdown-content {
     display: none;
-    position: absolute;
-    margin-top: 15%;
+    position: fixed;
+    margin-top: 18%;
     background-color: #24252a;
     border: 1px solid white;
+    border-top: none;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     text-align: left;
     width: 300px;
-    border-radius: 5px;
+    border-radius: 0px 0px 50px 20px;
 }
-.nome-usuario{
+.dropdown-content .nome-usuario{
     display: flex; /* Alteração para display flex */
     align-items: center; /* Centralizar verticalmente */
   height: 40px;
-  width: 300px;
+  /* width: 300px; */
   border-bottom: 1px solid white;
   
 }
@@ -570,7 +573,6 @@ margin: 0;
 }
 
 
-
 /* Adicione essas linhas para ajustar o posicionamento do dropdown */
 .login-button {
     position: relative;
@@ -584,4 +586,80 @@ margin: 0;
 .login-button .dropdown-content {
     top: 100%;
     left: 0;
+}
+
+/* Adicione no final do seu código CSS existente */
+
+/* Restante do seu CSS existente */
+
+.login-button-mobile button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.login-button-mobile .dropdown-content-mobile {
+    display: none;
+    position: absolute;
+    background-color: #24252a;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 4;
+    text-align: left;
+    max-width: 1000px;
+    min-width: 300px;
+    border-radius: 5px;
+    top: calc(100% +5%);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.login-button-mobile button:hover + .dropdown-content-mobile,
+.login-button-mobile .dropdown-content-mobile:hover {
+    display: block;
+}
+
+.login-button-mobile .dropdown-content-mobile a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 1px solid #555;
+}
+
+.login-button-mobile .dropdown-content-mobile a:last-child {
+    border-bottom: none;
+}
+
+
+@media screen and (max-width:1000px) {
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        margin-top:5%;
+        background-color: #24252a;
+        /* border: 1px solid white; */
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        text-align: left;
+        width: 300px;
+        border-radius: 5px;
+    }
+    
+}
+
+@media screen and (max-width:1300px){
+    .dropdown-content {
+        display: none;
+        position: fixed;
+        margin-top: 25%;
+        background-color: #24252a;
+        border: 1px solid white;
+        border-top: none;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        text-align: left;
+        width: 300px;
+        border-radius: 0px 0px 50px 20px;
+    }
 }

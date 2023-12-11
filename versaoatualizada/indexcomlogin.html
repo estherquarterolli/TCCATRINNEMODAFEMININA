@@ -80,14 +80,16 @@ include ('protect.php');
                     <ion-icon name="checkbox-outline"></ion-icon>
                 </div>
                 
-                
+                <div class="usuariofuncao">
+                  <a href="logout.php">Sair</a>
+                  <ion-icon name="log-out-outline"></ion-icon>
+              </div>
                 
             </div>
             <!-- <span class="titulomenu">Perfil</span> -->
         </div>
         
-          
-          
+        
       </div>
 
           <div class="mobile-menu-icon">
@@ -106,34 +108,40 @@ include ('protect.php');
               <center><a href="#"><H3>CARRINHO</H3></a></center>
           </div>
 
-          <div class="login-button-mobile-estatico" id="dropdownBtn">
-           <center><a href="#"><H3>CARRINHO</H3></a></center>
-           <center>
-            <a href="#" onclick="toggleDropdown()">
-              <h3>PERFIL</h3>
-            </a>
-          </center>
         
-          <div class="dropdown-content-mobile" id="dropdownContent">
-            <div class="nomeusuario">
-              <h2 class="nome-usuario"><?php echo $_SESSION['nome']; ?></h2>
-            </div>
-        
-            <div class="usuariofuncao">
-              <a href="info-usuario.html">Minha conta</a>
-              <ion-icon name="person-outline"></ion-icon>
-            </div>
-        
-            <div class="usuariofuncao">
-              <a href="#">Meus pedidos</a>
-              <ion-icon name="checkbox-outline"></ion-icon>
-            </div>
+          <div class="login-button-mobile" id="profileDropdown">
+            <center>
+                <button onclick="toggleProfileDropdown()">
+                    <h3>PERFIL</h3>
+                </button>
+                <div class="dropdown-content-mobile">
+                  <div class="nomeusuario">
+                    <!-- tem que por a parte do php de vcs -->
+                      <h2 class="nome-usuario"><?php echo $_SESSION['nome']; ?> </h2>
+                  </div>
+  
+                  <div class="usuariofuncao">
+                      <a href="info-usuario.php">Minha conta</a>
+                      <ion-icon name="person-outline"></ion-icon>
+                  </div>
+  
+                  <div class="usuariofuncao">
+                      <a href="#">Meus pedidos</a>
+                      <ion-icon name="checkbox-outline"></ion-icon>
+                  </div>
+                  
+                  <div class="usuariofuncao">
+                    <a href="logout.php">Sair</a>
+                    <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+                  
+              </div>
+                </div>
+            </center>
+        </div>
 
-            <div class="usuariofuncao">
-              <a href="#">Sair</a>
-              <ion-icon name="log-out-outline"></ion-icon>
-            </div>
-          </div>
+
+        
 
       </div>
     </div>
@@ -175,9 +183,9 @@ include ('protect.php');
     <div class="product">
       <div class="product-containerzao">
       <center><h2 class="product-category">ENCONTRE O QUE VOCÊ PROCURA...</h2></center>
-      <button class="pre-btn"><ion-icon CLASS="ARROW"  name="arrow-forward-circle-outline"></ion-icon></button>
-      <button class="nxt-btn"><ion-icon CLASS="ARROW" name="arrow-forward-circle-outline"></ion-icon></button>
-      <div class="product-container">
+      <!-- <button class="pre-btn"><ion-icon CLASS="ARROW"  name="arrow-forward-circle-outline"></ion-icon></button>
+      <button class="nxt-btn"><ion-icon CLASS="ARROW" name="arrow-forward-circle-outline"></ion-icon></button> -->
+      <div class="product-container " id="autoWidth">
       <div class="product-card">
         
               <div class="product-image-type">
@@ -544,6 +552,7 @@ include ('protect.php');
 <script src="js/header.js"></script>
     <script src="js/interacaocomamidia.js"></script>
     <script src="js/tipos-maisvendidos.js"></script>
+    <script src="js/tiposderoupa.js"></script>
     <script src="js/modallogin.js"></script>
     <script src="js/maisvendidos.js"></script>
     <script src="js/clientes-instagram.js"></script>
