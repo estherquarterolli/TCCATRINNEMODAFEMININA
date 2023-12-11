@@ -15,6 +15,7 @@ header{
     width:100%;
     box-shadow: 0px 3px 10px #464646;
     z-index: 7;
+    padding: 9px ;
     position: fixed;
     /* background-color:#24252a; */
     height: 90px;

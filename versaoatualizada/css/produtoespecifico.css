@@ -19,6 +19,7 @@
 
 .container{
     display: flex;
+    flex-direction: row;
     position: relative;
     align-items: center;
     justify-content: center;
@@ -27,6 +28,7 @@
 
 .row{
     display: flex;
+    flex-direction: row;
     gap: 20px;
 }
 

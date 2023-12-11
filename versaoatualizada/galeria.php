@@ -13,59 +13,12 @@
 </head>
 
 <body>
-    
-<!-- <div class="container-fluid"> -->
-  <header>
-    <div class="container">
-      <nav class="nav-bar">
-        
-          <div class="logo">
-              <a href="INDEX.HTML"><p>ATRINNE MODA FEMININA</p></a>
-          </div>
-        <div class="botoes-header">
-          <a href="GALERIA.html"><div class="login-button">
-           <button><ion-icon name="shirt-outline"></ion-icon></button>
-              <br>
-              <span class="titulomenu">Produtos</span>
-          </div></a>
-          <div class="login-button">
-              <button><a href="FAVORITOS.HTML"><ion-icon name="heart-outline"></ion-icon></a></button><br>
-              <span class="titulomenu">Favoritos</span>
-          </div>
+  
+<?php 
+  include('header.php') 
+   ?>
 
-          <div class="login-button">
-              <button><a href="CARRINHO.HTML"><ion-icon name="cart-outline"></ion-icon></a></button><br>
-              <span class="titulomenu">Carrinho</span>
-          </div>
-
-          <div class="login-button">
-              <button><a href="LOGIN.HTML"><ion-icon name="person-outline"></ion-icon></a></button><br>
-               <span class="titulomenu">Perfil</span>
-          </div>
-      </div>
-
-          <div class="mobile-menu-icon">
-              <button onclick="menuShow()"><ion-icon class="icon" name="menu-outline"></ion-icon></button>
-          </div>
-      </nav>
-      <div class="mobile-menu">
-          <div class="login-button-mobile">
-              <center><a href="GALERIA.html"><H3>PRODUTOS</H3></a></center>
-          </div>
-          <div class="login-button-mobile">
-              <center><a href="FAVORITOS.HTML"><H3>FAVORITOS</H3></a></center>
-          </div>
-
-          <div class="login-button-mobile">
-              <center><a href="CARRINHO.HTML"><H3>CARRINHO</H3></a></center>
-          </div>
-
-          <div class="login-button-mobile">
-              <center><a href="LOGIN.HTML"><H3>PERFIL</H3></a></center>
-          </div>
-      </div>
-    </div>
-  </header>
+   <!-- final do header -->
 <div class="gallery-container">
   <center><h1> PRODUTOS QUE VOCÊ SÓ ENCONTRA NA ATRINNE</h1></center>
 <BR>
