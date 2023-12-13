@@ -14,9 +14,9 @@ header{
     top: 0;
     background-color: #24252a;
     width:100%;
-    box-shadow: 0px 3px 10px #ff0000;
+    box-shadow: 0px 3px 10px #4b4b4b;
     z-index: 1;
-    position: fixed;
+    /* position: fixed; */
     /* background-color:#24252a; */
     height: 90px;
 
