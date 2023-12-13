@@ -63,19 +63,41 @@ if(isset($display_message)){
                    ?>
 
 <form method="post" action="">
-                <div class="edit_form">
-                    <img src="produtos/<?php echo $fetch_product['image']?>" alt="">
-                    <h3><?php echo $fetch_product['name'] ?></h3>
-                    <div class="price">Preço: <?php echo $fetch_product['price'] ?></div>
-                    <!-- CAMPOS OCULTOS QUE ESTÃO ARMAZENANDO OS DADOS PARA INSERIR NA TABELA CARRINHO PEGANDO DADOS DA TABELA PRODUTOS -->
-                    <input type="hidden" name="product_name" value="<?php echo $fetch_product['name'] ?>">
+                
+<li class="item">
+         <div class="box">
+           <div class="slide-img">
+             <img src="produtos/<?php echo $fetch_product['image']?>" alt="">
+             <div class="overlay">
+               <a href="produtoespecifico.php" class="buy-btn">Compre agora</a>
+             </div>
+           </div>
+           <div class="detail-box">
+             <div class="type">
+             <a href="produtoespecifico.php"><?php echo $fetch_product['name'] ?></a>
+                    <div class="price"> <?php echo $fetch_product['price'] ?></div>
+               </a>
+               <!-- <span>Perfeita para usar no verão</span> -->
+             </div>
+     
+             <br>
+             <ion-icon class="carrinho-icon" name="cart-outline"></ion-icon>
+           
+           </div>
+            <!-- CAMPOS OCULTOS QUE ESTÃO ARMAZENANDO OS DADOS PARA INSERIR NA TABELA CARRINHO PEGANDO DADOS DA TABELA PRODUTOS -->
+            <input type="hidden" name="product_name" value="<?php echo $fetch_product['name'] ?>">
                     <input type="hidden" name="product_price"  value="<?php echo $fetch_product['price'] ?>">
                     <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']?>">
                     <!-- precisa aumentar o tamanho do botão -->
-                    <input type="submit"  class="submit_btn cart_btn" value="Adicionar ao Carrinho" name="add_to_cart" >
-                </div>
-
+                    <!-- <input type="submit"  class="submit_btn cart_btn" value="Adicionar ao Carrinho" name="add_to_cart" > -->
+         </div>
+       </li>
 </form>
+
+
+
+
+
 <?php
                    }
                     
@@ -88,5 +110,11 @@ if(isset($display_message)){
             </div>
         </section>
     </div>
+
+    <!-- ionicon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
 </body>
 </html>
