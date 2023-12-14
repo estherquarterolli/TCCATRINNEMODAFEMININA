@@ -124,8 +124,13 @@ product-image-type A{
   padding-top: 10px;
 }
 
+h2{
+  font-family: 'BEBAS NEUE';
+}
 .product-brand {
   text-transform: uppercase;
+  font-family: 'BEBAS NEUE';
+
 }
 
 .product-short-description {

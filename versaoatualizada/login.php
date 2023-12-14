@@ -87,7 +87,7 @@ if(isset($_POST["submitLOGIN"])){
       header('location: indexcomlogin.php'); 
     }
     else{
-      echo "Email ou Senha incorretos!";
+      $erroEMAIL[] =  "Email ou Senha incorretos!";
     }
 
   }
@@ -105,14 +105,60 @@ if(isset($_POST["submitLOGIN"])){
     <title>Document</title> 
 
     <link rel="stylesheet" href="css/headerpag.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/login.css"> 
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 </head>
 <body>
-<?php
+<header>
+    <div class="container">
+      <nav class="nav-bar">
+          <div class="logo">
+              <a href="INDEX.HTML"><p>ATRINNE MODA FEMININA</p></a>
+          </div>
+        <div class="botoes-header">
+          <a href="shop_products.php"><div class="login-button">
+           <button><ion-icon name="shirt-outline"></ion-icon></button>
+              <br>
+              <span class="titulomenu">Produtos</span>
+          </div></a>
+          <div class="login-button">
+              <button><a href="login.php"><ion-icon name="heart-outline"></ion-icon></a></button><br>
+              <span class="titulomenu">Favoritos</span>
+          </div>
 
-include('header.php');
-?>
+          <div class="login-button">
+              <button><a href="cart.php"><ion-icon name="cart-outline"></ion-icon></a></button><br>
+              <span class="titulomenu">Carrinho</span>
+          </div>
+
+          <div class="login-button">
+              <button><a href="login.php"><ion-icon name="person-outline"></ion-icon></a></button><br>
+               <span class="titulomenu">Perfil</span>
+          </div>
+      </div>
+
+          <div class="mobile-menu-icon">
+              <button onclick="menuShow()"><ion-icon class="icon" name="menu-outline"></ion-icon></button>
+          </div>
+      </nav>
+      <div class="mobile-menu">
+          <div class="login-button-mobile">
+              <center><a href="GALERIA.html"><H3>PRODUTOS</H3></a></center>
+          </div>
+          <div class="login-button-mobile">
+              <center><a href="login.php"><H3>FAVORITOS</H3></a></center>
+          </div>
+
+          <div class="login-button-mobile">
+              <center><a href="login.php"><H3>CARRINHO</H3></a></center>
+          </div>
+
+          <div class="login-button-mobile">
+              <center><a href="login.php"><H3>PERFIL</H3></a></center>
+          </div>
+      </div>
+    </div>
+  </header>
 
   <main>
     <div class="box">
@@ -156,7 +202,16 @@ include('header.php');
 
               <input type="submit" name="submitLOGIN" value="Login" class="sign-btn" />
 
-             
+
+              <!-- Código para um erro aparecer somente se ele acontecer -->
+              <?php    
+              if(isset($erroEMAIL)){
+                foreach($erroEMAIL as $erroEMAIL){
+                  echo $erroEMAIL;
+                }
+              }
+              ?>
+ 
             </div>
           </form>
 
@@ -170,15 +225,6 @@ include('header.php');
               <!-- <h6>Pronto</h6> -->
               <a href="#" class="toggle">Faça seu login</a>
 <br>
-              <?php 
-              
-              if(isset($error)){
-                foreach($error as $error){
-                  echo $error;
-                }
-              }
-              
-              ?>
             </div>
 
             <div class="actual-form">
@@ -249,7 +295,15 @@ include('header.php');
 
               <input type="submit" name="submitCADASTRO" value="Cadastro" class="sign-btn" />
 
-        
+              <?php 
+              //  Código para um erro aparecer somente se ele acontecer 
+              if(isset($error)){
+                foreach($error as $error){
+                  echo $error;
+                }
+              }
+              
+              ?>
             </div>
           </form>
         </div>

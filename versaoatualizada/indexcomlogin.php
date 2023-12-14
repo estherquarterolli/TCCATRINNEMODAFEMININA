@@ -222,7 +222,7 @@ include('header.php')
       <div class="img-bannerinformativo">
       <img src="imagenstcc/TROCAEDEV.png">
       <div class="overlay">
-        <p>Mande uma dm para nosso instagram</p>
+        <p><a href="https://www.instagram.com/atrinnemodafeminina/">Mande uma dm para nosso instagram</a></p>
       </div>
     </div>
     </div>
