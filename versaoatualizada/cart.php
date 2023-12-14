@@ -1,4 +1,5 @@
 <?php include('conexao.php'); 
+include 'protect.php';
 // update query
 if(isset($_POST['update_product_quantity'])){
 $update_value = $_POST['update_quantity'];
@@ -60,7 +61,11 @@ if(isset($_GET['delete_all'])){
                     <td><?php echo $fetch_cart_products['id'] ?></td>
                     <td><?php echo $fetch_cart_products['name'] ?></td>
                     <td>
+                        
+                    <div class="carrinho-img">
                         <img src="produtos/<?php echo $fetch_cart_products['image'] ?>" alt="FÉ">
+                    </div>
+
                     </td>
                     <!-- PREÇO -->
                     <td>R$ <?php echo $fetch_cart_products['price'] ?></td>
