@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+  
 </head>
 <body>
 <header>
@@ -13,7 +14,7 @@
               <a href="INDEX.HTML"><p>ATRINNE MODA FEMININA</p></a>
           </div>
         <div class="botoes-header">
-          <a href="GALERIA.html"><div class="login-button">
+          <a href="shop_products.php"><div class="login-button">
            <button><ion-icon name="shirt-outline"></ion-icon></button>
               <br>
               <span class="titulomenu">Produtos</span>
@@ -24,7 +25,7 @@
           </div>
 
           <div class="login-button">
-              <button><a href="#"><ion-icon name="cart-outline"></ion-icon></a></button><br>
+              <button><a href="cart.php"><ion-icon name="cart-outline"></ion-icon></a></button><br>
               <span class="titulomenu">Carrinho</span>
           </div>
 

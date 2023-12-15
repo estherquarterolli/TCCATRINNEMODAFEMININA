@@ -1,3 +1,4 @@
+<!-- PÁGINA PARA ADM COLOCAR NOVOS ARQUIVOS -->
 <?php
 include ("conexao.php");
 if(isset($_POST['add_product'])){
@@ -6,9 +7,10 @@ if(isset($_POST['add_product'])){
     $product_image =$_FILES['product_image']['name'];
     $product_image_temp_name =$_FILES['product_image']['tmp_name'];
     $product_image_folder = 'produtos/'.$product_image;
+    $product_type = $_POST['product_type'];
    
 
-    $insert_query =mysqli_query($conn, "insert into `products` (name,price,image) values ('$product_name', '$product_price', '$product_image')");
+    $insert_query =mysqli_query($conn, "insert into `products` (name,price,image, type) values ('$product_name', '$product_price', '$product_image', '$product_type' )");
 
     if($insert_query){
         move_uploaded_file($product_image_temp_name,$product_image_folder);
@@ -53,8 +55,9 @@ include ('headerCarrinho.php');
         <h3 class="heading">Adicionar Produto</h3>
         <!-- FORMULÁRIO -->
         <form action="" class="add_product" method="post" enctype="multipart/form-data">
-        <input type="text" name="product_name" placeholder="Enter product name" class="input_fields" required>
-        <input type="number" name="product_price" min="0" placeholder="Enter product Price" class="input_fields" required>
+        <input type="text" name="product_name" placeholder="Nome do Produto" class="input_fields" required>
+        <input type="number" name="product_price" min="0" placeholder="Preço do Produto" class="input_fields" required>
+        <input type="text" name="product_type"  placeholder="Categoria do Produto" class="input_fields" required>
         <input type="file" name="product_image" class="input_fields" required accept="image/png, image/jpg, image/jpeg">
         <input type="submit" name="add_product" class="subimt_btn" value="Adicionar Produto"> 
         </form>

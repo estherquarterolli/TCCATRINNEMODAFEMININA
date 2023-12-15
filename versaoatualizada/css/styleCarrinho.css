@@ -284,7 +284,7 @@ li{
 .price{
   color: #333333;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   letter-spacing: 0.5px;
 }
 
@@ -342,26 +342,7 @@ li{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* cart.php */
+/* carrinho css */
 .shopping_cart table {
   text-align: center;
   width: 100%;
@@ -370,10 +351,10 @@ li{
   padding: 1.5rem;
   font-size: 1.6rem;
   color: var(--white);
-  background-color: var(--color2);
+  background-color: #D49DA8;
 }
 .table_bottom {
-  background-color: var(--color1);
+  background-color: #D49DA8;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -383,21 +364,21 @@ li{
 .bottom_btn {
   color: var(--black);
   font-size: 1.3rem;
-  background-color: var(--color4);
+  background-color: #965a66;
   padding: 1rem;
 }
 .bottom_btn span {
-  color: green;
+  color: rgb(14, 10, 10);
 }
 
 .delete_all_btn {
-  background-color: var(--color1);
+  background-color: #D49DA8;
   color: var(--white);
   font-size: 1.3rem;
   padding: 1.5rem;
 }
 .delete_all_btn .fa-trash {
-  color: var(--red);
+  color: #D49DA8;
   margin-right: 0.5rem;
 }
 .quantity_box {
@@ -412,8 +393,19 @@ li{
 .update_quantity {
   color: var(--white);
   padding: 0.5rem;
-  background-color: var(--color1);
+  background-color:  #D49DA8;
   margin: 1rem 0;
+}
+
+
+
+.carrinho-img img{
+width:150px !important;
+  height:200px;
+}
+
+.fas fa-trash{
+  color: #000;
 }
 /* media queries */
 

@@ -21,18 +21,6 @@ header{
     height: 90px;
 
 }
-/* header.rolagem{
-    background-color: #24252a;
-    color:rgb(255, 255, 255);
-    padding: 4px ;
-    width: 100%;
-    } */
-
-/* =.container {
-    display: inline;
-    align-items: center;
-    margin: 5%;
-} */
 
 .logo {
     display: flex;
@@ -46,6 +34,7 @@ header{
     flex-direction: row;
     gap: 35px;
     align-items: center;
+    margin-top: 1%;
     margin-bottom:2%; 
     margin-right: 5%;
 }
