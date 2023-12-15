@@ -22,6 +22,9 @@ if(isset($_POST['add_to_cart'])){
 ?>
 <!DOCTYPE html>
 <html lang="en">
+  <style>
+
+  </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,30 +54,68 @@ if(isset($display_message)){
 
             <!-- FILTROS -->
 <div class="container_filtro">
-  <form action="">
-<button type="submit" name="categoria" value="CALÇA" >Filtrar Pesquisa</button>
+<?php 
+// se n tiver nada digitado, n vai aparecer nada 
+if(!isset($_GET['busca'])){
+    echo " ";
+}else{
+$pesquisa = $conn->real_escape_string($_GET['busca']);
+// pesquisando na tabela produtos e vendo se o que foi escrito se parece com oque tem no banco
+// a porcentagem significa que vai buscar qualquer coisa relacionada com o nome
+$sql_code = "SELECT * FROM products WHERE name LIKE '%$pesquisa%' OR type LIKE '%$pesquisa%'";
+$sql_query = $conn->query($sql_code);
+
+if($sql_query->num_rows == 0){
+    echo "nenhum resultado encontrado...";
+}else{
+
+while($dados = $sql_query->fetch_assoc()){
+
+?>
+
+<table>
+    <tr>
+        <td><?php echo $dados['name'] ?></td>
+        <td><?php echo $dados['price'] ?></td>
+        <td><img src="protudos/<?php echo $dados['image'] ?>" alt=""></td>
+        <td><?php echo $dados['type'] ?></td>
+    </tr>
+</table>
+
+<?php
+}
+
+
+}
+
+
+
+}
+
+
+?>
+
+
+<form action="">
+    <input type="text" placeholder="Digite a Roupa" value="<?php if(isset($_GET['busca'])) echo $_GET['busca'] ?>" name="busca">
+    <button type="submit">PESQUISAR</button>
 </form>
 </div>
 
+                        <!-- FIM DO FILTRO -->
+
+
             <div class="product_container">
-
-           
-
-
                 <?php 
-                if(!isset($_GET['categoria'])){
-                  // $select_products = mysqli_query($conn, "select * from `products` ");
-       
                 // buscando dados da tabela dos produtos
                 $select_products = mysqli_query($conn, "select * from `products` ");
-               if(mysqli_num_rows($select_products) > 0){
+               
+                if(mysqli_num_rows($select_products) > 0){
 
-                  while( $fetch_product = mysqli_fetch_assoc($select_products)){
-                   // echo $fetch_product['name'];        
-                   // filtro
-                 ?> 
-
-                
+                   while( $fetch_product = mysqli_fetch_assoc($select_products)){
+                    // echo $fetch_product['name'];        
+                    // filtro
+                  ?> 
 
 <form method="post" action="">
                 
@@ -94,7 +135,7 @@ if(isset($display_message)){
                <!-- <span>Perfeita para usar no verão</span> -->
              </div>
              <br>
-             <!-- ICONE CARRINHO -->
+             <!-- ÍCONE DO CARRINHO -->
              <ion-icon class="carrinho-icon" name="cart-outline"></ion-icon>           
            </div>
            <!-- CAMPOS OCULTOS QUE ESTÃO ARMAZENANDO OS DADOS PARA INSERIR NA TABELA CARRINHO PEGANDO DADOS DA TABELA PRODUTOS -->
@@ -109,15 +150,13 @@ if(isset($display_message)){
 </form>
 
 <?php
-          
-          // fim dos ifs e elses e while
+                   
                   }
                 
            }
-          }
+      
                 else{
-                    // echo "<div class='empty_text'>Sem Produtos</div>";
-                    header('location: filtrar.php');
+                    echo "<div class='empty_text'>Sem Produtos</div>";
                 }
                 ?>
                 <!-- FORMULÁRIO -->

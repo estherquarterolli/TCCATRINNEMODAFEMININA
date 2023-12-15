@@ -1,6 +1,6 @@
 <header class="header">
 <div class="header_body">
-    <a href="index.php" class="logo">Atrinne Moda Feminina</a>
+    <a href="indexcomlogin.php" class="logo">Atrinne Moda Feminina</a>
     <nav class="navbar">
         <a href="carrinho.php">Adicionar Produtos</a>
         <a href="view_products.php">Ver Produtos</a>

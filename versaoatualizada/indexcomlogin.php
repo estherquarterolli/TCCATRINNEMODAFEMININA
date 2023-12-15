@@ -80,7 +80,7 @@ include('header.php')
       <center><h2 class="product-category">ENCONTRE O QUE VOCÊ PROCURA...</h2></center>
       <!-- <button class="pre-btn"><ion-icon CLASS="ARROW"  name="arrow-forward-circle-outline"></ion-icon></button>
       <button class="nxt-btn"><ion-icon CLASS="ARROW" name="arrow-forward-circle-outline"></ion-icon></button> -->
-      <div class="product-container " id="autoWidth">
+      <div class="product-container " id="slider-infinito">
       <div class="product-card">
         
               <div class="product-image-type">
@@ -222,7 +222,7 @@ include('header.php')
       <div class="img-bannerinformativo">
       <img src="imagenstcc/TROCAEDEV.png">
       <div class="overlay">
-        <p>Mande uma dm para nosso instagram</p>
+        <p><a href="https://www.instagram.com/atrinnemodafeminina/">Mande uma dm para nosso instagram</a></p>
       </div>
     </div>
     </div>

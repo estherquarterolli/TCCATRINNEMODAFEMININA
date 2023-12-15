@@ -14,25 +14,13 @@ header{
     top: 0;
     background-color: #24252a;
     width:100%;
-    box-shadow: 0px 3px 10px #ff0000;
+    box-shadow: 0px 3px 10px #4b4b4b;
     z-index: 1;
-    position: fixed;
+    /* position: fixed; */
     /* background-color:#24252a; */
     height: 90px;
 
 }
-/* header.rolagem{
-    background-color: #24252a;
-    color:rgb(255, 255, 255);
-    padding: 4px ;
-    width: 100%;
-    } */
-
-/* =.container {
-    display: inline;
-    align-items: center;
-    margin: 5%;
-} */
 
 .logo {
     display: flex;
@@ -46,6 +34,7 @@ header{
     flex-direction: row;
     gap: 35px;
     align-items: center;
+    margin-top: 1%;
     margin-bottom:2%; 
     margin-right: 5%;
 }
