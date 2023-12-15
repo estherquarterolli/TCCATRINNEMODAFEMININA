@@ -1,0 +1,111 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  /* background-color: aqua; */
+}
+
+
+
+
+.swiper-slide {
+  /* margin: 5%; */
+  /* width: 287PX;
+  HEIGHT:544PX;  N FUNCIONOU :(*/
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-tipos{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 15, 15, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay-tipos{
+  visibility: hidden;
+}
+img.product-thumb:hover .overlay-tipos{
+  visibility: visible;
+  animation: fade 0.5s;
+}
+
+
+
+/* overlay está em outros css também */
+.overlay{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-btn{
+  width: 160px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  color: #252525;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, .2);
+}
+
+.info-btn:hover{
+  color: white;
+  background-color: palevioletred;
+  transition: all ease 0.3s;
+}
+
+.overlay{
+  opacity: 0;
+}
+.product-card:hover .overlay{
+  opacity: 1;
+  animation: fade 0.5s;
+}
+
+@media screen and ( max-width:1980px) {
+  .swiper {
+    margin: 5%;
+    width: 80%;
+    height: 100%;
+  }
+  
+}
+@media screen and ( max-width:600px) {
+  .swiper {
+    margin: 5%;
+    width: 80%;
+    height: 70%;
+  }
+  .swiper-pagination{
+    margin-top: 25%;
+  }
+}
