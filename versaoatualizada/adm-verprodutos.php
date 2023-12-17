@@ -42,14 +42,13 @@ if(mysqli_num_rows($display_product)>0){
 
     <tr>
                     <td><?php echo $row['id']; ?></td>
-                    <td><img src="produtos/<?php echo $row['image']?>" alt=<?php echo $row['name'] ?>></td>
+                    <td><img src="produtos/<?php echo $row['image']?>" alt=<?php echo $row['name'] ?></td>
                     <td><?php echo $row['name']; ?></td>
                     <td><?php echo $row['price']; ?></td>
                     <td>
                         <!-- o nome depois do ? é um action para executar -->
                         <a href="delete.php?delete=<?php echo $row['id']; ?>"
-                         class="delete_product_btn" onclick="return confirm('Você tem certeza que deseja excluir esse produto?');">
-                         <i class="fas fa-trash"></i></a>
+                         class="delete_product_btn" onclick="return confirm('Você tem certeza que deseja excluir esse produto?');"><i class="fas fa-trash"></i></a>
                         <a href="update.php?edit=<?php echo $row['id']; ?>"
                         class="update_product_btn">
                             <i class="fas fa-edit"></i></a>

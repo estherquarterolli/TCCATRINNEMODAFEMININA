@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="css/produtoespecifico.css" />
+    <link rel="stylesheet" href="css/headerpag.css" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <script defer src="script.js"></script>
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="INDEX.HTML"><p>ATRINNE MODA FEMININA</p></a>
+            </div>
+          <div class="botoes-header">
+            <a href="GALERIA.html"><div class="login-button">
+             <button><ion-icon name="shirt-outline"></ion-icon></button>
+                <br>
+                <span class="titulomenu">Produtos</span>
+            </div></a>
+            <div class="login-button">
+                <button><a href="login.php"><ion-icon name="heart-outline"></ion-icon></a></button><br>
+                <span class="titulomenu">Favoritos</span>
+            </div>
+  
+            <div class="login-button">
+                <button><a href="login.php"><ion-icon name="cart-outline"></ion-icon></a></button><br>
+                <span class="titulomenu">Carrinho</span>
+            </div>
+  
+            <div class="login-button">
+                <button><a href="login.php"><ion-icon name="person-outline"></ion-icon></a></button><br>
+                 <span class="titulomenu">Perfil</span>
+            </div>
+        </div>
+  
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><ion-icon class="icon" name="menu-outline"></ion-icon></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <div class="login-button-mobile">
+                <center><a href="GALERIA.html"><H3>PRODUTOS</H3></a></center>
+            </div>
+            <div class="login-button-mobile">
+                <center><a href="login.php"><H3>FAVORITOS</H3></a></center>
+            </div>
+  
+            <div class="login-button-mobile">
+                <center><a href="login.php"><H3>CARRINHO</H3></a></center>
+            </div>
+  
+            <div class="login-button-mobile">
+                <center><a href="login.php"><H3>PERFIL</H3></a></center>
+            </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- fim do header  -->
+    <!-- seção do produto específico -->
+    <main class="item">
+      <section class="img">
+        <img src="images/jeans1.png" alt="" class="img-main" />
+        
+      </section>
+
+      <section class="price">
+        <!-- Nome do produto -->
+        <h1 class="price-main__heading">Nome do Produto</h1>
+
+        <!-- texto estático com descrição das roupas. -->
+        <p class="price-txt">
+         O melhor look para se usar no verão quente do RJO melhor look para se usar no verão quente do RJO melhor look para se usar no verão quente do RJO melhor look para se usar no verão quente do RJO melhor look para se usar no verão quente do RJ
+        </p>
+        <div class="price-box">
+          <div class="price-box__main">
+
+            <!-- preço do produto -->
+            <span class="price-box__main-new">R$125.00</span>
+            <!-- tag de desconto - frufrufru -->
+            <span class="price-box__main-discount"> 50%</span>
+          </div>
+            <!-- preço antes da "promoção"
+            <span class="price-box__old">R$250.00</span>
+          </div> -->
+        <div class="button-container">
+          <button id="pp" class="size-button">PP</button>
+          <button id="p" class="size-button">P</button>
+          <button id="m" class="size-button">M</button>
+          <button id="g" class="size-button">G</button>
+          <button id="gg" class="size-button">GG</button>
+        </div>
+
+        <div class="price-btnbox">
+          
+            <!-- botão para aumentar quantidade de produtos -->
+          <!-- <div class="price-btns"> -->
+<!-- aumentar prdoutos -->
+
+<div class="counter-container">
+  <button id="counterBtn" class="counter-button">
+    <span CLASS="CONTADOR"id="minus">-</span>
+    <span CLASS="CONTADOR"id="count">0</span>
+    <span CLASS="CONTADOR"id="plus">+</span>
+  </button>
+          </div>
+
+          <!-- botão para adicionar no carrinho -->
+          <button class="PRICE-BTN">
+            <ion-icon name="cart-outline"><P> ADICIONAR </P></ion-icon>
+        </div>
+      </section>
+    </main>
+
+    <script SRC="contador.js"></script>
+   <!-- ionicon -->
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   
+  </body>
+</html>

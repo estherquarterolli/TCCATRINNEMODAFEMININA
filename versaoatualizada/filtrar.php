@@ -26,7 +26,7 @@ if(isset($_POST['add_to_cart'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filtro</title>
-    <link rel="stylesheet" href="css/styleCarrinho">
+    <link rel="stylesheet" href="css/filtrar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -35,13 +35,9 @@ include('headerCarrinho.php');
 ?>
 
 <div class="container">
-    <!-- FILTRO -->
-  
-  <form action="">
-    <input type="text" placeholder="Digite a Roupa" value="<?php if(isset($_GET['busca'])) echo $_GET['busca'] ?>" name="busca">
-    <button type="submit">PESQUISAR</button>
-</form>
-  
+
+
+<!-- FIM DO FILTRO -->
     <?php
 if(isset($display_message)){
   foreach($display_message as $display_message){
@@ -54,8 +50,19 @@ if(isset($display_message)){
 
 ?>
 
+    <!-- FILTRO PESQUISAR-->
+    <div class="botao_container">
+  <form action="">
+    <input type="text" placeholder="Digite a Roupa" value="<?php if(isset($_GET['busca'])) echo $_GET['busca'] ?>" name="busca">
+    <button class="btn-filtar" type="submit">PESQUISAR</button>
+</form>
+</div>
+
+
+    <!-- SEÇÃO ONDE FICAM TODOS OS PRODUTOS -->
+
             <section class="products">
-            <!-- CONTAINER ONDE FICAM TODOS OS PRODUTOS -->
+      
 
             <!-- FILTROS -->
 
@@ -77,8 +84,11 @@ if($sql_query->num_rows == 0){
 while($dados = $sql_query->fetch_assoc()){
 
 ?>
+
+<div class="product_container">
+
 <!-- DADOS ESTÃO APARECENDO AQUI -->
-<form method="post" action="">
+<form class=""method="post" action="">
 
 <li class="item">
          <div class="box">
@@ -96,7 +106,7 @@ while($dados = $sql_query->fetch_assoc()){
                <!-- <span>Perfeita para usar no verão</span> -->
              </div>
              <br>
-             <ion-icon class="carrinho-icon" name="cart-outline"></ion-icon>           
+             <button type="submit"  class="submit_btn cart_btn" value="Adicionar ao Carrinho" name="add_to_cart"><ion-icon class="carrinho-icon" name="cart-outline"></ion-icon></button>                      
            </div>
            <!-- CAMPOS OCULTOS QUE ESTÃO ARMAZENANDO OS DADOS PARA INSERIR NA TABELA CARRINHO PEGANDO DADOS DA TABELA PRODUTOS -->
             <input type="hidden" name="product_name" value="<?php echo $dados['name'] ?>">
@@ -104,11 +114,12 @@ while($dados = $sql_query->fetch_assoc()){
                     <input type="hidden" name="product_image" value="<?php echo $dados['image']?>">
                     <input type="hidden" name="product_type" value="<?php echo $dados['type']?>">
                     <!-- precisa aumentar o tamanho do botão -->
-                    <input type="submit"  class="submit_btn cart_btn" value="aaa ao Carrinho" name="add_to_cart" >
+                    
          </div>
        </li>
-</form>
 
+</form>
+</DIV>
 
 <?php
 }

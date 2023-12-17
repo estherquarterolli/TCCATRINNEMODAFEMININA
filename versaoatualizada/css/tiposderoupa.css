@@ -1,3 +1,4 @@
+
 html,
 body {
   position: relative;
@@ -9,7 +10,7 @@ body {
 
 
 .swiper-slide {
-  /* margin: 5%; */
+ 
   /* width: 287PX;
   HEIGHT:544PX;  N FUNCIONOU :(*/
   text-align: center;
@@ -42,12 +43,14 @@ body {
 .overlay-tipos{
   visibility: hidden;
 }
-img.product-thumb:hover .overlay-tipos{
+img-thumb:hover .overlay-tipos{
   visibility: visible;
   animation: fade 0.5s;
 }
 
-
+.product-container{
+  width:60%;
+}
 
 /* overlay está em outros css também */
 .overlay{

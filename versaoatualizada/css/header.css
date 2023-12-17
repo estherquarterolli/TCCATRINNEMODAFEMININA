@@ -526,11 +526,11 @@ margin: 0;
     text-align: center;
     padding-right: 10px;
 }
-.dropdown-content {
+header .dropdown-content {
     display: none;
     position: fixed;
-    margin-top: 16%;
-    margin-right: 6%;
+    margin-top: 21%;
+    margin-right: 8%;
     background-color:  #24252a;
     border: 1px solid white;
     border-top: none;
@@ -666,3 +666,56 @@ margin: 0;
         border-radius: 0px 0px 50px 20px;
     }
 }
+
+
+
+.login-button-estatico{
+    position: block;
+    list-style: none;
+    width: 40px; 
+    height: 50px; /* 5% a menos que o valor original (60px) */
+    /* background: white; */
+    border-radius: 28.5px; /* 5% a menos que o valor original (30px) */
+    cursor: pointer;
+    box-shadow: none;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    align-items: center; 
+    line-height:1.5;
+
+
+    position: relative;
+
+    list-style: none;
+    cursor: pointer;
+    transition: .5s;
+    display: flex;
+    line-height: 1.5;
+    }
+
+ 
+
+        .login-button-estatico ion-icon {
+font-size: 0.3em; /* 5% a menos que o valor original (1.23em) */
+ color: rgb(254, 254, 254); 
+transition: .2s;
+            }
+
+
+            /* sup */
+
+
+            .login-button-estatico sup {
+                font-size: 1.2em; /* Defina o tamanho desejado para o <sup> */
+                color: white; /* Cor branca */
+                position: absolute;
+                top:-7%;
+                /* background-color: black; */
+              /* padding-top: 25px; */
+                bottom: 0; /* Alinhar abaixo do ícone */
+                left: 50%; /* Alinhar no centro horizontal */
+                transform: translateX(-50%); /* Ajustar o centro horizontal */
+            }
+            

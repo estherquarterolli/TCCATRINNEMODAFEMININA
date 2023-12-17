@@ -446,44 +446,71 @@ margin: 0;
     justify-content: center;
     align-items: center; 
     line-height: 0.5;
-    
 } 
 .login-button-estatico ion-icon{
     color: white;
+    font-size: 0.3em;
     width: 40px;
     height: 40px;
 }
 
-    .login-button-estatico{
-        position: block;
-        list-style: none;
-        width: 40px; 
-        height: 50px; /* 5% a menos que o valor original (60px) */
-        /* background: white; */
-        border-radius: 28.5px; /* 5% a menos que o valor original (30px) */
-        cursor: pointer;
-        box-shadow: none;
-        transition: .5s;
-        display: flex;
-        align-items: center;
-        justify-content: center; 
-        align-items: center; 
-        line-height:1.5;
-        }
-
-     
-    
-            .login-button-estatico ion-icon {
-    font-size: 0.3em; /* 5% a menos que o valor original (1.23em) */
-     color: rgb(254, 254, 254); 
-    transition: .2s;
-                }
+.login-button-estatico{
+    position: block;
+    list-style: none;
+    width: 40px; 
+    height: 50px; /* 5% a menos que o valor original (60px) */
+    /* background: white; */
+    border-radius: 28.5px; /* 5% a menos que o valor original (30px) */
+    cursor: pointer;
+    box-shadow: none;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    align-items: center; 
+    line-height:1.5;
 
 
+    position: relative;
+
+    list-style: none;
+    cursor: pointer;
+    transition: .5s;
+    display: flex;
+    line-height: 1.5;
+    }
+
+ 
+
+        .login-button-estatico ion-icon {
+font-size: 0.3em; /* 5% a menos que o valor original (1.23em) */
+ color: rgb(254, 254, 254); 
+transition: .2s;
+            }
+
+
+            /* sup */
+
+
+            .login-button-estatico sup {
+                font-size: 1.2em; /* Defina o tamanho desejado para o <sup> */
+                color: white; /* Cor branca */
+                position: absolute;
+                top:-7%;
+                /* background-color: black; */
+              /* padding-top: 25px; */
+                bottom: 0; /* Alinhar abaixo do ícone */
+                left: 50%; /* Alinhar no centro horizontal */
+                transform: translateX(-50%); /* Ajustar o centro horizontal */
+            }
+            
+
+               
 /* login com usuario ja logado */
 
 .dropdown-content .usuariofuncao {
     display: flex;
+    margin-top: 18%;
     align-items: center;
     justify-content: space-between;
     position: relative;
@@ -620,6 +647,48 @@ margin: 0;
 .login-button-mobile .dropdown-content-mobile a:last-child {
     border-bottom: none;
 }
+
+
+  .header .header_body .navbar a {
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: var(--white);
+  }
+  
+  .header .header_body .cart {
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: var(--white);
+  }
+
+.cart:hover {
+    color: #D49DA8;
+  }
+  
+  .contagem {
+  color: white;
+  text-decoration: none;
+  }
+  .login-button-estatico a{
+    text-decoration: none;
+    color: #fff;
+  }
+  #menu-btn {
+    margin-left: 2rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--white);
+    display: none;
+  }
+  
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width:1000px) {

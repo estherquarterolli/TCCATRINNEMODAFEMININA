@@ -1,17 +1,21 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  
 </head>
 <body>
 <header>
+<?php include('conexao.php'); 
+include 'protect.php';
+?>
     <div class="container-header">
       <nav class="nav-bar">
           <div class="logo">
-              <a href="INDEX.HTML"><p>ATRINNE MODA FEMININA</p></a>
+              <a href="indexcomlogin.php"><p>ATRINNE MODA FEMININA</p></a>
           </div>
         <div class="botoes-header">
           <a href="shop_products.php"><div class="login-button">
@@ -20,13 +24,21 @@
               <span class="titulomenu">Produtos</span>
           </div></a>
           <div class="login-button">
-              <button><a href="#"><ion-icon name="heart-outline"></ion-icon></a></button><br>
-              <span class="titulomenu">Favoritos</span>
+              <button><a href="sobrenos.php"><ion-icon name="star-outline"></ion-icon></a></button><br>
+              <span class="titulomenu">Sobre nós</span>
           </div>
 
-          <div class="login-button">
-              <button><a href="cart.php"><ion-icon name="cart-outline"></ion-icon></a></button><br>
-              <span class="titulomenu">Carrinho</span>
+          <?php 
+$select_product = mysqli_query($conn, "select * from `cart`") or die('falha');
+$row_count = mysqli_num_rows($select_product);
+
+
+
+?>
+          
+          <div class="login-button-estatico">
+              <button>  
+                <a href="carrinho.php"class="cart"><ion-icon name="cart-outline"></ion-icon><span><sup><?php echo $row_count ?></sup></span></a></button><br>
           </div>
 
           <div class="login-button-estatico" id="dropdownBtn">
@@ -67,14 +79,14 @@
       </nav>
       <div class="mobile-menu">
           <div class="login-button-mobile">
-              <center><a href="#"><H3>PRODUTOS</H3></a></center>
+              <center><a href="shop_products.php"><H3>PRODUTOS</H3></a></center>
           </div>
           <div class="login-button-mobile">
-              <center><a href="#"><H3>FAVORITOS</H3></a></center>
+              <center><a href="sobrenos.php"><H3>SOBRE NÓS</H3></a></center>
           </div>
 
           <div class="login-button-mobile">
-              <center><a href="#"><H3>CARRINHO</H3></a></center>
+              <center><a href="carrinho.php"><H3>CARRINHO</H3></a></center>
           </div>
 
         
