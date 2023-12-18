@@ -452,6 +452,29 @@ width:150px !important;
   cursor: pointer;
   background-color: #965a66;
 }
+
+.btn-filtrar-categoria{
+  width: 100px;
+  padding: 5px;
+  border-radius: 20px;
+  color: white;
+  font-family: 'BEBAS NEUE';
+  font-size:15PX;
+  background-color: #dac0c5;
+ 
+}
+.btn-filtrar-categoria a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.btn-filtrar-categoria a:hover{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.btn-filtrar-categoria:hover{
+  cursor: pointer;
+  background-color: #965a66;
+}
 .btnpesquisa{
  
   display: flex;

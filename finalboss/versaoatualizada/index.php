@@ -42,7 +42,7 @@ include ('protect.php');
     <div class="container">
       <nav class="nav-bar">
           <div class="logo">
-              <a href="INDEX.HTML"><p>ATRINNE MODA FEMININA</p></a>
+              <a href="INDEX.php"><p>ATRINNE MODA FEMININA</p></a>
           </div>
         <div class="botoes-header">
           <a href="shop_products.php"><div class="login-button">
@@ -51,12 +51,12 @@ include ('protect.php');
               <span class="titulomenu">Produtos</span>
           </div></a>
           <div class="login-button">
-              <button><a href="login.php"><ion-icon name="heart-outline"></ion-icon></a></button><br>
-              <span class="titulomenu">Favoritos</span>
+            <button><a href="sobrenos.php"><ion-icon name="navigate-outline"></ion-icon></a></button><br>
+              <span class="titulomenu">Sobre nós</span>
           </div>
 
           <div class="login-button">
-              <button><a href="cart.php"><ion-icon name="cart-outline"></ion-icon></a></button><br>
+            <button><a href="sobrenos.php"><ion-icon name="cart-outline"></ion-icon></a></button><br>
               <span class="titulomenu">Carrinho</span>
           </div>
 
@@ -72,10 +72,10 @@ include ('protect.php');
       </nav>
       <div class="mobile-menu">
           <div class="login-button-mobile">
-              <center><a href="GALERIA.html"><H3>PRODUTOS</H3></a></center>
+              <center><a href="shop_products.php"><H3>PRODUTOS</H3></a></center>
           </div>
           <div class="login-button-mobile">
-              <center><a href="login.php"><H3>FAVORITOS</H3></a></center>
+              <center><a href="sobrenos.php"><H3>Sobre nós</H3></a></center>
           </div>
 
           <div class="login-button-mobile">
@@ -130,14 +130,12 @@ include ('protect.php');
       <div class="product-container" id="slider-infinito">
       <div class="product-card">
         
-              <div class="product-image-type">
-            <A href="BLUSAS.HTML" STYLE="text-decoration: NONE;COLOR:BLACK;">
-
+             
+      <div class="product-image-type">
+            <A href="filtrar.php?busca=blusa" STYLE="text-decoration: NONE;COLOR:BLACK;">
+      
               <div class="img-tipos">
-                <div class="img"></div>
-                <img src="imagenstcc/tproupablusa.png" class="product-thumb" alt="">
-
-                
+                <img src="imagenstcc/tproupablusa.png" class="product-thumb" value="blusa" alt="">
                 <!-- <div class="overlay">
                 <button href="#" class="info-btn">Saiba mais</button>
               </div> -->
@@ -152,9 +150,11 @@ include ('protect.php');
               </div>
             </A>
 </div><!--fim produto -->
+
+
 <div class="product-card">
   <div class="product-image-type">
-<A href="#" STYLE="text-decoration: NONE;COLOR:BLACK;">
+<A href="filtrar.php?busca=short" STYLE="text-decoration: NONE;COLOR:BLACK;">
       <img src="imagenstcc/tproupashort.png" class="product-thumb" alt="">
       
   </div>
@@ -168,7 +168,7 @@ include ('protect.php');
 
 <div class="product-card">
   <div class="product-image-type">
-<A href="#" STYLE="text-decoration: NONE;COLOR:BLACK;">
+<A href="filtrar.php?busca=conjunto" STYLE="text-decoration: NONE;COLOR:BLACK;">
       <img src="imagenstcc/tproupaconjunto.png" class="product-thumb" alt="">
      
   </div>
@@ -182,7 +182,7 @@ include ('protect.php');
 
 <div class="product-card">
   <div class="product-image-type">
-<A href="#" STYLE="text-decoration: NONE;COLOR:BLACK;">
+<A href="filtrar.php?busca=vestido" STYLE="text-decoration: NONE;COLOR:BLACK;">
       <img src="imagenstcc/tproupavestido.png" class="product-thumb" alt="">
      
   </div>
@@ -196,7 +196,7 @@ include ('protect.php');
 
 <div class="product-card">
   <div class="product-image-type">
-<A href="#" STYLE="text-decoration: NONE;COLOR:BLACK;">
+<A href="filtrar.php?busca=macacão" STYLE="text-decoration: NONE;COLOR:BLACK;">
       <img src="imagenstcc/tproupamacaquinho.png" class="product-thumb" alt="">
      
   </div>
@@ -210,7 +210,7 @@ include ('protect.php');
 
 <div class="product-card">
   <div class="product-image-type">
-<A href="#" STYLE="text-decoration: NONE;COLOR:BLACK;">
+<A href="filtrar.php?busca=calça" STYLE="text-decoration: NONE;COLOR:BLACK;">
       <img src="imagenstcc/tproupacalca.png" class="product-thumb" alt="">
      
   </div>
@@ -221,6 +221,8 @@ include ('protect.php');
   </div>
 </A>
 </div><!--fim produto -->
+
+
 
 
           </div>
@@ -454,11 +456,11 @@ include ('protect.php');
             <br>
          
      </div></a>
-     <div id="Blog1"> <a href="#"> <font color="white"> <h2>Blog</h2> </font>
+     <div id="Blog1"> <a href="shop_products.php"> <font color="white"> <h2>GALERIA</h2> </font>
       <br>
         </a>
    </div></a>
-   <div id="Sobre1"> <a href="SOBRENOS.HTML">
+   <div id="Sobre1"> <a href="sobrenos.php">
     <font color="white"> <h2>Sobre nós</h2> </font></a>
     <br>
 </div></a>
@@ -472,11 +474,11 @@ include ('protect.php');
         <div id="Contato1"> 
           <h2>Contato</h2>
             </div>
-           <a href="https://www.instagram.com/atrinnemodafeminina/?hl=pt"><img src="imagenstcc/insta_icon.png" width="67" height="65" 
-                id="instagram">
+           <a href="https://www.instagram.com/atrinnemodafeminina/?hl=pt"><p> <ion-icon class="redesocial" name="logo-instagram" style="width: 60px; height: 60px;" ></ion-icon> </p>
+               
     
-                <a href="https://api.whatsapp.com/message/RKUYXZFHCGHTM1?autoload=1&app_absent=0"><img src="imagenstcc/whatsapp-logo-2022.svg" width="77" height="75" 
-                    id="whats">
+                <a href="https://api.whatsapp.com/message/RKUYXZFHCGHTM1?autoload=1&app_absent=0"><p><ion-icon class="redesocial"  name="logo-whatsapp"  style="width: 60px; height: 60px;"></ion-icon> </p>
+                 
     </div>
           </div>
     </div>

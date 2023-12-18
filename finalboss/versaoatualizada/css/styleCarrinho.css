@@ -2,16 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300;500&display=swap');
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  font-family: "Poppins", sans-serif;
 
-}
 :root {
   --color1: #072227;
   --color2: #35858b;
@@ -135,15 +126,16 @@ section {
 .edit_btn,
 .cancel_btn {
   display: block;
-  width:30%;
+  /* width:30%; */
+  height: 40px;
   text-align: center;
   background-color: #D49DA8;
   color: var(--white);
-  /* font-size: 10px; */
+  font-size: 10px; */
   padding: 1.2rem ;
   border-radius: 0.5rem;
   cursor: pointer;
-  margin-top: 2rem;
+   margin-top: 2rem; 
   margin: 0 auto;
 }
 .submit_btn ion-icon{
@@ -237,6 +229,7 @@ li{
 
 .box{
   width: 300px;
+  height: 550px;
   /* height: auto; */
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -279,13 +272,14 @@ li{
 .type a{
   color: #222222;
   text-transform: uppercase;
-  margin: 5px 0px;
+  /* margin: 5px 0px; */
   font-weight: 700;
   letter-spacing: 0.5px;
   padding-right: 8px;
   font-size: 18px;
   width: 100%;
   text-decoration: none;
+  margin-bottom: -9%;
 
 }
 
@@ -296,14 +290,14 @@ li{
 
 .price{
   color: #333333;
-  font-weight: 600;
+  /* font-weight: 600; */
   font-size: 1.5rem;
   letter-spacing: 0.5px;
 }
 
 .carrinho-icon{
   display: flex;
-  padding-top: 3%;
+  /* padding-top: 3%; */
   /* background-color: aqua; */
   width: 40px;
   height: 40px;

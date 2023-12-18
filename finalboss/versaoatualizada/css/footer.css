@@ -18,10 +18,13 @@ a:hover {
 text-decoration:underline;
 }
 
-    #instagram{
+.redesocial{
 	position: absolute;
+    width: 50px;
+    height: 50px;
 	right:200px;
 	top:72px;
+    font-size:50px;
     color:white;
 	}
 

@@ -22,7 +22,7 @@
               <span class="titulomenu">Produtos</span>
           </div></a>
           <div class="login-button">
-              <button><a href="sobrenos.php"><ion-icon name="star-outline"></ion-icon></a></button><br>
+              <button><a href="sobrenos.php"><ion-icon name="navigate-outline"></ion-icon></a></button><br>
               <span class="titulomenu">Sobre nós</span>
           </div>
 

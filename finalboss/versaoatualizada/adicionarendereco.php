@@ -48,34 +48,28 @@ include ('conexao.php');
    
 <form method="post">
     <div class="circulo">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" placeholder="" value="<?php  $nome = $_SESSION['nome'];  echo $nome;?>">
-<br>
-        <label for="sobrenome">Email: </label>
-        <input type="text" id="sobrenome" value="<?php  $email = $_SESSION['email'];  echo $email;?>" disabled>
+        <label for="nome">Rua:</label>
+        <input type="text" id="rua" name="rua" placeholder="" value="<?php  $rua = $_SESSION['rua'];  echo $rua;?>">
+        <br>
+        <label for="sobrenome">Número: </label>
+        <input type="text" id="numero" value="<?php  $numero = $_SESSION['numero'];  echo $numero;?>">
         <br>
         <div class="half-width">
-            <label for="email">Telefone:</label>
-            <input type="text" id="email" name="telefone" value="<?php  $telefone = $_SESSION['telefone'];  echo $telefone;?>" >
+            <label for="email">CEP:</label>
+            <input type="text" id="cep" name="cep" value="<?php  $cep = $_SESSION['cep'];  echo $cep;?>" >
         </div>
-   
-        <div class="half-width">
-            <label for="telefone">Cpf:</label>
-            <input type="text" id="telefone" value="<?php  $cpf = $_SESSION['cpf'];  echo $cpf;?>" disabled >
-        </div>
-        <br>
-        <BR>
+
             <div class="botoes-editar">
-                <center><button type="submit" class="salvardados" id="salvaralteracao" name="Salvar" >Salvar</button></center>
+                <center><button type="submit" class="salvardados" id="adicionarendereco" name="Salvar" >Adicionar</button></center>
             </div>
 
 <?php
 if(isset($_POST["Salvar"])){
-    $nome = $_POST['nome'];
-    $telefone = $_POST['telefone'];
-    $id = $_SESSION['id'];
-    $sql = "UPDATE cadastro SET Nome= '$nome', Telefone = '$telefone' WHERE IdCadastro='$id' ";
-    $result = mysqli_query($conn, $sql);
+    $rua = $_POST['nome'];
+    $numero = $_POST['telefone'];
+    $cpf = $_SESSION['id'];
+    $sqlendereco = "UPDATE endereco SET Rua= '$rua', Número = '$numero', CEP = '$cep' WHERE IdCadastro='$id' ";
+    $result = mysqli_query($conn, $sqlendereco);
     
  }
 ?>

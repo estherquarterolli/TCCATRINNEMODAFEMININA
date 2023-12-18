@@ -57,12 +57,13 @@ if(isset($display_message)){
     <input type="text" placeholder="Digite a Roupa" value="<?php if(isset($_GET['busca'])) echo $_GET['busca'] ?>" name="busca">
     <button class="btn-filtar" type="submit">PESQUISAR</button>
     <br> <br>
-  <button class="btn-filtar" type="submit"><a href="filtrar.php?busca=calça">Calça</a></button>
-  <button class="btn-filtar" type="submit"><a href="filtrar.php?busca=Vestido">Vestido</a></button>
-  <button class="btn-filtar" type="submit"><a href="filtrar.php?busca=Short">Short</a></button>
-  <button class="btn-filtar" type="submit"><a href="filtrar.php?busca=Blusa">Blusa</a></button>
-  <button class="btn-filtar" type="submit"><a href="filtrar.php?busca=Conjunto">Conjunto</a></button>
-  <button class="btn-filtar" type="submit"><a href="filtrar.php?busca=Macacão">Macacão</a></button>
+  <button class="btn-filtrar-categoria" type="submit"><a href="filtrar.php?busca=calça">Calça</a></button>
+  <button class="btn-filtrar-categoria" type="submit"><a href="filtrar.php?busca=Vestido">Vestido</a></button>
+  <button class="btn-filtrar-categoria" type="submit"><a href="filtrar.php?busca=Vestido">Vestido</a></button>
+  <button class="btn-filtrar-categoria" type="submit"><a href="filtrar.php?busca=Short">Short</a></button>
+  <button class="btn-filtrar-categoria" type="submit"><a href="filtrar.php?busca=Blusa">Blusa</a></button>
+  <button class="btn-filtrar-categoria" type="submit"><a href="filtrar.php?busca=Conjunto">Conjunto</a></button>
+  <button class="btn-filtrar-categoria" type="submit"><a href="filtrar.php?busca=Macacão">Macacão</a></button>
 </form>
 </div>
 

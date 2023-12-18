@@ -1,0 +1,73 @@
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300;500&display=swap');
+
+
+
+
+h1{
+    font-family: 'BEBAS NEUE';
+    font-size: 62PX;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container-tendencias{
+    justify-content: center;
+    align-items: center;
+    width: 1300px;
+    display: flex;
+    flex-direction: row;
+    margin: 9%;
+    gap: 4%;
+}
+.btn-cores img, .btn-jeans img, .btn-verao img{
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.container-body{
+    margin: 3%;
+    padding: 3%;
+}
+.Tendencias-titulo{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-cores:hover img,
+.btn-jeans:hover img,
+.btn-verao:hover img {
+  transform: scale(1.1);
+}
+
+.txt-cores, .txt-jeans, .txt-verao {
+  display: none;
+  position: fixed;
+  top:87%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #ff69b4;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 999;
+}
+
+.txt-container img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+} 

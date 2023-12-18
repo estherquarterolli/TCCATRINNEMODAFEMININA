@@ -391,8 +391,8 @@ include('header.php')
      
       </section>
 
-  <!-- rodapé -->
-  <footer>
+   <!-- rodapé -->
+   <footer>
     <div class="footer-container">
         <div class="footer-section">
             <h2>Perguntas Frequentes:</h2>
@@ -411,11 +411,11 @@ include('header.php')
             <br>
          
      </div></a>
-     <div id="Blog1"> <a href="#"> <font color="white"> <h2>Blog</h2> </font>
+     <div id="Blog1"> <a href="shop_products.php"> <font color="white"> <h2>GALERIA</h2> </font>
       <br>
         </a>
    </div></a>
-   <div id="Sobre1"> <a href="SOBRENOS.HTML">
+   <div id="Sobre1"> <a href="sobrenos.php">
     <font color="white"> <h2>Sobre nós</h2> </font></a>
     <br>
 </div></a>
@@ -429,11 +429,11 @@ include('header.php')
         <div id="Contato1"> 
           <h2>Contato</h2>
             </div>
-           <a href="https://www.instagram.com/atrinnemodafeminina/?hl=pt"><img src="imagenstcc/insta_icon.png" width="67" height="65" 
-                id="instagram">
+           <a href="https://www.instagram.com/atrinnemodafeminina/?hl=pt"><p> <ion-icon class="redesocial" name="logo-instagram" style="width: 60px; height: 60px;" ></ion-icon> </p>
+               
     
-                <a href="https://api.whatsapp.com/message/RKUYXZFHCGHTM1?autoload=1&app_absent=0"><img src="imagenstcc/whatsapp-logo-2022.svg" width="77" height="75" 
-                    id="whats">
+                <a href="https://api.whatsapp.com/message/RKUYXZFHCGHTM1?autoload=1&app_absent=0"><p><ion-icon class="redesocial"  name="logo-whatsapp"  style="width: 60px; height: 60px;"></ion-icon> </p>
+                 
     </div>
           </div>
     </div>

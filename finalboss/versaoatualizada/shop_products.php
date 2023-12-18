@@ -1,4 +1,8 @@
 
+
+<?php
+include ('conexao.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +15,7 @@
     <link rel="stylesheet" href="css/pagcoringa.css">
   </head>
 <body>
+  
 <?php 
 include('header.php');
 ?>
@@ -75,7 +80,6 @@ if(isset($display_message)){
                </a>
                <!-- <span>Perfeita para usar no verão</span> -->
              </div>
-             <br>
              <!-- ICONE CARRINHO -->
            <a href="pagcoringa.php?edit=<?php echo $fetch_product['id']; ?>"  <button type="submit"  class="submit_btn cart_btn" value="Adicionar ao Carrinho" name="add_to_cart"><ion-icon class="carrinho-icon" name="cart-outline">></ion-icon></button></a>       
            </div>
@@ -107,8 +111,22 @@ if(isset($display_message)){
         </section>
     </div>
 
+    <script src="js/header.js"></script>
+    <script src="js/interacaocomamidia.js"></script>
+    <script src="js/tipos-maisvendidos.js"></script>
+    <script src="js/tiposderoupa.js"></script>
+    <script src="js/modallogin.js"></script>
+    <script src="js/maisvendidos.js"></script>
+    <script src="js/clientes-instagram.js"></script>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
     <!-- ionicon -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
 </body>
 </html>

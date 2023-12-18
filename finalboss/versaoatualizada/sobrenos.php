@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Atrinne Moda Feminina</title>
+
+    <link rel="stylesheet" href="css/headerpag.css">
     <style>
-        * {
-    font-family: Nunito, sans-serif;
-  }
+  
   
   .responsive-container-block {
     min-height: 75px;
@@ -122,6 +122,7 @@
     padding-right: 10px;
     padding-bottom: 0px;
     padding-left: 0px;
+    text-align: justify;
   }
   
   .explore {
@@ -631,12 +632,40 @@
 .mapamapa iframe{
   border-radius: 20px;
 }
+.text-blk description{
+
+}
+.btnvoltar {
+    text-decoration: none;
+    text-decoration-line: none;
+    color:black;
+    justify-content: baseline;
+    align-items: baseline;
+    margin-left: 4%;
+    padding-left: 5%;
+
+}
+.btnvoltar:hover {
+    color: rgb(108, 108, 108);
+    padding: 5px;
+}
  
+.containerzaoooo{
+  padding: 10px;
+  margin: 3%;
+  /* background-color: red; */
+}
     </style>
 </head>
 <body>
+    <?php
     
+    include('header.php');
+    ?>
+    <div class="containerzaoooo">
+     <a class="btnvoltar" href="indexcomlogin.php"><p>Voltar</p></a>
     <div class="responsive-container-block bigContainer">
+   
         <div class="responsive-container-block Container bottomContainer">
           <div class="ultimateImg">
             <img class="mainImg" src="sliderp3.png">
@@ -652,13 +681,13 @@
             </p>
               
              <p class="text-blk description">
-              No ano de  2018, foi criada a loja de roupas e acessórios<br>
-            Atrinne Moda Femenina.Um micronegócio  que visa dá dicas <br>
-            de moda e fazer as mulheres se sentirem únicas,lindas,<br>
-            confiantes e confortáveis.Além disso, a loja vende online<br>
-            via whatsapp e faz Entrega para todo o Brasil e  tem como <br>
-            dona  a a dona e Jacqueline Trindade.<br>. </p>
-            <a class="explore"> 
+              No ano de  2018, foi criada a loja de roupas e acessórios
+            Atrinne Moda Femenina.Um micronegócio que visa dá dicas 
+            de moda e fazer as mulheres se sentirem únicas,lindas,
+            confiantes e confortáveis. Além disso, a loja vende online
+            via whatsapp e faz Entrega para todo o Brasil e tem como 
+            dona  a a dona e Jacqueline Trindade. </p>
+            <a href="shop_products.php"class="explore"> 
               Ver produtos
             </a>
           </div>
@@ -673,6 +702,25 @@
           </div>
         </div>
       </div>
+      </div>
+
+      
+    <script src="js/header.js"></script>
+    <script src="js/interacaocomamidia.js"></script>
+    <script src="js/tipos-maisvendidos.js"></script>
+    <script src="js/tiposderoupa.js"></script>
+    <script src="js/modallogin.js"></script>
+    <script src="js/maisvendidos.js"></script>
+    <script src="js/clientes-instagram.js"></script>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- ionicon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
       
 </body>
 </html>

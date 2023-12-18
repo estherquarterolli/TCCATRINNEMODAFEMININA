@@ -78,6 +78,7 @@ include('header.php');
 
       </section>
 
+      <div class="informacoes-produtos-container">
       <section class="price">
         <!-- Nome do produto -->
         <h1 class="price-main__heading"><?php echo $fetch_data['name'] ?></h1>
@@ -115,10 +116,8 @@ include('header.php');
     </ul>
     </div>
 </div>
+
         <div class="price-btnbox">
-          
-            <!-- botão para aumentar quantidade de produtos -->
-          <!-- <div class="price-btns"> -->
 
 
           <!-- botão para adicionar no carrinho -->
@@ -127,6 +126,7 @@ include('header.php');
           </form>
         </div>
 
+        </div>
         <?php
             }}
             ?>
