@@ -1,0 +1,567 @@
+@import url(coresatrinne.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300;500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+
+}
+:root {
+  --color1: #072227;
+  --color2: #35858b;
+  --color3: #4fbdba;
+  --color4: #aefeff;
+  --black: #000;
+  --white: #fff;
+  --lightgray: #d3d3d3;
+  --red: rgb(238, 62, 62);
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+  height: auto;
+  /* background-color: var(--lightgray); */
+}
+/* header styles */
+.header {
+  background-color: var(--color1);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.header .header_body {
+  display: flex;
+  align-items: center;
+  padding: 2.5rem 2rem;
+}
+.header .header_body .logo {
+  margin-right: auto;
+  font-size: 2.5rem;
+  color: var(--color4);
+}
+.header .header_body .navbar a {
+  margin-left: 2rem;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.header .header_body .cart {
+  margin-left: 2rem;
+  font-size: 2rem;
+  color: var(--white);
+}
+.header .header_body .navbar a:hover,
+.header .header_body .cart:hover {
+  color: var(--color4);
+}
+.header .header_body .cart span {
+  padding: 0 0.5rem;
+}
+#menu-btn {
+  margin-left: 2rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--white);
+  display: none;
+}
+
+/* index.php file */
+.display_message {
+  background-color: lightgray;
+  padding: 2.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.display_message span {
+  font-size: 1.5rem;
+}
+.display_message i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.display_message i:hover {
+  color: var(--red);
+}
+
+.heading {
+  text-align: center;
+  font-size:42px;
+  text-transform: uppercase;
+  padding: 1.5rem 0 2rem;
+  color: var(--color1);
+  font-family: 'BEBAS NEUE';
+}
+section {
+  padding: 2rem;
+}
+
+/* add products form */
+.add_product,
+.update_product {
+  max-width: 600px;
+  background-color: var(--color2);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.add_product .input_fields,
+.update_product .input_fields {
+
+  padding: 1rem 1.2rem;
+  font-size: 1.6rem;
+  color: var(--black);
+  background-color: var(--white);
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+/* submit button */
+.submit_btn,
+.edit_btn,
+.cancel_btn {
+  display: block;
+  width:30%;
+  text-align: center;
+  background-color: #D49DA8;
+  color: var(--white);
+  /* font-size: 10px; */
+  padding: 1.2rem ;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin: 0 auto;
+}
+.submit_btn ion-icon{
+  width: 40px;
+  height: 40px;
+}
+.cancel_btn {
+  background-color: var(--red);
+  margin: 2rem auto;
+}
+.submit_btn:hover {
+  color: #965a66;
+}
+
+/* view_products.php */
+.display_product table {
+  width: 100%;
+  text-align: center;
+}
+.display_product table thead th {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  background-color: var(--color2);
+  color: var(--white);
+}
+td {
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: var(--color1);
+  border: 1px solid var(--white);
+  text-transform: uppercase;
+}
+.empty_text {
+  background-color: var(--color2);
+  padding: 2.5rem 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.delete_product_btn,
+.update_product_btn {
+  text-align: center;
+  color: var(--red);
+  font-size: 1.7rem;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+.update_product_btn {
+  color: var(--color2);
+}
+.product_container_box {
+  text-align: center;
+  height: 70%;
+}
+
+img {
+  width: 20%;
+  margin: 0 auto;
+}
+
+
+
+
+/* comprar produtos página */
+li{
+  list-style: none;
+}
+
+ .product_container {
+  display: grid;
+  max-width:100%;
+  padding: 40px;
+  grid-template-columns: repeat(auto-fit, 30rem);
+  gap: 90px;
+  justify-content: center;
+} 
+
+  .products{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+.box{
+  width: 300px;
+  /* height: auto; */
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  /* position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%); */
+  margin: 25px ;
+}
+
+.slide-img{
+  height: 450px;
+  position: relative;
+}
+
+.slide-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.detail-box{
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: safe;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.type{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.type a{
+  color: #222222;
+  text-transform: uppercase;
+  margin: 5px 0px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding-right: 8px;
+  font-size: 18px;
+  width: 100%;
+  text-decoration: none;
+
+}
+
+
+.type span{
+  color: rgba(26, 26, 26, 0.5);
+}
+
+.price{
+  color: #333333;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.carrinho-icon{
+  display: flex;
+  padding-top: 3%;
+  /* background-color: aqua; */
+  width: 40px;
+  height: 40px;
+}
+.overlay{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy-btn{
+  width: 160px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  color: #252525;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, .2);
+  text-decoration: none;
+}
+
+.buy-btn:hover{
+  color: white;
+  background-color: palevioletred;
+  transition: all ease 0.3s;
+}
+
+.overlay{
+  opacity: 0;
+}
+.slide-img:hover .overlay{
+  opacity: 1;
+  animation: fade 0.5s;
+} 
+
+
+
+
+
+/* carrinho css */
+.shopping_cart table {
+  text-align: center;
+  width: 100%;
+}
+.shopping_cart table thead th {
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--white);
+  background-color: #D49DA8;
+}
+.table_bottom {
+  background-color: #D49DA8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  margin: 1rem 0 3rem 0;
+}
+.bottom_btn {
+  color: var(--black);
+  font-size: 1.3rem;
+  background-color: #965a66;
+  padding: 1rem;
+}
+.bottom_btn span {
+  color: rgb(14, 10, 10);
+}
+
+.delete_all_btn {
+  background-color: #D49DA8;
+  color: var(--white);
+  font-size: 1.3rem;
+  padding: 1.5rem;
+}
+.delete_all_btn .fa-trash {
+  color: #D49DA8;
+  margin-right: 0.5rem;
+}
+.quantity_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.quantity_box input {
+  width: 40%;
+  padding: 0.5rem;
+}
+.update_quantity {
+  color: var(--white);
+  padding: 0.5rem;
+  background-color:  #D49DA8;
+  margin: 1rem 0;
+}
+
+
+
+.carrinho-img img{
+width:150px !important;
+  height:200px;
+}
+
+.fas fa-trash{
+  color: #000;
+}
+
+.container_filtro button{
+  width: 300px;
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+  font-family: 'BEBAS NEUE';
+  font-size: 25PX;
+  background-color: #D49DA8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.btn-filtar{
+  width: 100px;
+  padding: 5px;
+  border-radius: 20px;
+  color: white;
+  font-family: 'BEBAS NEUE';
+  font-size: 25PX;
+  background-color: #D49DA8;
+ 
+}
+.container_filtro BUTTON:hover{
+  cursor: pointer;
+  background-color: #965a66;
+}
+
+.btn-filtar:hover{
+  cursor: pointer;
+  background-color: #965a66;
+}
+.btnpesquisa{
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.botao_container{
+  padding-top: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.botao_container input{
+width: 300px;
+padding: 5px;
+border-radius: 10px;
+background-color: #c2c2c2;
+}
+/* media queries */
+
+@media (max-width: 1200px) {
+  .shopping_cart {
+    overflow-x: scroll;
+  }
+
+  .shopping_cart table {
+    width: 120rem;
+  }
+
+  .shopping_cart .heading {
+    text-align: left;
+  }
+
+  .shopping_cart .checkout-btn {
+    text-align: left;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+    transition: 0.2s linear;
+  }
+
+  #menu-btn.fa-times {
+    transform: rotate(180deg);
+  }
+
+  .header .header_body .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background-color: var(--blue);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.2s linear;
+  }
+
+  .header .header_body .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: var(--color1);
+  }
+
+  .header .header_body .navbar a {
+    margin: 2rem;
+    display: block;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .display_product {
+    overflow-x: scroll;
+  }
+
+  .display_product table {
+    width: 90rem;
+  }
+  .table_bottom {
+    display: block;
+    text-align: center;
+  }
+  .bottom_btn {
+    color: var(--black);
+    font-size: 1.3rem;
+    background-color: var(--color4);
+    padding: 1rem;
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
+  .products .product_container {
+    grid-template-columns: 1fr;
+  }
+}
