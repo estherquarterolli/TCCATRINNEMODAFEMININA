@@ -36,7 +36,7 @@ if(isset($_POST['add_product'])){
 <body>
 
 <?php 
-include ('headerCarrinho.php');
+include ('headerAdmin.php');
 ?>
 <!-- form section -->
 <div class="container">

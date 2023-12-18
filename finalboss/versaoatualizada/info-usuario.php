@@ -69,7 +69,8 @@ include ('protect.php');
 <br>
     <h3>Catálogo de Endereço</h3>
     <div class="botoes-editar">
-      <a class="btnsalvarendereco" onclick="adicionarEndereco()">Adicionar Novo </a>
+      
+      <a href="adicionarendereco.php"class="btnsalvarendereco" onclick="adicionarEndereco()">Adicionar Novo </a>
    
     </div>
 </div>

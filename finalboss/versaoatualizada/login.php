@@ -60,18 +60,43 @@ include('conexao.php');
 if(isset($_POST["submitLOGIN"])){
 
 
+  if(isset($_POST['email_login'])|| isset($_POST['senha_login'])) {
 
+    $emailadmin = $_POST['email_login'];
+    $senhaadmin = $_POST['senha_login'];
+    // vendo se o email e senha inseridos é igual aos dados específicos de administrador.
+    if($emailadmin == 'atrinnemodafeminina@gmail.com'  || $senhaadmin == 'admin123'){
 
-
-
-
-
-
-
-
-
-
+      // sessão
+      $sql_code = "SELECT * FROM cadastro WHERE Email = '$emailadmin' AND Senha = '$senhaadmin' ";
+      $sql_query = $conn->query($sql_code);
   
+      $quantidade = $sql_query->num_rows;
+  
+      if($quantidade == 1){
+  
+        $usuario = $sql_query->fetch_assoc();
+  
+        if(!isset($_SESSION)){
+          session_start();
+        }
+  
+        $_SESSION['id'] = $usuario['IdCadastro'];
+        $_SESSION['nome'] = $usuario['Nome'];
+        $_SESSION['email'] = $usuario['Email'];
+        $_SESSION['telefone'] = $usuario['Telefone'];
+        $_SESSION['endereco'] = $usuario['Endereco'];
+        $_SESSION['cpf'] = $usuario['Cpf'];
+        $_SESSION['senha'] = $usuario['Senha'];
+
+
+
+      header('location: administrador.php');
+      }
+    }
+
+  else{
+
   if(isset($_POST['email_login']) || isset($_POST['senha_login'])){
 
     $email = $conn->real_escape_string($_POST['email_login']);
@@ -105,6 +130,9 @@ if(isset($_POST["submitLOGIN"])){
     }
 
   }
+}
+}
+
   }
 
 ?>
