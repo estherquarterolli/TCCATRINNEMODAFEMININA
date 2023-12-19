@@ -59,7 +59,7 @@ include ('headerAdmin.php');
         <input type="number" name="product_price" min="0" placeholder="Preço do Produto" class="input_fields" required>
         <input type="text" name="product_type"  placeholder="Categoria do Produto" class="input_fields" required>
         <input type="file" name="product_image" class="input_fields" required accept="image/png, image/jpg, image/jpeg">
-        <input type="submit" name="add_product" class="subimt_btn" value="Adicionar Produto"> 
+        <input type="submit" name="add_product" class="submit_btn" value="Adicionar Produto"> 
         </form>
     </section>
 </div>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTROLE DE PRODUTOS - ATRINNE MODA FEMININA</title>
-    <link rel="stylesheet" href="css/headerpag.css">
+    <link rel="stylesheet" href="css/styleCarrinho.css">
     <link rel="stylesheet" href="css/filtrar.css">
 <style>
 .bv{

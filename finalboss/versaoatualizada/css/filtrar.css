@@ -13,7 +13,7 @@
 
 }
 :root {
-  --color1: #072227;
+  --color1: #949494;
   --color2: #35858b;
   --color3: #4fbdba;
   --color4: #aefeff;
@@ -35,7 +35,7 @@ html {
 }
 /* header styles */
 .header {
-  background-color: var(--color1);
+  background-color: lightgrey;
   position: sticky;
   top: 0;
   left: 0;

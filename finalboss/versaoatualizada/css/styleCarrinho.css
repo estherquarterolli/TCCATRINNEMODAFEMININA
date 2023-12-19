@@ -26,7 +26,7 @@ html {
 }
 /* header styles */
 .header {
-  background-color: var(--color1);
+  background-color: rgb(213, 213, 213);
   position: sticky;
   top: 0;
   left: 0;
@@ -40,22 +40,27 @@ html {
 .header .header_body .logo {
   margin-right: auto;
   font-size: 2.5rem;
-  color: var(--color4);
+  font-family: "BEBAS NEUE";
+  text-decoration: none;
+  font-size: 40px;
+  color: Black;
 }
 .header .header_body .navbar a {
   margin-left: 2rem;
   font-size: 2rem;
-  color: var(--white);
+  color: black;
+  text-decoration: none;
+  font-family: "AnyBody";
 }
 
 .header .header_body .cart {
   margin-left: 2rem;
   font-size: 2rem;
-  color: var(--white);
+  color:black;
 }
 .header .header_body .navbar a:hover,
 .header .header_body .cart:hover {
-  color: var(--color4);
+  color: #965a66;
 }
 .header .header_body .cart span {
   padding: 0 0.5rem;
@@ -104,16 +109,14 @@ section {
 .add_product,
 .update_product {
   max-width: 600px;
-  background-color: var(--color2);
-  border-radius: 0.5rem;
-  padding: 2rem;
-  margin: 0 auto;
+  background-color:  rgb(52, 52, 52);
+  color:black;
   margin-top: 2rem;
 }
 .add_product .input_fields,
 .update_product .input_fields {
 
-  padding: 1rem 1.2rem;
+  padding: 0.5rem;
   font-size: 1.6rem;
   color: var(--black);
   background-color: var(--white);
@@ -130,8 +133,9 @@ section {
   height: 40px;
   text-align: center;
   background-color: #D49DA8;
-  color: var(--white);
-  font-size: 10px; */
+  color: black;
+  font-family: "AnyBody";
+  /* font-size: 10px; */
   padding: 1.2rem ;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -147,7 +151,8 @@ section {
   margin: 2rem auto;
 }
 .submit_btn:hover {
-  color: #965a66;
+  background-color: #965a66;
+  color: #dbc6ca;
 }
 
 /* view_products.php */
@@ -158,12 +163,13 @@ section {
 .display_product table thead th {
   padding: 1.5rem;
   font-size: 1.5rem;
-  background-color: var(--color2);
+  background-color: #965a66;
   color: var(--white);
 }
 td {
   padding: 1rem;
   font-size: 1.5rem;
+  font-family: "AnyBody";
   color: var(--color1);
   border: 1px solid var(--white);
   text-transform: uppercase;
