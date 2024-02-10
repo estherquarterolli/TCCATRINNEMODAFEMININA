@@ -36,7 +36,8 @@ if(isset($_GET['delete_all'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho</title>
+    <title>Atrinne Moda Feminina</title> 
+    <link rel="shortcut icon" href="imagenstcc/manequim">
     <!-- Inclusão de arquivos de estilo -->
     <link rel="stylesheet" href="css/styleCarrinho.css">
     <link rel="stylesheet" href="css/headerpag.css">
@@ -149,14 +150,15 @@ if(isset($_GET['delete_all'])){
                   <a href='shop_products.php' class='bottom_btn' >Continuar Comprando</a> 
                   <h3 class='bottom_btn'>Total: R$<span>$grand_total</span></h3> 
                   <a href='" . $whatsapp_link . "' class='bottom_btn'>Finalizar Compra</a> 
+                  <a href='carrinho.php?delete_all' class='delete_all_btn' onclick='return confirm('Deseja retirar TO esse item do carrinho?')' >
+            <i class='fas fa-trash'></i>Excluir Todos
+        </a>
               </div>";
           }
           ?>
-
+        
         <!-- Área do botão para excluir todos os itens do carrinho -->
-        <a href="carrinho.php?delete_all" class="delete_all_btn" onclick="return confirm('Deseja retirar TO esse item do carrinho?')" >
-            <i class="fas fa-trash"></i>Excluir Todos
-        </a>
+        
 
     </section>
 </div>

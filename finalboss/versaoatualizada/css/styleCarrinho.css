@@ -108,8 +108,13 @@ section {
 /* add products form */
 .add_product,
 .update_product {
-  max-width: 600px;
-  background-color:  rgb(52, 52, 52);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15%;
+  max-width: 800px;
+  /* background-color:  rgb(255, 255, 255); */
   color:black;
   margin-top: 2rem;
 }
@@ -141,6 +146,23 @@ section {
   cursor: pointer;
    margin-top: 2rem; 
   margin: 0 auto;
+}
+
+.carrinho-icon{
+  display: block;
+  /* width:30%; */
+  height: 40px;
+  text-align: center;
+  background-color: #D49DA8;
+  color: black;
+  font-family: "AnyBody";
+  /* font-size: 10px; */
+  padding:1.2rem ;
+  border-radius: 0.5rem;
+  cursor: pointer;
+   margin-top: 2rem; 
+  margin: 0 auto;
+}
 }
 .submit_btn ion-icon{
   width: 40px;
@@ -175,7 +197,7 @@ td {
   text-transform: uppercase;
 }
 .empty_text {
-  background-color: var(--color2);
+  background-color:#D49DA8;
   padding: 2.5rem 2rem;
   font-size: 2rem;
   text-align: center;
@@ -217,7 +239,7 @@ li{
 
  .product_container {
   display: grid;
-  max-width:100%;
+  width: 100%;
   padding: 40px;
   grid-template-columns: repeat(auto-fit, 30rem);
   gap: 90px;
@@ -235,7 +257,7 @@ li{
 
 .box{
   width: 300px;
-  height: 550px;
+  height: 450px;
   /* height: auto; */
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -244,11 +266,11 @@ li{
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%); */
-  margin: 25px ;
+  /* margin: 25px ; */
 }
 
 .slide-img{
-  height: 450px;
+  height: 350px;
   position: relative;
 }
 
@@ -377,8 +399,16 @@ li{
 .bottom_btn {
   color: var(--black);
   font-size: 1.3rem;
-  background-color: #965a66;
+  background-color:#D49DA8;
   padding: 1rem;
+  text-decoration: none;
+
+}
+.bottom_btn a {
+  color: var(--black);
+
+  text-decoration: none;
+
 }
 .bottom_btn span {
   color: rgb(14, 10, 10);
@@ -422,8 +452,8 @@ width:150px !important;
 }
 
 .container_filtro button{
-  width: 300px;
-  padding: 10px;
+  width: 200px;
+  padding: 7px;
   border-radius: 20px;
   color: white;
   font-family: 'BEBAS NEUE';

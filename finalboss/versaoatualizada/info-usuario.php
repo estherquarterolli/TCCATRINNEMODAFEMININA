@@ -15,7 +15,8 @@ include ('protect.php');
 
 
 
-    <title>Atrinne Moda Feminina</title>
+    <title>Atrinne Moda Feminina</title> 
+    <link rel="shortcut icon" href="imagenstcc/manequim">
 
     <!-- ionicon -->
     <!-- bootstrap -->
@@ -61,7 +62,13 @@ include ('protect.php');
             <input type="text" id="telefone" value="<?php  $cpf = $_SESSION['cpf'];  echo $cpf;?>" disabled>
         </div>
         <br>
-        <BR>
+        
+        <div class="half-width">
+            <label for="telefone">Endereço:</label>
+            <input type="text" id="endereco" value="<?php  $end = $_SESSION['endereco'];  echo $end;?>" disabled>
+        </div>
+        <br>
+        <br>
             
     </div>
     <button onclick="window.location.href='editardados-usuario.php'" class="alterardados" id="editardados">Editar Dados</button>

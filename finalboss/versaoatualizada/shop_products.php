@@ -63,14 +63,14 @@ if(isset($display_message)){
 
                 
 
-<form method="post" action="">
+<form class="form"method="post" action="">
                 
 <li class="item">
          <div class="box">
            <div class="slide-img">
              <img src="produtos/<?php echo $fetch_product['image']?>" alt="">
              <div class="overlay">
-               <a href="produtoespecifico.php" class="buy-btn">Compre agora</a>
+               <a href="pagcoringa.php?edit=<?php echo $fetch_product['id']; ?>" class="buy-btn">Compre agora</a>
              </div>
            </div>
            <div class="detail-box">
@@ -81,7 +81,7 @@ if(isset($display_message)){
                <!-- <span>Perfeita para usar no verão</span> -->
              </div>
              <!-- ICONE CARRINHO -->
-           <a href="pagcoringa.php?edit=<?php echo $fetch_product['id']; ?>"  <button type="submit"  class="submit_btn cart_btn" value="Adicionar ao Carrinho" name="add_to_cart"><ion-icon class="carrinho-icon" name="cart-outline">></ion-icon></button></a>       
+           <a href="pagcoringa.php?edit=<?php echo $fetch_product['id']; ?>"  <button type="submit"   value="Adicionar ao Carrinho" name="add_to_cart"><ion-icon class="carrinho-icon" name="cart-outline">></ion-icon></button></a>       
            </div>
            <!-- CAMPOS OCULTOS QUE ESTÃO ARMAZENANDO OS DADOS PARA INSERIR NA TABELA CARRINHO PEGANDO DADOS DA TABELA PRODUTOS -->
             <input type="hidden" name="product_name" value="<?php echo $fetch_product['name'] ?>">

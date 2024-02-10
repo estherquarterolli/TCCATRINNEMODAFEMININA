@@ -1,6 +1,5 @@
 <?php 
 include ('conexao.php');
-include 'protect.php';
 if(isset($_POST['add_to_cart'])){
     $products_name = $_POST['product_name'];
     $products_price = $_POST['product_price'];
@@ -59,7 +58,6 @@ if(isset($display_message)){
     <br> <br>
   <button class="btn-filtrar-categoria" type="submit"><a href="filtrar.php?busca=calça">Calça</a></button>
   <button class="btn-filtrar-categoria" type="submit"><a href="filtrar.php?busca=Vestido">Vestido</a></button>
-  <button class="btn-filtrar-categoria" type="submit"><a href="filtrar.php?busca=Vestido">Vestido</a></button>
   <button class="btn-filtrar-categoria" type="submit"><a href="filtrar.php?busca=Short">Short</a></button>
   <button class="btn-filtrar-categoria" type="submit"><a href="filtrar.php?busca=Blusa">Blusa</a></button>
   <button class="btn-filtrar-categoria" type="submit"><a href="filtrar.php?busca=Conjunto">Conjunto</a></button>
@@ -107,7 +105,7 @@ while($dados = $sql_query->fetch_assoc()){
            <div class="slide-img">
              <img src="produtos/<?php echo $dados['image']?>" alt="">
              <div class="overlay">
-               <a href="pagcoringa.php" class="buy-btn">Compre agora</a>
+               <a href="pagcoringa.php?edit=<?php echo $dados['id']; ?>" class="buy-btn">Compre agora</a>
              </div>
            </div>
            <div class="detail-box">
@@ -117,20 +115,19 @@ while($dados = $sql_query->fetch_assoc()){
                </a>
                <!-- <span>Perfeita para usar no verão</span> -->
              </div>
-             <br>
-             <a href="pagcoringa.php?edit=<?php echo $dados['id']; ?>"  <button type="submit"  class="submit_btn cart_btn" value="Adicionar ao Carrinho" name="add_to_cart"><ion-icon class="carrinho-icon" name="cart-outline">></ion-icon></button></a>                      
+             <!-- ICONE CARRINHO -->
+           <a href="pagcoringa.php?edit=<?php echo $dados['id']; ?>"  <button type="submit"   value="Adicionar ao Carrinho" name="add_to_cart"><ion-icon class="carrinho-icon" name="cart-outline"></ion-icon></button></a>       
            </div>
            <!-- CAMPOS OCULTOS QUE ESTÃO ARMAZENANDO OS DADOS PARA INSERIR NA TABELA CARRINHO PEGANDO DADOS DA TABELA PRODUTOS -->
             <input type="hidden" name="product_name" value="<?php echo $dados['name'] ?>">
                     <input type="hidden" name="product_price"  value="<?php echo $dados['price'] ?>">
                     <input type="hidden" name="product_image" value="<?php echo $dados['image']?>">
                     <input type="hidden" name="product_type" value="<?php echo $dados['type']?>">
-                    <!-- precisa aumentar o tamanho do botão -->
-                    
+                  
          </div>
        </li>
-
 </form>
+
 </DIV>
 
 <?php

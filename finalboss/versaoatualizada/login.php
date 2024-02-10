@@ -4,9 +4,6 @@ if(!empty($_SESSION['id'])){
   header('location: index.php');
 }
 
-
-
-
 include ('conexao.php');
 if(isset($_POST['submitCADASTRO'])){
   $nome = mysqli_real_escape_string($conn, $_POST['nome_cadastro']);
@@ -144,10 +141,11 @@ if(isset($_POST["submitLOGIN"])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
-
+    <title>Atrinne Moda Feminina</title> 
+    <link rel="shortcut icon" href="imagenstcc/manequim">
     <link rel="stylesheet" href="css/headerpag.css">
     <link rel="stylesheet" href="css/login.css"> 
+    
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 </head>
 <body>
@@ -155,7 +153,7 @@ if(isset($_POST["submitLOGIN"])){
     <div class="container">
       <nav class="nav-bar">
           <div class="logo">
-              <a href="INDEX.HTML"><p>ATRINNE MODA FEMININA</p></a>
+              <a href="index.php"><p>ATRINNE MODA FEMININA</p></a>
           </div>
         <div class="botoes-header">
           <a href="shop_products.php"><div class="login-button">
@@ -164,8 +162,8 @@ if(isset($_POST["submitLOGIN"])){
               <span class="titulomenu">Produtos</span>
           </div></a>
           <div class="login-button">
-              <button><a href="login.php"><ion-icon name="heart-outline"></ion-icon></a></button><br>
-              <span class="titulomenu">Favoritos</span>
+            <button><a href="sobrenos.php"><ion-icon name="navigate-outline"></ion-icon></a></button><br>
+              <span class="titulomenu">Sobre nós</span>
           </div>
 
           <div class="login-button">
@@ -188,7 +186,7 @@ if(isset($_POST["submitLOGIN"])){
               <center><a href="GALERIA.html"><H3>PRODUTOS</H3></a></center>
           </div>
           <div class="login-button-mobile">
-              <center><a href="login.php"><H3>FAVORITOS</H3></a></center>
+              <center><a href="sobrenos.php"><H3>Sobre nós</H3></a></center>
           </div>
 
           <div class="login-button-mobile">
@@ -295,7 +293,7 @@ if(isset($_POST["submitLOGIN"])){
 
               <div class="input-wrap">
                 <input
-                  type="text"
+                  type="number"
                   class="input-field"
                   name="telefone_cadastro"
                   autocomplete="off"
@@ -306,7 +304,7 @@ if(isset($_POST["submitLOGIN"])){
 
               <div class="input-wrap">
                 <input
-                  type="text"
+                  type="number"
                   class="input-field"
                   name="cpf_cadastro"
                   autocomplete="off"

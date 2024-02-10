@@ -35,8 +35,7 @@ if(isset($_POST['update_product'])){
 </head>
 <body>
     <?php 
-    include ('headerCarrinho.php');
-    
+    include ('headerAdmin.php');
     if(isset($display_message)){
         echo "<div class='display_message'>
         <span>$display_message</span>
