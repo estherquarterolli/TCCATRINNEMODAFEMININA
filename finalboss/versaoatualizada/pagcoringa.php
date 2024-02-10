@@ -1,4 +1,5 @@
 <?php 
+include('protect.php');
 include ('conexao.php');
 if(isset($_POST['add_to_cart'])){
     $products_name = $_POST['product_name'];
@@ -9,7 +10,7 @@ if(isset($_POST['add_to_cart'])){
     // select cart data based on condition
     $select_cart = mysqli_query($conn, "select * from `cart` where  name='$products_name'");
     if(mysqli_num_rows($select_cart) > 0){
-        $display_message[]="Produto já etá no Carrinho";
+        $display_message[]="Produto já está no Carrinho";
     }else{
          // insert cart data in cart table 
     $insert_products=mysqli_query($conn, "insert into `cart` (name,price,image,quantity) values 
@@ -48,8 +49,8 @@ if(isset($_POST['add_to_cart'])){
 
     <script defer src="script.js"></script>
 
-    <title>Atrinne Moda Feminina</title>
-
+    <title>Atrinne Moda Feminina</title> 
+    <link rel="shortcut icon" href="imagenstcc/manequim">
   
   </head>
   <body>
@@ -71,7 +72,11 @@ include('header.php');
                     // echo $row;
                 
                 ?>
+                <div class="container-produtao">
+             
+                
                 <form action="" method="post" >
+                <a class="btnvoltar" href="indexcomlogin.php"><p>Voltar</p></a>
     <main class="item">
       <section class="img">
         <img src="imagenstcc/<?php echo $fetch_data['image']?>">
@@ -99,24 +104,6 @@ include('header.php');
             <span class="price-box__main-discount"> 50%</span>
           </div>
           
-          <div class="select-box">
-    <div class="selection-option">
-        <input type="text" placeholder="tamanho selecionado" id="soValue" readonly name="">
-    </div>
-    <div class="content">
-        <!-- <div class="search">
-        <input type="text" id="optionSearch" placeholder="pesquise" name="">
-        </div> -->
-    <ul class="options">
-        <li>PP</li>
-        <li>P</li>
-        <li>M</li>
-        <li>G</li>
-        <li>GG</li>
-    </ul>
-    </div>
-</div>
-
         <div class="price-btnbox">
 
 
@@ -125,18 +112,31 @@ include('header.php');
           <button type="submit"  class="submit_btn cart_btn PRICE-BTN" value="Adicionar ao Carrinho" name="add_to_cart"><ion-icon class="carrinho-icon" name="cart-outline"></ion-icon></button>
           </form>
         </div>
-
+        </div>
         </div>
         <?php
             }}
             ?>
       </section>
     </main>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/pagcoringa.js"></script>
     <script SRC="js/contador.js"></script>
-   <!-- ionicon -->
-   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/interacaocomamidia.js"></script>
+    <script src="js/tipos-maisvendidos.js"></script>
+    <script src="js/tiposderoupa.js"></script>
+    <script src="js/modallogin.js"></script>
+    <script src="js/maisvendidos.js"></script>
+    <script src="js/clientes-instagram.js"></script>
+
    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- ionicon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
   </body>
 </html>

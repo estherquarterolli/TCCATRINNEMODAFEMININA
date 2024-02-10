@@ -14,7 +14,8 @@ include ('conexao.php');
     <link rel="stylesheet" href="css/todos.css">
 
 
-    <title>Atrinne Moda Feminina</title>
+    <title>Atrinne Moda Feminina</title> 
+    <link rel="shortcut icon" href="imagenstcc/manequim">
 
     <!-- ionicon -->
     <!-- bootstrap -->
@@ -56,7 +57,7 @@ include ('conexao.php');
         <br>
         <div class="half-width">
             <label for="email">Telefone:</label>
-            <input type="text" id="email" name="telefone" value="<?php  $telefone = $_SESSION['telefone'];  echo $telefone;?>" >
+            <input type="number" id="email" name="telefone" value="<?php  $telefone = $_SESSION['telefone'];  echo $telefone;?>" >
         </div>
    
         <div class="half-width">

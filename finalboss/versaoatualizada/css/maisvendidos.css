@@ -18,7 +18,7 @@ section.maisvendidos{
 .product-category{
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 80%);
     margin-top: 5%;
-  padding: 0 10vw;
+  /* padding: 0 10vw; */
   font-size: 50px;
   font-weight: 200px;
   margin-bottom: 40px;

@@ -71,7 +71,7 @@
     font-size: 22px;
     font-weight: 700;
     line-height: 30px;
-    color: #ffffff;
+    color: black;
     padding-top: 0px;
     padding-right: 10px;
     padding-bottom: 0px;
@@ -668,7 +668,7 @@
    
         <div class="responsive-container-block Container bottomContainer">
           <div class="ultimateImg">
-            <img class="mainImg" src="sliderp3.png">
+            <img class="mainImg" src="imagenstcc/sliderp3.png">
             <div class="purpleBox">
               <p class="purpleText">
                 "Loja com os melhores produtos da região!"             </p>
@@ -696,7 +696,7 @@
         <br>
         <div class="mapa">
           <center><h1> Conheça nossa loja física!</h1></center>
-        
+        <br><br>
           <div class="mapamapa">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.2500828850452!2d-43.25238672402836!3d-22.64446262854996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9974a8fa13e843%3A0x3a5723425fc1291b!2sAv.%20B%20-%20Nova%20Campinas%2C%20Duque%20de%20Caxias%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1702510143084!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>

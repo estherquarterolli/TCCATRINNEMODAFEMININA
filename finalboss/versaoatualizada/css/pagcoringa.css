@@ -44,6 +44,7 @@ body {
   z-index: 50;
 }
 
+
 /*/////////////
 Overlay image modal
  //////////////*/
@@ -57,6 +58,14 @@ Overlay image modal
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.container-produtao{
+  margin:2%;
+  width: 1200px;
+  height: 580px;
+  padding: 3%;
+  background-color: rgb(232, 232, 232);
+  border-radius: 20px;
+}
 .item-overlay {
   max-width: 50rem;
   padding-top: 5rem;
@@ -186,8 +195,9 @@ padding-right: 2%;
 }
 
 .item .img IMG{
-  WIDTH:560PX;
-  HEIGHT:650PX;
+  WIDTH:460PX;
+  HEIGHT:490PX;
+  border-radius: 20px;
 }
 /* Left img container stylling */
 .img-main {
@@ -326,7 +336,12 @@ padding-right: 2%;
 }
 
 .price-btnbox {
-  margin-top: 2rem;
+  margin-top: -1%;
+}
+.selection-option input{
+  width: 70px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 .price-btnbox {
@@ -422,8 +437,9 @@ padding-right: 2%;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  background-color:#D49DA8;
+  background-color:#9d646f;
   color: #fff;
+  list-style-type: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
@@ -587,4 +603,17 @@ JavaScript Triggered Classes
 
 .preload * {
   transition: none !important;
+}
+
+
+.btnvoltar {
+  text-decoration: none;
+  text-decoration-line: none;
+  color:black;
+
+}
+.btnvoltar:hover {
+  /* background-color: black; */
+  color: rgb(108, 108, 108);
+  padding: 5px;
 }

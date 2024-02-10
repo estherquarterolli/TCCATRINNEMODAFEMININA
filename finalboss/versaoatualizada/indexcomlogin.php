@@ -25,8 +25,8 @@ include ('protect.php');
     <script type="text/javascript" src="js/lightslider.js"></script>
     <!-- <link rel="stylesheet" href="css/styleCarrinho.css"> -->
 
-    <title>Atrinne Moda Feminina</title>
-
+    <title>Atrinne Moda Feminina</title> 
+    <link rel="shortcut icon" href="imagenstcc/manequim">
     <!-- ionicon -->
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -402,7 +402,7 @@ include('header.php')
         <div class="footer-section">
           <img src="imagenstcc/manequim.png" width="180" height="140" 
           id="Logo">
-          <div id="Fonte1"> Atrine Moda Feminina
+          <div id="Fonte1"> Atrinne Moda Feminina
           </div>
         </div>
         <div class="footer-section">

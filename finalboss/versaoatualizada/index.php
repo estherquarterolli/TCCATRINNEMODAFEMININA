@@ -24,8 +24,8 @@ include ('conexao.php');
     <script type="text/javascript" src="js/Jquery.js"></script>
     <script type="text/javascript" src="js/lightslider.js"></script>
 
-    <title>Atrinne Moda Feminina</title>
-
+    <title>Atrinne Moda Feminina</title> 
+    <link rel="shortcut icon" href="imagenstcc/manequim">
     <!-- ionicon -->
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -124,7 +124,7 @@ include ('conexao.php');
     <!-- tipos de roupa -->
     <div class="product">
       <div class="product-containerzao">
-      <center><h2 class="product-category">ENCONTRE O QUE VOCÊ PROCURA... <?php echo $_SESSION['name']; ?></h2></center>
+      <center><h2 class="product-category">ENCONTRE O QUE VOCÊ PROCURA... </h2></center>
       <!-- <button class="pre-btn"><ion-icon CLASS="ARROW"  name="arrow-forward-circle-outline"></ion-icon></button>
       <button class="nxt-btn"><ion-icon CLASS="ARROW" name="arrow-forward-circle-outline"></ion-icon></button> -->
       <div class="product-container" id="slider-infinito">
@@ -447,7 +447,7 @@ include ('conexao.php');
         <div class="footer-section">
           <img src="imagenstcc/manequim.png" width="180" height="140" 
           id="Logo">
-          <div id="Fonte1"> Atrine Moda Feminina
+          <div id="Fonte1"> Atrinne Moda Feminina
           </div>
         </div>
         <div class="footer-section">

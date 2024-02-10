@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300;500&display=swap');
+.bv{
+    color: black;
+    background-color: #D49DA8;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.container-tabelausuarios{
+  margin-top: 6%;
+  text-align: center;
+  font-size: 20px;
+  display: flex;
+  padding: 10px;
+  margin-top: -0.1%;
+  flex-direction: column;
+  justify-content:center;
+  font-family: 'Anybody';
+}
+.table{
+    background-color: rgb(208, 208, 208);
+   
+    margin-left:10%;
+    margin-right:10%;
+    color: rgb(0, 0, 0);
+    border-radius: 15px 15px 5px 5px;
+}
+td{
+  color:black;
+  font-family: 'Anybody';
+}

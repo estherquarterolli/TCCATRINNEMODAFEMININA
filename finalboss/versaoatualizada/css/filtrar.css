@@ -236,6 +236,7 @@ li{
 }
 .box{
   width: 300px;
+  height: 450px;
   /* height: auto; */
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -248,9 +249,10 @@ li{
 }
 
 .slide-img{
-  height: 450px;
+  height: 350px;
   position: relative;
 }
+
 
 .slide-img img{
   width: 100%;
