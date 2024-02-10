@@ -1,0 +1,114 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1:3306
+-- Tempo de geração: 21-Dez-2023 às 12:36
+-- Versão do servidor: 8.0.31
+-- versão do PHP: 8.0.26
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Banco de dados: `tccatrinnemodafeminina`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cadastro`
+--
+
+DROP TABLE IF EXISTS `cadastro`;
+CREATE TABLE IF NOT EXISTS `cadastro` (
+  `IdCadastro` int NOT NULL AUTO_INCREMENT,
+  `Nome` varchar(255) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `Telefone` varchar(255) NOT NULL,
+  `Endereco` varchar(255) NOT NULL,
+  `Cpf` varchar(255) NOT NULL,
+  `Senha` varchar(255) NOT NULL,
+  PRIMARY KEY (`IdCadastro`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Extraindo dados da tabela `cadastro`
+--
+
+INSERT INTO `cadastro` (`IdCadastro`, `Nome`, `Email`, `Telefone`, `Endereco`, `Cpf`, `Senha`) VALUES
+(1, 'Tutu Monts', 'arthur@gmail.com', '190', 'rua do tutu', '21', 'gay'),
+(2, 'Esther Quarterolli', 'tete@gmail.com', '40028922', 'rua do miojo', '13', 'estrela123'),
+(3, 'Letícia', 'let@gmail.com', '6669', '[rua de gay]', '55', 'a'),
+(4, 'Nataly', 'nat@gmail.com', '12344321', 'casinhada naty', '157', 'naty'),
+(5, 'Jorgin', 'jorgin@gmail.com', '21990249370', '', '193', 'a'),
+(6, 'teste', 'teste@gmail.com', '21990249370', '', '3424234', 'a'),
+(7, 'Atrinne Moda Feminina', 'atrinnemodafeminina@gmail.com', '', 'batata', '', 'admin123'),
+(8, 'George Chaves', 'george@gmail.com', '21201892981', '', '69', 'a');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cart`
+--
+
+DROP TABLE IF EXISTS `cart`;
+CREATE TABLE IF NOT EXISTS `cart` (
+  `name` varchar(255) NOT NULL,
+  `price` varchar(100) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `quantity` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `IdCadastroFK` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `IdCadastroFK` (`IdCadastroFK`)
+) ENGINE=MyISAM AUTO_INCREMENT=90 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Extraindo dados da tabela `cart`
+--
+
+INSERT INTO `cart` (`name`, `price`, `image`, `type`, `quantity`, `id`, `IdCadastroFK`) VALUES
+('Macacão Floral', '189.00', 'Macacão floral. R$ 189,00.jpg', '', 1, 89, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `products`
+--
+
+DROP TABLE IF EXISTS `products`;
+CREATE TABLE IF NOT EXISTS `products` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `price` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Extraindo dados da tabela `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `price`, `image`, `type`) VALUES
+(39, 'Macacão Floral', '189.00', 'Macacão floral. R$ 189,00.jpg', 'macacão'),
+(38, 'Macacão', '90.00', 'macacao.png', 'macacão'),
+(36, 'Body Liz', '60.00', 'Body Liz. R$ 59,90_.jpg', 'blusa'),
+(35, 'Blusa Babado', '50.00', 'Blusa babado. R$ 49,90_.jpg', 'blusa'),
+(34, 'Conjunto Amanda', '179.00', 'Conjunto Amanda. R$ 179,00_.jpg', 'Conjunto'),
+(33, 'Body Any', '60.00', 'Body Any. R$ 59,90_.jpg', 'blusa'),
+(40, 'calça cinza', '10', 'image-product-1.jpg', 'calça');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
